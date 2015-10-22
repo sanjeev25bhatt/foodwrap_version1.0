@@ -1,0 +1,79 @@
+#modal-or{
+	text-align: center;
+}
+#signup-modal > .modal-dialog{
+	width: 450px;
+}
+#login-modal > .modal-dialog{
+	width: 450px;
+}
+
+
+.carousel-caption{
+	z-index: 10;
+}
+.carousel-inner > #item > img{
+	position: absolute;
+	min-width: 100%;
+	top: 50px;
+	left: 0;
+	height: auto;
+}
+.carousel-inner > #item{
+	height: 500px;
+}
+@media(min-width: 768px){
+	.carousel-inner > #item{
+		height: 700px;
+	}
+	.map{
+		height: 550px;
+	}
+	.map > iframe{
+		height: 550px;
+	}
+	
+}
+@media(max-width: 500px){
+	#signup-modal > .modal-dialog{
+	width: 350px;
+	}
+	#login-modal > .modal-dialog{
+	width: 350px;
+	}
+}
+#position{
+	position: absolute;
+	top: 50px;
+	left: 1000px;
+	z-index:10;
+}
+.info{
+	background: #50cff4 url(../images/skyline.png) repeat-x bottom;
+	padding: 50px 0;
+	margin-top: 50px;
+}
+.info a{
+	color: #fff;
+}
+.info a:hover{
+	color:#333;
+}
+.tab-pane{
+	padding: 20px 10px 0 10px;
+}
+.carousel-inner > #item2 > img{
+	position: absolute;
+	left: 0;
+	height: auto;
+}
+.carousel-inner > #item2{
+	height: 300px;
+}
+#services{
+	padding-top: 20px;
+}
+#tool{
+	padding-bottom: 20px;
+}
+

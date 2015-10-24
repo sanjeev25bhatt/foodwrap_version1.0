@@ -1,9 +1,3 @@
-<?php
-	
-	
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,38 +20,18 @@
 	</style> 
 </head>
   
-<body>
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="navbar-header">
-		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="index.php">Fresh Wraap</a>
-    </div> 
-    <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
-            <li><a href="index.php">Home</a></li>
-            <li class="active"><a href="contact.php">Contact Us</a></li>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services<b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Newspaper subscription</a></li>
-                    <li><a href="#">Breakfast</a></li>
-                    <li><a href="#">Beverages</a></li>
-                    <li><a href="#">Fresh Fruits</a></li>
-					<li><a href="#">Delievery</a></li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-</nav>
+<body id="contact">
+
+<!--Navigation bar-->
+<?php
+	include "nav-bar.php";
+?>
+<!--Navbar ends-->
 
 <div class="map">
 	<iframe width="100%" height="400px" frameborder="0" scrolling="no" marginheight="no" marginwidth="no" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.7602366648107!2d77.3707827798427!3d28.6369471999864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5535873a947%3A0xebbf22864f7d31c9!2s21%2C+Cassia+Rd%2C+Shipra+Suncity%2C+Indirapuram%2C+Ghaziabad%2C+Uttar+Pradesh+201014%2C+India!5e0!3m2!1sen!2s!4v1445271690373"></iframe><br />
 </div>
+
 <div class="container">
 	<div class="row">
 	<div class="col-lg-12">
@@ -72,22 +46,22 @@
             <h2>Get in touch</h2>
             <hr>
             <p>Need a quote, enquiry about our team or have a suggestion for <strong>Fresh Wraap</strong>, we need to hear from you:</p>
-            <form class="form-horizontal tpad" role="form">
+            <form method="" action="" class="form-horizontal tpad" role="form">
                 <div class="form-group">
                     <label for="email" class="col-lg-2 control-label">Email</label>
                     <div class="col-lg-10">
-                        <input type="email" class="form-control" id="email" placeholder="Email">
+                        <input type="email" id="email-contact" class="form-control" name="email" placeholder="Email" />
                     </div>
                 </div>
                 <div class="form-group tpad">
                     <label for="message" class="col-lg-2 control-label">Message</label>
                     <div class="col-lg-10">
-                        <textarea class="form-control" rows="6" id="message" placeholder="Message..."></textarea>
+                        <textarea class="form-control" id="message" rows="6" name="message" placeholder="Message..."></textarea>
                     </div>
                 </div>
                 <div class="form-group tpad">
                     <div class="col-lg-offset-2 col-lg-10">
-                        <a data-toggle="modal" href="#myModal" class="btn btn-default btn-lg">Send</a>
+                        <a type="button" data-toggle="modal" id="my_modal" class="btn btn-default btn-lg">Send</a>
                     </div>
                 </div>
             </form>
@@ -100,11 +74,10 @@
                         <h3 class="modal-title">Thank you for submitting</h3>
                     </div>
                     <div class="modal-body">
-                        <p>We appreciate you getting in touch. Please be patient, we will contact you shortly with a reply.</p>
-                        <p>The Fresh Wraap Team</p>
+                        <p id="user-submit">We appreciate you getting in touch. Please be patient, we will contact you shortly with a reply.<br />The Fresh Wraap Team</p>
                     </div>
                     <div class="modal-footer">
-                        <a href="index.php" class="btn btn-default btn-lg">OK</a>
+                        <a href="#" id="chumantar" class="btn btn-default btn-lg">OK</a>
                     </div>
                 </div>
             </div>
@@ -115,6 +88,13 @@
         </div>
     </div>    
 </div>
+
+<!--Footer-->
+<?php
+	include "footer.php";
+?>
+<!--Footer ends-->
+
 
 	<script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>

@@ -1,13 +1,15 @@
+#checkbox{
+	margin-left:20px;
+}
 #modal-or{
 	text-align: center;
 }
 #signup-modal > .modal-dialog{
-	width: 450px;
+	width: 700px;
 }
 #login-modal > .modal-dialog{
-	width: 450px;
+	width: 500px;
 }
-
 
 .carousel-caption{
 	z-index: 10;
@@ -31,6 +33,12 @@
 	}
 	.map > iframe{
 		height: 550px;
+	}
+	.fbl-img{
+		width: 435px;
+	}
+	.fbs-img{
+		width: 630px;
 	}
 	
 }
@@ -70,10 +78,8 @@
 .carousel-inner > #item2{
 	height: 300px;
 }
-#services{
+#service{
 	padding-top: 20px;
 }
-#tool{
-	padding-bottom: 20px;
-}
+
 

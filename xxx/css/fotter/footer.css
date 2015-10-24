@@ -2,29 +2,32 @@
 /*=========================
   footer-row1
  ================= */
-
-.footer-row1 {
+.above-ftr {
+	background-color: #3c3e3d;
+	
+}
+ .footer-row1 {
   background-color:#3c3e3d;
   height:auto;
   }
-.footer-row1 .col-md-2  h2{
+.footer-row1 .col-sm-3  h2{
     color:#FFFFFF ;
 	
   }
-.footer-row1 .col-md-2  p{
+.footer-row1 .col-sm-3 p{
     color: 	#B8B8B8;
 	
 }
-.footer-row1 .col-md-1  h4{
+.footer-row1 .col-sm-1  h4{
     color:#E0E0E0  ;
 	padding:10px;
   }
-  .footer-row1 .col-md-2  h4{
+  .footer-row1 .col-sm-2  h4{
     color:#E0E0E0  ;
 	padding:10px;
   }
   
-   .footer-row1 .col-md-3  h4{
+  .footer-row1 .col-sm-3  h4{
     color:#E0E0E0;
 	padding:10px;
   }
@@ -65,22 +68,22 @@ ul.social-network li {
 /* footer social icons */
 
 
-.social-network a.icoFacebook:hover {
+ul.social-network a.icoFacebook:hover {
 	background-color:#3B5998;
 }
-.social-network a.icoTwitter:hover {
+ul.social-network a.icoTwitter:hover {
 	background-color:#33ccff;
 }
-.social-network a.icoGoogle:hover {
+ul.social-network a.icoGoogle:hover {
 	background-color:#BD3518;
 }
 
-}
- .social-network a.icoFacebook:hover i, .social-network a.icoTwitter:hover i,
+
+.social-network a.icoFacebook:hover i, .social-network a.icoTwitter:hover i,
 .social-network a.icoGoogle:hover i{ 
 	color:#fff;
 }
-a.socialIcon:hover, .socialHoverClass {
+a.socialIcon:hover,.socialHoverClass {
 	color:#44BCDD;
 }
 
@@ -134,13 +137,13 @@ a.socialIcon:hover, .socialHoverClass {
 
 
 .ftr {
-	height:60px;
+	height:auto;
 	background-color:#282828;
 }
 .text {
-  line-height:60px;
+  line-height:70px;
   color:#FFFFFF;
-  margin-left:3%;
+  margin-left: 3%;
   margin-left: 3%;
 }
 

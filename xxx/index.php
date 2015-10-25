@@ -10,6 +10,8 @@
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/self.css" rel="stylesheet">
+	<link href="css/hw_css/work_con.css" rel="stylesheet">
+	
 	<script type="text/javascript" src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script type="text/javascript" src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	  
@@ -94,6 +96,72 @@
         </div>
     </div>       
 </div>
+
+
+<!--How It Works Block Starts-->
+
+
+
+<div id="howItWorks">
+
+<div class="container" >
+
+<div class="row text-center"><h1 style="margin:45px 0px;">How It Works</h1></div>
+
+<div class="row text-center">
+
+
+
+<div class="col-md-4 wi1 padding-bot-45">
+
+<span class="text-circle">1</span>
+
+<h3>PICK A SERVICE</h3>
+
+
+
+
+
+</div>
+
+
+
+<div class="col-md-4 wi2 padding-bot-45">
+
+<span class="text-circle">2</span>
+
+<h3>BOOK ONLINE</h3>
+
+
+
+</div>
+
+
+
+<div class="col-md-4 wi3 padding-bot-45">
+
+<span class="text-circle">3</span>
+
+<h3>PAY AFTER WORK IS DONE</h3>
+
+
+
+<h3></h3>
+
+<p></p>
+
+</div>
+
+
+
+</div>
+
+</div>
+
+<!--How It Works Block Ends-->
+
+</div>	
+
 
 
 <!--Footer Starts-->

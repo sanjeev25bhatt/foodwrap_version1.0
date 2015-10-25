@@ -5,3 +5,9 @@ Release items :
 -Modified Index page - Alignment and few other items .
 
 
+Using mysql batch file 
+from dos command prompt 
+-cd C:\xampp\htdocs\FreshWrapCode\freshwrap_version1.0
+- mysqlbat.bat
+
+

@@ -1,6 +1,20 @@
 $(document).ready(function() {
 	
-	
+	//Checking if the session exists when window loads
+	$(window).load(function() {
+		$.post('loggedin.php', function(data) {
+			var hide = data;
+			if(hide!='5'){
+				$("#my-reg").html(data);
+				$('#show-it').show("fast");
+				$('#show-it-logout').removeClass('hidden');
+			} else if(hide=='5'){
+				$('#hide-it').removeClass('hidden');
+				$('#hide-it-login').removeClass('hidden');
+				$('#show-it-logout').addClass('hidden');
+			}
+		})
+	});
 	
 	//auto active
 	$("#index a:contains('Home')").parent().addClass('active');
@@ -78,12 +92,17 @@ $(document).ready(function() {
 					$('#my_query_modal').modal({
 						show: true,
 					});
-				}else {
+				} else if(invalid=='2'){
+					$('#query_modal').html('You\'re are already registered and logged in, click <a href="logout.php">here</a> to logout.');
+					$('#my_query_modal').modal({
+						show: true,
+					});
+				}else if(invalid!='5'&&invalid!='1'&&invalid!='2'){
 					$('#hide-it').hide("fast");
 					$('#hide-it-login').hide("fast");
 					$("#my-reg").html(data);
 					$('#show-it').show("fast");
-					$('#show-it-logout').show("fast");
+					$('#show-it-logout').removeClass('hidden');
 				}
 			});
 		}

@@ -2,8 +2,12 @@
  $dbc = mysqli_connect('localhost', 'root', '', 'a_database') or die('Error');
  require('core.inc.php');
 
- if(isset($_SESSION['user_id'])&&!empty($_SESSION['user_id'])){
-   $user_id = $_SESSION['user_id'];
+ if((isset($_SESSION['user_id'])&&!empty($_SESSION['user_id']))||(isset($_COOKIE['user_id'])&&!empty($_COOKIE['user_id']))){
+   if(!empty($_SESSION['user_id'])){
+     $user_id = $_SESSION['user_id'];
+   } else if(empty($_SESSION['user_id'])&&!empty($_COOKIE['user_id'])){
+     $user_id = $_COOKIE['user_id'];
+   }
    $query = "SELECT `firstname` FROM `users` WHERE `id`='$user_id'";
    if($query_run = mysqli_query($dbc, $query)){
      $query_num_rows = mysqli_num_rows($query_run);
@@ -23,6 +27,8 @@
      }
    }
 	
-   echo 'You\'re logged in, '.$firstname.' '.$surname.' <a href="logout.php">Logout</a>';
- } 
+   echo 'You\'re logged in, '.$firstname.' '.$surname;
+ } else {
+	 echo '5';
+ }
 ?>

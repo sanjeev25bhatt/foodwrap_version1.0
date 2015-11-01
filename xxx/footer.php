@@ -1,8 +1,6 @@
 <!--Footer Start-->
 
-<link rel="stylesheet" href="css/fotter/footer.css">
-<link rel="stylesheet" href="css/fotter/new_bootstrap.min.css">
-<link rel="stylesheet" href="css/fotter/new_bootstrap-theme.min.css">
+
 
 
 <div class="above-ftr">
@@ -40,7 +38,7 @@
  
  
  <div class="col-sm-3 col-sm-offset-1">
-	<h4>Ideas by Mr Right</h4>
+	<h4>Ideas by Fresh Wraap</h4>
 		<ul class="ab ">
 			<li><a href="#">Types of watr heater or geyser available <br>in market</a></li>
 			<p>Oct 08 2015.</p><hr><li><a href="#">How to choose the right geyser or water heater for your home?</a></li></br><p>Oct 07 2015.</p><hr> <li><a href="#">visit our blog ! </a></li>

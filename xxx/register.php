@@ -28,7 +28,7 @@
 					 if($query_run = mysqli_query($dbc, $query)){
 					   echo 'You have successfully registered, log in and be with us!';
 					}
-				   }else {echo 'Sorry we could\'t register, try again later'; }
+				   }else { echo 'Sorry we could\'t register, try again later'; }
 				 }
 			   }
 			 } else { echo 'All fields are required'; }
@@ -36,6 +36,5 @@
 		 } else if((isset($_SESSION['user_id'])&&!empty($_SESSION['user_id']))||(isset($_COOKIE['user_id'])&&!empty($_COOKIE['user_id']))){
 		   echo 'You\'re are already registered and logged in, click <a href="logout.php">here</a> to logout.';
 		 }
-	
 
 ?>

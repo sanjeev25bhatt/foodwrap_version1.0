@@ -88,7 +88,7 @@
 							<div class="form-group">
 								<label for="firstname" class="col-lg-12">First Name: </label><br>
 								<div class="col-lg-12">
-									<input type="text" name="firstname" class="form-control" id="firstname" />
+									<input type="text" name="firstname" class="form-control" id="firstname" placeholder="First Name.."/>
 								</div>
 							</div>
 							

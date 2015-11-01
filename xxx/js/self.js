@@ -1,7 +1,6 @@
-$(document).ready(function() {
-	
-	//Checking if the session exists when window loads
-	$(window).load(function() {
+
+//Checking if the session exists when window loads
+	$(function() {
 		$.post('loggedin.php', function(data) {
 			var hide = data;
 			if(hide!='5'){
@@ -13,8 +12,26 @@ $(document).ready(function() {
 				$('#hide-it-login').removeClass('hidden');
 				$('#show-it-logout').addClass('hidden');
 			}
-		})
+		});
 	});
+
+
+$(document).ready(function() {
+    
+	//scroll to the top button
+	var $newdiv1 = $( "<div id='toTop' class='btn btn-primary'><i class='glyphicon glyphicon-arrow-up'></i>Back to Top</div>" );
+	$('body').append($newdiv1);
+    	$(window).scroll(function () {
+			if ($(this).scrollTop() != 0) {
+				$('#toTop').fadeIn();
+			} else {
+				$('#toTop').fadeOut();
+			}
+		}); 
+    $('#toTop').click(function(){
+        $("html, body").animate({ scrollTop: 0 }, 600);
+        return false;
+    });
 	
 	//auto active
 	$("#index a:contains('Home')").parent().addClass('active');
@@ -127,9 +144,6 @@ $(document).ready(function() {
 			$('#myModal').modal('hide');
 		});
 	});
-	
-	
-	
 	
 	
 });

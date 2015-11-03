@@ -7,6 +7,9 @@ Reviewed Comments
 
 - Page is not aligned correctly if the database is not connected correctly 
 
+- chat need to be aligned in better shape 
+
+
 
 
 

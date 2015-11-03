@@ -11,3 +11,6 @@ from dos command prompt
 - mysqlbat.bat
 
 
+2- Automate complete bat file ,no need to write single code 
+
+

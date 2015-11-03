@@ -9,7 +9,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/self.css" rel="stylesheet">
 	<link href="css/footer.css" rel="stylesheet">
-	<style>
+	<style rel="stylesheet">
 		.map{
 			padding-bottom: 20px;
 		}

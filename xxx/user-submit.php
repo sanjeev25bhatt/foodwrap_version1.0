@@ -1,5 +1,5 @@
 <?php
-	$dbc = mysqli_connect('localhost', 'root', '', 'a_database') or die('Error');
+	include "chat/connect.php";
 	
 	if(isset($_POST['email'])&&isset($_POST['message'])){
 		$email = $_POST['email'];

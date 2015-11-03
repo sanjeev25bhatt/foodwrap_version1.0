@@ -1,5 +1,5 @@
 <?php
-$dbc = mysqli_connect('localhost', 'root', '', 'a_database') or die('Error');
+include "connect.php";
 require ('core.php');
 	if(isset($_POST['action'])&&!empty($_POST['action'])){
 			

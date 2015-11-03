@@ -1,5 +1,5 @@
 <?php
-	$dbc = mysqli_connect('localhost', 'root', '', 'a_database') or die('Error');
+	include "connect.php";
 	require ('core.php');
 	if((isset($_SESSION['user_id'])&&!empty($_SESSION['user_id']))||(isset($_COOKIE['user_id'])&&!empty($_COOKIE['user_id']))){
 			if(isset($_SESSION['user_id'])&&!empty($_SESSION['user_id'])){

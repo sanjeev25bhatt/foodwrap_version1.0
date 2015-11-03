@@ -1,6 +1,5 @@
 <?php
-	$dbc = mysqli_connect('localhost', 'root', '', 'a_database') or die('Error');
-	
+	include "connect.php";
 	require ('core.php');
 	if(isset($_SESSION['admin_id'])&&!empty($_SESSION['admin_id'])){
 		$admin_id = $_SESSION['admin_id'];

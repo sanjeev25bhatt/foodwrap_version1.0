@@ -119,7 +119,9 @@
 
 
 
-<a href="chat/chat-div.php">Link for chat</a>
+<a href="chat/chat-div.php">Link for chat</a> <br>
+<a href="chat/admin.php">admin chat link</a> <br>
+
 
 <!--Footer Starts-->
 <?php

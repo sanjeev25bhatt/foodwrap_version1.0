@@ -42,6 +42,7 @@
 	}
 	
 }
+
 @media(max-width: 500px){
 	#signup-modal > .modal-dialog{
 	width: 350px;

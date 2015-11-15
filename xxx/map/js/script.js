@@ -34,6 +34,7 @@
 			for (var i = 0; i < route.legs.length; i++) {
 				var routeSegment = i + 1;
 			alert("total distance" + route.legs[i].distance.text)
+			alert ("total duration" + route.legs[i].duration.text);
         
 			}
 			}
@@ -41,9 +42,10 @@
 				$("#error").append("Unable to retrieve your route<br />");
 			}
 		});
-		
+		var directionsDisplay = new google.maps.DirectionsRenderer({ 'draggable': true });
 		var trafficLayer = new google.maps.TrafficLayer();
 		trafficLayer.setMap(mapObject);
+		directionsDisplay.setPanel(document.getElementById('dvPanel'));
 	}
 	
 

@@ -49,6 +49,8 @@
 	</div>
 	<div id="map"></div>
 	<p id="error"></p>
+	
+	<div id="dvPanel"></div>
 	<script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
 </body>

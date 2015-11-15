@@ -13,6 +13,7 @@
 		// Draw the map
 		var mapObject = new google.maps.Map(document.getElementById("map"), myOptions);
 		var directionsService = new google.maps.DirectionsService();
+		  var directionsDisplay = new google.maps.DirectionsRenderer;
 		var directionsRequest = {
 			origin: from ,
 			destination: to ,
@@ -27,6 +28,14 @@
 				map: mapObject,
 				directions: response
 				});
+				directionsDisplay.setDirections(response);
+				var route = response.routes[0];
+				 // For each route, display summary information.
+			for (var i = 0; i < route.legs.length; i++) {
+				var routeSegment = i + 1;
+			alert("total distance" + route.legs[i].distance.text)
+        
+			}
 			}
 			else {
 				$("#error").append("Unable to retrieve your route<br />");
@@ -43,10 +52,13 @@
 	}
 	
 	function getLocation() {
+	
+		
 		if (navigator.geolocation) {
 			navigator.geolocation.getCurrentPosition(function(position){
 				latitude = position.coords.latitude; 
 				longitude = position.coords.longitude;	
+				alert (latitude);
 				var geocoder = new google.maps.Geocoder();
 				var location = new google.maps.LatLng(latitude,longitude);
 				geocoder.geocode({'latLng': location},function(results, status) {

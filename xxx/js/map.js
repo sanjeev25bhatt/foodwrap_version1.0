@@ -99,6 +99,7 @@
 		$("#calculate-route").submit(function(event) {
 			event.preventDefault();
 			alert("I am an alert box inside submit!");
+			$("#map").css("height","+=600");
 			calculateRoute($("#from").val(), $("#to").val());
 		});
 	});

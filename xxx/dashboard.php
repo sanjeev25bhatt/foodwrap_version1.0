@@ -13,7 +13,7 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="css/dashb.css">
+	<link rel="stylesheet" href="css/dashb.css">
     <!-- Custom CSS -->
     <link href="css/sb-admin.css" rel="stylesheet">
 
@@ -30,6 +30,11 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+	
+			<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+			<script src="js/map.js"></script>
+	
 </head>
 
 <body>
@@ -46,14 +51,14 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Fresh wrapp</a>
+                <a class="navbar-brand" href="index.php">Fresh wrapp</a>
             </div>
            
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                     <li class="active">
-                        <a href="index.html"><i class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></i> Home</a>
+                        <a href="index.php"><i class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></i> Home</a>
                     </li>
                     <li>
                         <a href="#"><i class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></i> Profile</a>
@@ -200,15 +205,56 @@
                     </div>
                 </div>
                 <!-- /.row -->
-
+					
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="panel panel-default" style="height: 491px;">
+                        <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Area Chart</h3>
                             </div>
                             <div class="panel-body">
-                                <div id="morris-area-chart"></div>
+                                <div id="morris-area-chart">
+										
+									<div class="container padded">
+										<div class="row">
+											<div class="col-sm-8">
+												<h2>Track your order
+												<span id="caption">(Calculate your route)</span></h2><hr>
+												<form id="calculate-route" method="POST" action="#" class="form-horizontal tpad" name="calculate-route" role="form">
+													<div class="form-group">
+														<div class="row">
+															<label for="from" class="col-sm-2 control-label">Address:</label>					
+															<div class="col-sm-7">
+																<input type="text" id="from" class="form-control" name="from" placeholder="An address"/>
+															</div>
+															<div class="col-sm-3">
+																<a id="from-link" href="">Get my position</a>
+															</div>
+														</div>
+													</div>
+													<div class="form-group tpad">
+														<div class="row">
+															<label for="to" class="col-sm-2 control-label">To:</label>
+															<div class="col-sm-7">
+																<input type="text" id="to" class="form-control" name="to" placeholder="Another address"/>
+															</div>
+															<div class="col-sm-3"></div>
+														</div>
+													</div>
+													<div class="form-group tpad">
+														<div class="col-lg-offset-2 col-lg-10">
+															<input type="submit" class="btn btn-primary btn-md" />
+															<input type="reset" class="btn btn-primary btn-md" />
+														</div>
+													</div>
+												</form>
+											</div>
+										</div>
+									</div>
+								<div id="map"></div>
+								<p id="error"></p>
+								<div id="dvPanel"></div>
+								</div>
                             </div>
                         </div>
                     </div>
@@ -372,7 +418,7 @@
     <script src="js/plugins/morris/raphael.min.js"></script>
     <script src="js/plugins/morris/morris.min.js"></script>
     <script src="myscripts.js"></script>
-<script src="gridData.js"></script>
+	<script src="gridData.js"></script>
 </body>
 
 </html>

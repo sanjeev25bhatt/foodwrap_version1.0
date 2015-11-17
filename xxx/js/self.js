@@ -7,10 +7,12 @@
 				$("#my-reg").html(data);
 				$('#show-it').show("fast");
 				$('#show-it-logout').removeClass('hidden');
+				$('#show-it-dashboard').removeClass('hidden');
 			} else if(hide=='5'){
 				$('#hide-it').removeClass('hidden');
 				$('#hide-it-login').removeClass('hidden');
 				$('#show-it-logout').addClass('hidden');
+				$('#show-it-dashboard').addClass('hidden');
 			}
 		});
 	});
@@ -120,6 +122,7 @@ $(document).ready(function() {
 					$("#my-reg").html(data);
 					$('#show-it').show("fast");
 					$('#show-it-logout').removeClass('hidden');
+					$('#show-it-dashboard').removeClass('hidden');
 				}
 			});
 		}

@@ -2,7 +2,6 @@
 	function calculateRoute(from, to) {
 		var latitude;
 		var longitude;
-		alert ("from " + from + " TO " + to);
 		var myOptions = {
 			zoom: 10,
 			disableDefaultUI: false,
@@ -35,7 +34,6 @@
 				var routeSegment = i + 1;
 			alert("total distance" + route.legs[i].distance.text)
 			alert ("total duration" + route.legs[i].duration.text);
-        
 			}
 			}
 			else {
@@ -60,7 +58,6 @@
 			navigator.geolocation.getCurrentPosition(function(position){
 				latitude = position.coords.latitude; 
 				longitude = position.coords.longitude;	
-				alert (latitude);
 				var geocoder = new google.maps.Geocoder();
 				var location = new google.maps.LatLng(latitude,longitude);
 				geocoder.geocode({'latLng': location},function(results, status) {
@@ -98,7 +95,7 @@
 
 		$("#calculate-route").submit(function(event) {
 			event.preventDefault();
-			alert("I am an alert box inside submit!");
+			$('#buttons-above-map').removeClass('hidden');
 			$("#map").css("height","+=600");
 			calculateRoute($("#from").val(), $("#to").val());
 		});

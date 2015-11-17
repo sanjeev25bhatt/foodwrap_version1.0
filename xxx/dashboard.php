@@ -1,3 +1,9 @@
+<?php
+	include "chat/connect.php";
+	require ('core.inc.php');
+	if((isset($_SESSION['user_id'])&&!empty($_SESSION['user_id']))||(isset($_COOKIE['user_id'])&&!empty($_COOKIE['user_id']))){
+		
+?>
 
 <html lang="en">
 
@@ -22,23 +28,20 @@
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<style type="text/css">
+		#dvPanel{
+			display: none;
+		}
+		
+		
+	</style>
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-	
-			<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
-			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-			<script src="js/map.js"></script>
+	<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	
 </head>
 
 <body>
-
     <div id="wrapper">
 
         <!-- Navigation -->
@@ -101,7 +104,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Dashboard <small>Sanjeev</small>
+                            Dashboard <small id="user-name"></small>
                         </h1>
                         <ol class="breadcrumb">
                             <li class="active">
@@ -213,8 +216,6 @@
                                 <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Area Chart</h3>
                             </div>
                             <div class="panel-body">
-                                <div id="morris-area-chart">
-										
 									<div class="container padded">
 										<div class="row">
 											<div class="col-sm-8">
@@ -251,10 +252,20 @@
 											</div>
 										</div>
 									</div>
+									<div class="container padded">
+										<div class="row">
+											<div class="col-sm-4 col-sm-offset-8">
+												<span class="hidden" id="buttons-above-map">
+													<a id="toggle-route" href="javascript:void(0);" class="btn btn-default btn-sm"></a>
+													
+													
+												</span>
+											</div>
+										</div>
+									</div>
+									<div id="dvPanel"></div>
+								<div id="error"></div>
 								<div id="map"></div>
-								<p id="error"></p>
-								<div id="dvPanel"></div>
-								</div>
                             </div>
                         </div>
                     </div>
@@ -413,12 +424,16 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-
-    <!-- Morris Charts JavaScript -->
-    <script src="js/plugins/morris/raphael.min.js"></script>
-    <script src="js/plugins/morris/morris.min.js"></script>
-    <script src="myscripts.js"></script>
-	<script src="gridData.js"></script>
+	
+	<script src="js/map.js"></script>
+    <script src="js/dashboard.js"></script>
 </body>
 
 </html>
+<?php
+	} else {
+?>
+<h1>Kindly log in and continue</h1>
+<?php
+	}
+?>

@@ -118,9 +118,6 @@
 
 
 
-
-<a href="chat/chat-div.php">Link for chat</a>
-
 <!--Footer Starts-->
 <?php
 	include "footer.php";

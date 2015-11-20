@@ -33,38 +33,31 @@
     </div>
 </nav>
 
-	<div id="admin-chat" class="container">
-    <div class="row">
-        <div class="col-md-5">
-            <div class="panel panel-primary">
-                <div class="panel-heading">
-                    <span class="glyphicon glyphicon-comment"></span><strong class="chat-with">User</strong>
-                    <div class="btn-group pull-right">
-                        <button class="btn btn-default btn-xs" type="button">
-                            <span class="glyphicon glyphicon-chevron-down"></span>
-                        </button>
-                    </div>
-                </div>
-                <div class="panel-body">
-                    <ul id="admin-chat-material" class="chat">
-                        
+	<div class="chat_wrap panel panel-primary">
+                <div class="toggle"><h3>Online Chat Support</h3></a>
+				</div>
+				<div class="chat">
+					<div class="panel-heading">
+					<header>
+						<h3 class="toggle chat-with">Online Support</h3>
+					</header>
+					</div>
+					<div class="chatArea panel-body">
+						<ul id="admin-chat-material" class="chat">
+							
 						</ul>
+					</div>
+					<div class="panel-footer">
+						<div class="input-group">
+							<input class="form-control input-sm" id="btn-admin-input" type="text" placeholder="Type your message here...">
+							<span class="input-group-btn">
+								<button class="btn btn-warning btn-sm" id="btn-chat-admin">Send</button>
+							</span>
 						</div>
-                <div class="panel-footer">
-                    <div class="input-group">
-                        <input class="form-control input-sm" id="btn-admin-input" type="text" placeholder="Type your message here...">
-                        <span class="input-group-btn">
-                            <button class="btn btn-warning btn-sm" id="btn-chat-admin">
-                                Send</button>
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+					</div>
+				</div>
+		</div>
 
-<h1 id="pea"><h1>
 	<script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/chat.js"></script>
@@ -72,6 +65,7 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$('#btn-chat-admin').on('click',function(){
+				$('.panel-body').scrollTop($('.panel-body')[0].scrollHeight);
 				var chattext = $('#btn-admin-input').val();
 				$.post('chat-admin.php', { chat: chattext}, function(data){
 					$('#admin-chat-material').load('DisplayAdminMessages.php');
@@ -80,6 +74,7 @@
 			});
 			$('#btn-admin-input').bind('keypress',function(e) {
 				if(e.keyCode == '13'){
+					$('.panel-body').scrollTop($('.panel-body')[0].scrollHeight);
 					var chattext = $('#btn-admin-input').val();
 					$.post('chat-admin.php', { chat: chattext}, function(data){
 						$('#admin-chat-material').load('DisplayAdminMessages.php');
@@ -87,12 +82,35 @@
 					});
 				}
 			});
-			
 			setInterval(function(){
 				$('#admin-chat-material').load('DisplayAdminMessages.php');
 			},500);
 			
 			$('#admin-chat-material').load('DisplayAdminMessages.php');
+		
+			
+			$('.toggle').click(function(e){
+				var toggleState = $('.chat').css('display');
+				$('.chat').slideToggle(150);
+				if(toggleState == 'none') {
+					$('#toTop').css('display','none');
+					$('div.toggle').css('display','none');
+					$('.chat-with').css('display','block');
+				} else {
+					
+					$('#toTop').css('display','block');
+					$('div.toggle').fadeIn(150);
+				}
+			});
+			
+			
+			
+			
+			$(".toggle").hover(function() {
+				$(this).css('cursor','pointer');
+			}, function() {
+				$(this).css('cursor','auto');
+			});
 		});
 	</script>
 

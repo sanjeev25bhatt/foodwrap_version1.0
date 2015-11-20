@@ -32,8 +32,8 @@
 				 // For each route, display summary information.
 			for (var i = 0; i < route.legs.length; i++) {
 				var routeSegment = i + 1;
-			alert("total distance" + route.legs[i].distance.text)
-			alert ("total duration" + route.legs[i].duration.text);
+			//alert("total distance" + route.legs[i].distance.text);
+			//alert ("total duration" + route.legs[i].duration.text);
 			}
 			}
 			else {

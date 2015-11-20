@@ -119,36 +119,35 @@ html, body, .container {
 div.chat_wrap {
 	bottom: 0;
 	display: block;
-	font-size: .85em;
+	font-size: .95em;
 	position: fixed;
 	right: 3rem;
-	width: 410px;
+	width: 360px;
 }
 
 div.chat_wrap > div.toggle {
-	background: rgb(240,240,240);
+	background: rgba(62,77,132,1);
 	border: 1px solid rgba(0,0,0,0);
-	color: rgba(0,0,0,.4);
-	display: none;
+	color: rgb(255,255,255);
+	display: block;
+	width:360px;
 	font-weight: bold;
 	padding: 0;
 	text-align: center;
+}
+.chat{
+	display: none;
 }
 	
 .panel-heading {
 	background: rgba(62,77,132,1);
 }
 
-
 .chat-with {
 	color: rgb(255,255,255);
-	display:block;
+	display:none;
 	margin: 0;
 	padding: 0;	
 	text-align: center;
 }
-
-
-
-
 

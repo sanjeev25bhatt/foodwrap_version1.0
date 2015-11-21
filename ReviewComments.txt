@@ -9,6 +9,11 @@ Reviewed Comments
 
 - chat need to be aligned in better shape 
 
+- Online chat is working only with logging - Bug need to be fixed 
+- Payment gateway (pal  pal) sandbox is working fine 
+-CCAvnue need to be integrated .
+
+
 
 
 

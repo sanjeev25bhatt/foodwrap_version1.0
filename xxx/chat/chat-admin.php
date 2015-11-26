@@ -2,7 +2,7 @@
 	include "connect.php";
 	require ('core.php');
 	if(isset($_SESSION['admin_id'])&&!empty($_SESSION['admin_id'])){
-			$userid = '8';
+			$userid = '12';
 			$adminid = $_SESSION['admin_id'];
 			$chattext = $_POST['chat'];
 			$by = 'admin';

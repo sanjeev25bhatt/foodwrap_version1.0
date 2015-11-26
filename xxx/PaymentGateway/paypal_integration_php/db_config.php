@@ -2,7 +2,7 @@
 //Database credentials
 $dbHost = 'localhost';
 $dbUsername = 'root';
-$dbPassword = 'root';
+$dbPassword = '';
 $dbName = 'a_database';
 //Connect with the database
 $db = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);

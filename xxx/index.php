@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Fresh Wraap</title>
+    <title>Fresh Wraap changed</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/self.css" rel="stylesheet">
@@ -16,14 +16,24 @@
 
 <!--Navigation bar starts-->
 <?php
-	include "nav-bar.php";
+include "nav-bar.php";
 ?>
 <!--Navigation bar ends-->
-
+<?php
+class index
+{
+    function main()
+    {
+       // echo ("testing");
+    }
+}
+?>
 
 <!--Carousal Starts-->
 <?php
-	include "carousel.php";
+include "carousel.php";
+$m = new index();
+$m->main();
 ?>
 <!--Carousal Ends-->
 
@@ -118,8 +128,9 @@
 
 <!--Chat box-->
 <?php
-	if((isset($_SESSION['user_id'])&&!empty($_SESSION['user_id']))||(isset($_COOKIE['user_id'])&&!empty($_COOKIE['user_id']))){
-		
+if ((isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) || (isset($_COOKIE['user_id']) &&
+    !empty($_COOKIE['user_id']))) {
+
 ?>
 	    <div class="chat_wrap panel panel-primary">
                 <div class="toggle"><h3>Online Chat Support</h3></a>
@@ -146,7 +157,7 @@
 				</div>
 		</div>
 <?php
-	}
+}
 ?>
         
 
@@ -154,7 +165,7 @@
 
 <!--Footer Starts-->
 <?php
-	include "footer.php";
+include "footer.php";
 ?>
 <!--Footer Ends-->
 	

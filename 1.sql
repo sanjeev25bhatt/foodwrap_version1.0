@@ -22,9 +22,11 @@ SET time_zone = "+00:00";
 -- Table structure for table `admin`
 --
 use a_database ;
-drop table payments ;
-drop table products ;
-drop table admin ;
-drop table chat ;
-drop table users ;
-drop table users1 ;
+DROP TABLE IF EXISTS payments;
+DROP TABLE IF EXISTS products;
+DROP TABLE IF EXISTS admin;
+DROP TABLE IF EXISTS chat;
+DROP TABLE IF EXISTS map_markers ;
+DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS users1;
+

@@ -60,7 +60,7 @@ CREATE TABLE IF NOT EXISTS `chat` (
 -- Table structure for table `map-markers`
 --
 
-CREATE TABLE IF NOT EXISTS `map-markers` (
+CREATE TABLE IF NOT EXISTS `map_markers` (
 `id` int(11) NOT NULL,
   `description` varchar(25) NOT NULL,
   `name` varchar(25) NOT NULL,
@@ -73,7 +73,7 @@ CREATE TABLE IF NOT EXISTS `map-markers` (
 -- Dumping data for table `map-markers`
 --
 
-INSERT INTO `map-markers` (`id`, `description`, `name`, `latitude`, `longitude`, `content`) VALUES
+INSERT INTO `map_markers` (`id`, `description`, `name`, `latitude`, `longitude`, `content`) VALUES
 (1, 'restaurant', 'PRAKASH RESTAURANT', 29.86968, 77.890167, 'a high class restaurant of roorkee\r\ngood facilities and food in reasonable price'),
 (2, 'bar', 'HOTEL ROYAL PALACE', 29.869081, 77.889277, 'its a restaurant with a bar and a hotel..\r\nHere chicken is really awesome.'),
 (3, 'restaurant', 'PANJABI DHABA', 29.864084, 77.889197, 'another non veg venue'),
@@ -157,7 +157,7 @@ ALTER TABLE `chat`
 --
 -- Indexes for table `map-markers`
 --
-ALTER TABLE `map-markers`
+ALTER TABLE `map_markers`
  ADD PRIMARY KEY (`id`);
 
 --
@@ -195,7 +195,7 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=52;
 --
 -- AUTO_INCREMENT for table `map-markers`
 --
-ALTER TABLE `map-markers`
+ALTER TABLE `map_markers`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `payments`

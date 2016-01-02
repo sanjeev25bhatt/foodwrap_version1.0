@@ -12,7 +12,7 @@ Reviewed Comments
 - Online chat is working only with logging - Bug need to be fixed 
 - Payment gateway (pal  pal) sandbox is working fine 
 -CCAvnue need to be integrated .
-
+- Dummy Admin page is created .
 
 
 

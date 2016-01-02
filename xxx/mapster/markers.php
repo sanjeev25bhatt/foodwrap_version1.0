@@ -3,7 +3,7 @@
 	require ('core.inc.php');
 
 	if((!isset($_SESSION['user_id'])&&empty($_SESSION['user_id']))||(!isset($_COOKIE['user_id'])&&empty($_COOKIE['user_id']))){
-		$query = "SELECT * FROM `map-markers`";
+		$query = "SELECT * FROM `map_markers`";
 		if($query_run = mysqli_query($dbc, $query)){
 			$query_num_rows = mysqli_num_rows($query_run);
 			

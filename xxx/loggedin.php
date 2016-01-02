@@ -1,4 +1,4 @@
-<?php
+w<?php
  include "chat/connect.php";
  require('core.inc.php');
 

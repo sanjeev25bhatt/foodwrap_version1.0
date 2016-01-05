@@ -198,44 +198,25 @@
                             <div class="panel-heading">
                             <!--create form-->
                         <form name="insert_form" method="post" action="insertprocess.php">
-
-
-    <table>
-    <tr>
-    <th>
-     Product ID: 
-     </th>
-      <th>
-       Product Name:                    
-    </th>
-    </tr>
-    
-   
-    <tr>
-      <td><input name="product_ID" type="checkbox" ></td>
-      <td><input name="product_Name" type="text"></td>
-    </tr>
-    <tr>
-    <td>
-      <button type="submit" class="btn btn-default">Add </button>
-    </td>
-    <td>
-     <button type="button" class="btn btn-default">Delete </button>
-    </td>
-    <td>
-     <button type="button" class="btn btn-default">Update    </button>
-    </td>
-    </tr>
-    </table>
-                        
-                          
-                              
-                              
-                                </form>
-							
-                            </div>
-							</div></div>
-                
+							<table>
+								<tr>
+									<th>Product ID: </th>
+									<th>Product Name: </th>
+								</tr>
+								<tr>
+									<td><input name="product_ID" type="checkbox" ></td>
+									<td><input name="product_Name" type="text"></td>
+								</tr>
+								<tr>
+									<td><button type="submit" class="btn btn-default">Add </button></td>
+									<td><button type="button" class="btn btn-default">Delete </button></td>
+									<td><button type="button" class="btn btn-default">Update </button></td>
+								</tr>
+							</table>
+						</form>
+					</div>
+				</div>
+				</div></div>     
 <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
 </body>

@@ -9,14 +9,27 @@ $(function() {
 });
 
 $(document).ready(function(){
-	$('#toggle-route').text('Check route');
-	$('#toggle-route').toggle(function() {
-		$('#toggle-route').text('Hide route');
-	},function(){
-		$('#toggle-route').text('Check route');
+	$('#toggle-track').click(function() {
+		if(!$('#place').is(":hidden")){
+			$("#place").slideToggle("fast");
+		}
+		$('#track').slideToggle("slow");
 	});
+	$('#toggle-place').click(function() {
+		if(!$('#track').is(":hidden")){
+			$("#track").slideToggle("fast");
+		}
+		$("#place").slideToggle("slow");
+	});
+	if($("#dvPanel").is(":hidden")){
+		$('#toggle-route').text('Check route');
+	} 
 	$("#toggle-route").click(function(){
+		if($("#dvPanel").is(":hidden")){
+			$('#toggle-route').text('Hide route');
+		} else if(!$("#dvPanel").is(":hidden")){
+			$('#toggle-route').text('Check route');
+		}
 		$("#dvPanel").slideToggle("slow");
 	});
-	
 });

@@ -1,6 +1,4 @@
  
-
-
 @media(min-width:768px) {
     body {
         margin-top: 50px;
@@ -153,4 +151,16 @@ body {
 
 .panel-yellow > a:hover {
     color: #df8a13;
+}
+
+#place{
+	padding: 18px;
+}
+
+#map-canvas {
+	height: 100%;
+}
+
+#buttons-above-map{
+	padding-right: 15px;
 }

@@ -42,7 +42,7 @@
                     </div>
                     <div class="modal-body">
                     <div class="row"><div class="container"><div class="col-lg-12"><input type="image" class="img-responsive fbl-img" src="images/facebook-login.jpg" /></div></div></div>
-                        <hr /><p id="modal-or">or</p><hr />
+                        <div class="row"><div class="col-sm-5"><hr /></div><div class="col-sm-1"><p id="modal-or">or</p></div><div class="col-sm-6"><hr /></div></div>
 						<form method="" action="" class="form-horizontal tpad" role="form">
 							<div class="form-group">
 								<label for="email" class="col-lg-5">Email: </label><br />
@@ -60,9 +60,7 @@
 							<a data-toggle="modal" class="btn btn-large btn-primary" id="old-reg">Log In</a>
 						</form>
 						<div class="row">
-							<div class="container padded">
-								<div class="col-md-5 col-md-offset-1"><strong>Not yet registered? Kindly proceed!</strong><a data-toggle="modal" class="btn btn-primary" id="to-signup-modal">Sign Up</a></div>
-							</div>
+								<div class="pull-right" id="another-modal"><strong>Not yet registered? Kindly proceed!</strong><a data-toggle="modal" class="btn btn-primary" id="to-signup-modal">Sign Up</a></div>
 						</div>
 					
 					</div>
@@ -82,7 +80,7 @@
                     </div>
                     <div class="modal-body">
                         <div class="row"><div class="container"><div class="col-lg-12"><input type="image" class="img-responsive fbs-img" src="images/facebook-signup.jpg" /></div></div></div>
-                        <hr /><p id="modal-or">or</p><hr />
+                        <div class="row"><div class="col-sm-5"><hr /></div><div class="col-sm-1"><p id="modal-or">or</p></div><div class="col-sm-6"><hr /></div></div>
 						<div class="row">
 						<form method="" action="" class="form-horizontal tpad" role="form">
 							<div class="col-sm-6">
@@ -135,9 +133,7 @@
 							<a data-toggle="modal" class="btn btn-large btn-primary" id="new-reg">Sign Up</a>
 						</form></div>
 						<div class="row">
-							<div class="container padded">
-								<div class="col-md-6 col-md-offset-3"><strong>Already a user? Kindly proceed!</strong><a data-toggle="modal" class="btn btn-primary" id="to-login-modal">Log In</a></div>
-							</div>
+								<div class="pull-right" id="another-modal"><strong>Already a user? Kindly proceed!</strong><a data-toggle="modal" class="btn btn-primary" id="to-login-modal">Log In</a></div>
 						</div>
 					</div>
                     

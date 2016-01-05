@@ -34,8 +34,7 @@ $(document).ready(function(){
 				content: '<h2>'+name+'</h2><h4>'+content+'</h4>',
 				icon: 'images/'+description+'.png'
 			});
-			google.maps.event.addListener(marker,"click", function(e){
-					
+			google.maps.event.addListener(marker,"click", function(e){	
 				var infoWindow = new google.maps.InfoWindow({
 					content: '<div id="info">'+this.content+'</div>'
 				});

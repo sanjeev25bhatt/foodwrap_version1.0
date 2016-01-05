@@ -13,7 +13,7 @@
    <td><a href="addform.php"><button type="button" class="btn btn-default">Add Contacts</button></a></td>
    <td><a href="updateform.php"><button type="button" class="btn btn-primary">update Contacts</button></a></td>
    <td><a href="deleteform.php"><button type="button" class="btn btn-primary">delete Contacts</button></a></td>
-   <td><a href= auth.php?logout">Logout</a></td>
+   <td><a href= "auth.php?logout">Logout</a></td>
   <td>
   <form method="" action="">
   <input type="text" name="search" />

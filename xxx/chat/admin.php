@@ -3,7 +3,6 @@
 	require ('core.php');
 	
 	if(isset($_SESSION['admin_id'])&&!empty($_SESSION['admin_id'])){
-		
 ?>		
 <!DOCTYPE html>
 <html lang="en">
@@ -57,6 +56,7 @@
 					</div>
 				</div>
 		</div>
+		<p id="data-hidden"></p>
 
 	<script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -102,9 +102,6 @@
 					$('div.toggle').fadeIn(150);
 				}
 			});
-			
-			
-			
 			
 			$(".toggle").hover(function() {
 				$(this).css('cursor','pointer');
@@ -182,6 +179,7 @@
 	<script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/chat.js"></script>
+	<script type="text/javascript" src="js/online.js"></script>
 	
 	
 </body>

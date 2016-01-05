@@ -2,7 +2,11 @@
 	margin-left:20px;
 }
 #modal-or{
+	padding-top: 10px;
 	text-align: center;
+}
+#another-modal{
+	padding-right: 15px;
 }
 #signup-modal > .modal-dialog{
 	width: 700px;
@@ -81,8 +85,6 @@
 #service{
 	padding-top: 20px;
 }
-
-
 
 .howItWorks{
 	background: url(../images/bg1.jpg) bottom;

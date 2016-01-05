@@ -9,7 +9,7 @@ $(document).ready(function() {
 				show: true,
 			});
 		} else {
-			$.post('admin-login.php', { adminname: adminname, password: adminpass }, function(data) {
+			$.ajax({ type: 'POST', url: 'admin-login.php', data: { adminname: adminname, password: adminpass }}).success(function(data) {
 				var invalid = data;
 				if(invalid=='in'){
 					$('#admin_login').html('Invalid username and password, try again later');
@@ -24,10 +24,27 @@ $(document).ready(function() {
 				}
 			});
 		}
+		
 		$('#bhaagjaa').on('click',function() {
 			$('#admin-modal').modal('hide');
 			
 		});
 		
 	});
+		window.onbeforeunload = function (event) {
+			if (typeof event == 'undefined') {
+				event = window.event;
+			}
+			if (event) {
+				
+			}
+		};
+		$(function () {
+			$("a").not('#lnkLogOut').click(function () {
+				window.onbeforeunload = null;
+			});
+			$(".btn").click(function () {
+				window.onbeforeunload = null;
+		});
+		});
 });

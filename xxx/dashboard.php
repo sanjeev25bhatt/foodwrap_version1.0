@@ -2,7 +2,6 @@
 	include "chat/connect.php";
 	require ('core.inc.php');
 	if((isset($_SESSION['user_id'])&&!empty($_SESSION['user_id']))||(isset($_COOKIE['user_id'])&&!empty($_COOKIE['user_id']))){
-		
 ?>
 
 <html lang="en">
@@ -28,12 +27,18 @@
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	
+	<link rel="stylesheet" href="css/marker.css">
 	<style type="text/css">
 		#dvPanel{
 			display: none;
 		}
-		
-		
+		#track{
+			display: none;
+		}	
+		.dropdown-menu{
+			background-color: black;
+		}
 	</style>
 
 	<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
@@ -78,28 +83,21 @@
                     <li>
                         <a href="bootstrap-grid.html"><i class="pull-right hidden-xs showopacity glyphicon glyphicon-camera"></i> Gallery</a>
                     </li>
-                    <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Dropdown <i class="pull-right hidden-xs showopacity glyphicon glyphicon-collapse-down"></i></a>
-                        <ul id="demo" class="collapse">
-                            <li>
-                                <a href="#">Dropdown Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Dropdown Item</a>
-                            </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-arrows-v"></i> Dropdown <i class="pull-right hidden-xs showopacity glyphicon glyphicon-collapse-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Dropdown Item 1</a></li>
+                            <li><a href="#">Dropdown Item 2</a></li>
                         </ul>
-                    </li>
-                   
-                    
+                    </li>   
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
         </nav>
 
-        <div id="page-wrapper">
+        
 
             <div class="container-fluid">
-
                 <!-- Page Heading -->
                 <div class="row">
                     <div class="col-lg-12">
@@ -108,7 +106,7 @@
                         </h1>
                         <ol class="breadcrumb">
                             <li class="active">
-                                <i class="fa fa-dashboard"></i> Dashboard
+                                <i class="fa fa-dashboard">Dashboard</i> 
                             </li>
                         </ol>
                     </div>
@@ -118,7 +116,7 @@
                 
 
                 <div class="row">
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-3 col-sm-6">
                         <div class="panel panel-primary">
                             <div class="panel-heading">
                                 <div class="row">
@@ -140,7 +138,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-3 col-sm-6">
                         <div class="panel panel-green">
                             <div class="panel-heading">
                                 <div class="row">
@@ -162,7 +160,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-3 col-sm-6">
                         <div class="panel panel-yellow">
                             <div class="panel-heading">
                                 <div class="row">
@@ -184,7 +182,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-3 col-sm-6">
                         <div class="panel panel-red">
                             <div class="panel-heading">
                                 <div class="row">
@@ -210,62 +208,59 @@
                 <!-- /.row -->
 					
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-sm-12">
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Area Chart</h3>
                             </div>
                             <div class="panel-body">
-									<div class="container padded">
-										<div class="row">
-											<div class="col-sm-8">
-												<h2>Track your order
-												<span id="caption">(Calculate your route)</span></h2><hr>
-												<form id="calculate-route" method="POST" action="#" class="form-horizontal tpad" name="calculate-route" role="form">
-													<div class="form-group">
-														<div class="row">
-															<label for="from" class="col-sm-2 control-label">Address:</label>					
-															<div class="col-sm-7">
-																<input type="text" id="from" class="form-control" name="from" placeholder="An address"/>
-															</div>
-															<div class="col-sm-3">
-																<a id="from-link" href="">Get my position</a>
-															</div>
-														</div>
-													</div>
-													<div class="form-group tpad">
-														<div class="row">
-															<label for="to" class="col-sm-2 control-label">To:</label>
-															<div class="col-sm-7">
-																<input type="text" id="to" class="form-control" name="to" placeholder="Another address"/>
-															</div>
-															<div class="col-sm-3"></div>
-														</div>
-													</div>
-													<div class="form-group tpad">
-														<div class="col-lg-offset-2 col-lg-10">
-															<input type="submit" class="btn btn-primary btn-md" />
-															<input type="reset" class="btn btn-primary btn-md" />
-														</div>
-													</div>
-												</form>
-											</div>
-										</div>
+								<a id="toggle-place" href="javascript:void(0);" class="btn btn-default btn-sm">Place Order</a>
+								<a id="toggle-track" href="javascript:void(0);" class="btn btn-default btn-sm">Track Order</a>		
+									<div id="place">
+										<div class="form-group" id="map-canvas"></div>
 									</div>
-									<div class="container padded">
-										<div class="row">
-											<div class="col-sm-4 col-sm-offset-8">
-												<span class="hidden" id="buttons-above-map">
-													<a id="toggle-route" href="javascript:void(0);" class="btn btn-default btn-sm"></a>
+									<div id="track">
+													<h2>Track your order
+													<span id="caption">(Calculate your route)</span></h2>
+													<form id="calculate-route" method="POST" action="#" class="form-horizontal tpad" name="calculate-route" role="form">
+														<div class="form-group">
+															<div class="row">
+																<label for="from" class="col-sm-2 control-label">Address:</label>					
+																<div class="col-sm-7">
+																	<input type="text" id="from" class="form-control" name="from" placeholder="An address"/>
+																</div>
+																<div class="col-sm-3">
+																	<a id="from-link" href="">Get my position</a>
+																</div>
+															</div>
+														</div>
+														<div class="form-group tpad">
+															<div class="row">
+																<label for="to" class="col-sm-2 control-label">To:</label>
+																<div class="col-sm-7">
+																	<input type="text" id="to" class="form-control" name="to" placeholder="Another address"/>
+																</div>
+																<div class="col-sm-3"></div>
+															</div>
+														</div>
+														<div class="form-group tpad">
+															<div class="col-lg-offset-2 col-lg-10">
+																<input id="calculate-route" type="submit" class="btn btn-primary btn-md" />
+																<input type="reset" class="btn btn-primary btn-md" />
+															</div>
+														</div>
+													</form>
 													
-													
-												</span>
+											<div class="row">
+												<div class="hidden pull-right ft_space" id="buttons-above-map">
+														<a id="toggle-route" href="javascript:void(0);" class="btn btn-default btn-sm"></a>
+												</div>
 											</div>
-										</div>
+										
+										<div id="dvPanel"></div>
+										<div id="error"></div>
+										<div id="map"></div>
 									</div>
-									<div id="dvPanel"></div>
-								<div id="error"></div>
-								<div id="map"></div>
                             </div>
                         </div>
                     </div>
@@ -412,21 +407,21 @@
             </div>
             <!-- /.container-fluid -->
 
-        </div>
-        <!-- /#page-wrapper -->
+        
 
     </div>
     <!-- /#wrapper -->
 	
 	
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script src="js/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-	
 	<script src="js/map.js"></script>
-    <script src="js/dashboard.js"></script>
+	<script src="js/marker.js"></script>
+	<script src="js/dashboard.js"></script>
+
 </body>
 
 </html>

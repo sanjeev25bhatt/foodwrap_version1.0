@@ -125,7 +125,7 @@ $m->main();
         </div>
     </div>       
 </div>
-
+<div class="hidden"><h2 id="data_hidden"></h2></div>
 <!--Chat box-->
 <?php
 if ((isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) || (isset($_COOKIE['user_id']) &&
@@ -143,7 +143,7 @@ if ((isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) || (isset($_CO
 					</div>
 					<div class="chatArea panel-body">
 						<ul id="user-chat" class="chat">
-							
+							<a id="find_admin" class="btn btn-primary" href="">Find admin</a>
 						</ul>
 					</div>
 					<div class="panel-footer">
@@ -175,13 +175,29 @@ include "footer.php";
 	
 	<script type="text/javascript">
 		$(document).ready(function() {
+			var modal;
+			function free_admin(){
+				$.ajax({type:'POST', url:'chat/free_admin.php', success:function(data){
+					id_return = data;
+				}, async: false
+				});
+				return id_return;
+			}
+			$('#find_admin').on('click', function(){
+				modal = free_admin();
+			});
 			$('#btn-chat-user').on('click',function(){
 				$('.panel-body').scrollTop($('.panel-body')[0].scrollHeight);
 				var chattext = $('#btn-user-input').val();
+				alert(window.modal);
 				$.post('chat/chat-user.php', { chat: chattext}, function(data){
 					$('#user-chat').load('chat/DisplayUserMessages.php');
 					$('#btn-user-input').val("");
 				});
+				setInterval(function(){
+					$('#user-chat').load('chat/DisplayUserMessages.php');
+				},500);
+			
 			});
 			$('#btn-user-input').bind('keypress',function(e) {
 				if(e.keyCode == '13'){
@@ -191,13 +207,13 @@ include "footer.php";
 						$('#user-chat').load('chat/DisplayUserMessages.php');
 						$('#btn-user-input').val("");
 					});
+					setInterval(function(){
+						$('#user-chat').load('chat/DisplayUserMessages.php');
+					},500);
+			
 				}
 			});
-			setInterval(function(){
-				$('#user-chat').load('chat/DisplayUserMessages.php');
-			},500);
 			
-			$('#user-chat').load('chat/DisplayUserMessages.php');
 		
 			
 			$('.toggle').click(function(e){

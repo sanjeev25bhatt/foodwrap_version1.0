@@ -10,12 +10,7 @@
 		$query = "SELECT * FROM `chat` WHERE `user-id`='".mysql_real_escape_string($user_id)."'";
 		if($query_run = mysqli_query($dbc, $query)){
 			$query_num_rows = mysqli_num_rows($query_run);
-			if($query_num_rows==0){
-?>
-<a><li><div class="chat-body clearfix"><h2>We are here to provide you whatever you want.</h2></div></li></a>
-
-<?php
-			} else {
+			if($query_num_rows!=0){
 				while($user_row = mysqli_fetch_array($query_run)){
 					$chat_text = $user_row['chat-text'];
 					$chat_who = $user_row['by'];

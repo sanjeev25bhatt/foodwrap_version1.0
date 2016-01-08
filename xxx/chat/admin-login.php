@@ -14,7 +14,9 @@ require ('core.php');
 						echo 'in';
 					} else if($query_num_rows==1){
 						while($admin_id_row = mysqli_fetch_array($query_run)){
-						$_SESSION['admin_id'] = $admin_id_row['id'];
+							$_SESSION['admin_id'] = $admin_id_row['id'];
+							$query1 = "UPDATE `admin` SET `online`='10' WHERE id='".mysql_real_escape_string($_SESSION['admin_id'])."'";
+							$query1_run = mysqli_query($dbc, $query1);
 						}	
 						echo $_SESSION['admin_id'];
 					}

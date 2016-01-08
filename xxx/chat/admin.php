@@ -56,7 +56,6 @@
 					</div>
 				</div>
 		</div>
-		<p id="data-hidden"></p>
 
 	<script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -102,13 +101,32 @@
 					$('div.toggle').fadeIn(150);
 				}
 			});
-			
 			$(".toggle").hover(function() {
 				$(this).css('cursor','pointer');
 			}, function() {
 				$(this).css('cursor','auto');
 			});
+		
+		window.onbeforeunload = function (event) {
+			if (typeof event == 'undefined') {
+				event = window.event;
+			}
+			if (event) {
+				var admin_id = <?php echo(json_encode($_SESSION['admin_id']));?>;
+				$.post('online.php', {admin_id: admin_id}, function(data) {
+					return data;
+				});
+			}
+		};
+		$(function () {
+			$("a").not('#lnkLogOut').click(function () {
+				window.onbeforeunload = null;
+			});
+			$(".btn").click(function () {
+				window.onbeforeunload = null;
+			});
 		});
+	});
 	</script>
 
 	<script type="text/javascript" src="js/online.js"></script>

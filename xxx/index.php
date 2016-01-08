@@ -174,7 +174,9 @@ include "footer.php";
 	<script type="text/javascript" src="js/self.js"></script>
 	
 	<script type="text/javascript">
+    var modal = "" ;
 		$(document).ready(function() {
+		 // alert (tt);
 			var modal;
 			function free_admin(){
 				$.ajax({type:'POST', url:'chat/free_admin.php', success:function(data){
@@ -184,12 +186,19 @@ include "footer.php";
 				return id_return;
 			}
 			$('#find_admin').on('click', function(){
-				modal = free_admin();
-			});
+			   
+                 
+                 
+				//modal = free_admin();
+                localStorage.setItem("modal", free_admin());
+              });
 			$('#btn-chat-user').on('click',function(){
+			 
+			 alert (localStorage.getItem("modal"));
 				$('.panel-body').scrollTop($('.panel-body')[0].scrollHeight);
 				var chattext = $('#btn-user-input').val();
 				alert(window.modal);
+                
 				$.post('chat/chat-user.php', { chat: chattext}, function(data){
 					$('#user-chat').load('chat/DisplayUserMessages.php');
 					$('#btn-user-input').val("");

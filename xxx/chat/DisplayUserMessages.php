@@ -10,7 +10,11 @@
 		$query = "SELECT * FROM `chat` WHERE `user-id`='".mysql_real_escape_string($user_id)."'";
 		if($query_run = mysqli_query($dbc, $query)){
 			$query_num_rows = mysqli_num_rows($query_run);
-			if($query_num_rows!=0){
+			if($query_num_rows==0){
+?>
+<li><p> You are connected with the live chat room.</p></li>
+<?php
+			} else {	
 				while($user_row = mysqli_fetch_array($query_run)){
 					$chat_text = $user_row['chat-text'];
 					$chat_who = $user_row['by'];

@@ -19,8 +19,6 @@
 
 
 $(document).ready(function() {
-    
-	
 	//scroll to the top button
 	var $newdiv1 = $( "<div id='toTop' class='btn btn-primary'><i class='glyphicon glyphicon-arrow-up'></i>Back to Top</div>" );
 	$('body').append($newdiv1);

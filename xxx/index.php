@@ -19,21 +19,10 @@
 include "nav-bar.php";
 ?>
 <!--Navigation bar ends-->
-<?php
-class index
-{
-    function main()
-    {
-       // echo ("testing");
-    }
-}
-?>
 
 <!--Carousal Starts-->
 <?php
 include "carousel.php";
-$m = new index();
-$m->main();
 ?>
 <!--Carousal Ends-->
 
@@ -126,13 +115,20 @@ $m->main();
     </div>       
 </div>
 <div class="hidden"><h2 id="data_hidden"></h2></div>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/self.js"></script>
+	
 <!--Chat box-->
 <?php
-if ((isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) || (isset($_COOKIE['user_id']) &&
-    !empty($_COOKIE['user_id']))) {
-
+if ((isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) || (isset($_COOKIE['user_id']) && !empty($_COOKIE['user_id']))) {
+	if(isset($_SESSION['user_id'])&&!empty($_SESSION['user_id'])){
+		$userid = $_SESSION['user_id'];
+	} else if(isset($_COOKIE['user_id'])&&!empty($_COOKIE['user_id'])){
+		$userid = $_COOKIE['user_id'];
+	}
 ?>
-	    <div class="chat_wrap panel panel-primary">
+	    <div id="chat_wrap" class="chat_wrap panel panel-primary">
                 <div class="toggle"><h3>Online Chat Support</h3></a>
 				</div>
 				<div class="chat">
@@ -143,7 +139,7 @@ if ((isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) || (isset($_CO
 					</div>
 					<div class="chatArea panel-body">
 						<ul id="user-chat" class="chat">
-							<a id="find_admin" class="btn btn-primary" href="">Find admin</a>
+							<a id="find_admin" class="btn btn-primary" href="javascript:void(0);">Find admin</a>
 						</ul>
 					</div>
 					<div class="panel-footer">
@@ -156,6 +152,76 @@ if ((isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) || (isset($_CO
 					</div>
 				</div>
 		</div>
+		
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var modal;
+			function free_admin(user){
+				$.ajax({type:'POST', url:'chat/free_admin.php',data: { user_id: user}, success: function(data){
+					id_return = data;
+				}, async: false
+				});
+				return id_return;
+			}
+			$('#find_admin').on('click', function(){
+				var u_id = <?php echo(json_encode($userid));?>;
+                localStorage.setItem("modal", free_admin(u_id));
+				var $a = localStorage.getItem("modal");
+				if($a>0){					
+					setInterval(function(){
+						$('#user-chat').load('chat/DisplayUserMessages.php');
+					},2000);
+				} else {
+					$('#find_admin').after('<p>' + $a + '</p>')
+					$("#find_admin").addClass('hidden');
+				}
+              });
+			  
+			$('#btn-chat-user').on('click',function(){
+				var x = localStorage.getItem("modal");
+				$('.panel-body').scrollTop($('.panel-body')[0].scrollHeight);
+				var chattext = $('#btn-user-input').val();
+				if(x>0){
+					$.post('chat/chat-user.php', { chat: chattext, admin_id: x}, function(data){
+						$('#btn-user-input').val("");
+					});	
+				} 
+			});
+			$('#btn-user-input').bind('keypress',function(e) {
+				if(e.keyCode == '13'){
+					var x = localStorage.getItem("modal");
+					$('.panel-body').scrollTop($('.panel-body')[0].scrollHeight);
+					var chattext = $('#btn-user-input').val();
+					if(x>0){
+						$.post('chat/chat-user.php', { chat: chattext, admin_id: x}, function(data){
+							$('#btn-user-input').val("");
+						});	
+					}
+				}
+			});
+			
+			$('.toggle').click(function(e){
+				var toggleState = $('.chat').css('display');
+				if(toggleState == 'none') {
+					$('div.toggle').css('display','none');
+					$('.chat').slideToggle(350);
+					$('#toTop').css('display','none');
+					$('.chat-with').css('display','block');
+				} else {					
+					$('.chat').slideToggle(350).promise().done(function(){
+						$('div.toggle').css('display','block');
+						$('#toTop').css('display','block');
+					});
+				}
+			});
+			
+			$(".toggle").hover(function() {
+				$(this).css('cursor','pointer');
+			}, function() {
+				$(this).css('cursor','auto');
+			});
+		});
+	</script>
 <?php
 }
 ?>
@@ -168,90 +234,7 @@ if ((isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) || (isset($_CO
 include "footer.php";
 ?>
 <!--Footer Ends-->
-	
-	<script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/self.js"></script>
-	
-	<script type="text/javascript">
-    var modal = "" ;
-		$(document).ready(function() {
-		 // alert (tt);
-			var modal;
-			function free_admin(){
-				$.ajax({type:'POST', url:'chat/free_admin.php', success:function(data){
-					id_return = data;
-				}, async: false
-				});
-				return id_return;
-			}
-			$('#find_admin').on('click', function(){
-			   
-                 
-                 
-				//modal = free_admin();
-                localStorage.setItem("modal", free_admin());
-              });
-			$('#btn-chat-user').on('click',function(){
-			 
-			 alert (localStorage.getItem("modal"));
-				$('.panel-body').scrollTop($('.panel-body')[0].scrollHeight);
-				var chattext = $('#btn-user-input').val();
-				alert(window.modal);
-                
-				$.post('chat/chat-user.php', { chat: chattext}, function(data){
-					$('#user-chat').load('chat/DisplayUserMessages.php');
-					$('#btn-user-input').val("");
-				});
-				setInterval(function(){
-					$('#user-chat').load('chat/DisplayUserMessages.php');
-				},500);
-			
-			});
-			$('#btn-user-input').bind('keypress',function(e) {
-				if(e.keyCode == '13'){
-					$('.panel-body').scrollTop($('.panel-body')[0].scrollHeight);
-					var chattext = $('#btn-user-input').val();
-					$.post('chat/chat-user.php', { chat: chattext}, function(data){
-						$('#user-chat').load('chat/DisplayUserMessages.php');
-						$('#btn-user-input').val("");
-					});
-					setInterval(function(){
-						$('#user-chat').load('chat/DisplayUserMessages.php');
-					},500);
-			
-				}
-			});
-			
-		
-			
-			$('.toggle').click(function(e){
-				var toggleState = $('.chat').css('display');
-				$('.chat').slideToggle(150);
-				if(toggleState == 'none') {
-					$('#toTop').css('display','none');
-					$('div.toggle').css('display','none');
-					$('.chat-with').css('display','block');
-				} else {
-					
-					$('#toTop').css('display','block');
-					$('div.toggle').fadeIn(150);
-				}
-			});
-			
-			
-			
-			
-			$(".toggle").hover(function() {
-				$(this).css('cursor','pointer');
-			}, function() {
-				$(this).css('cursor','auto');
-			});
-		});
-	</script>
-	
+
 	<script type="text/javascript" src="chat/js/chat.js"></script>
-	
-	
-  </body>
+	</body>
 </html>

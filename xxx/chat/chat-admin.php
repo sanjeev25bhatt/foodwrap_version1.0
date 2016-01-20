@@ -2,13 +2,13 @@
 	include "connect.php";
 	require ('core.php');
 	if(isset($_SESSION['admin_id'])&&!empty($_SESSION['admin_id'])){
-			$userid = '12';
-			$adminid = $_SESSION['admin_id'];
-			$chattext = $_POST['chat'];
-			$by = 'admin';
+		$userid = $_POST['userid'];
+		$adminid = $_SESSION['admin_id'];
+		$chattext = $_POST['chat'];
+		$by = 'admin';
+		if(isset($chattext)&&!empty($chattext)){
 			$query = "INSERT INTO `chat` VALUES('','$userid','$adminid','$chattext','$by')";
-			if($query_run = mysqli_query($dbc, $query)){
-				echo $adminid;
-			} 
+			$query_run = mysqli_query($dbc, $query); 
+		}
 	} 
 ?>

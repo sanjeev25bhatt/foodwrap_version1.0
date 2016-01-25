@@ -9,7 +9,7 @@
 		}
 		$order_id = $_POST['order_id'];
 		if(isset($order_id)&&!empty($order_id)){
-			$query = "SELECT * FROM `map-tracker` WHERE `order_id`='".mysql_real_escape_string($order_id)."' AND `user_id`='".mysql_real_escape_string($user_id)."'";
+			$query = "SELECT * FROM `map_tracker` WHERE `order_id`='".mysql_real_escape_string($order_id)."' AND `user_id`='".mysql_real_escape_string($user_id)."'";
 			if($query_run = mysqli_query($dbc, $query)){
 				$query_num_rows = mysqli_num_rows($query_run);
 				

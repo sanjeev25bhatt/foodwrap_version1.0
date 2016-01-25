@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 20, 2016 at 05:18 PM
+-- Generation Time: Jan 25, 2016 at 06:05 PM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -75,7 +75,7 @@ CREATE TABLE IF NOT EXISTS `chat` (
   `admin-id` int(11) NOT NULL,
   `chat-text` varchar(500) NOT NULL,
   `by` varchar(10) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `chat`
@@ -94,32 +94,61 @@ INSERT INTO `chat` (`id`, `user-id`, `admin-id`, `chat-text`, `by`) VALUES
 (10, 13, 2, 'i got it', 'admin'),
 (11, 14, 2, 'yo', 'admin'),
 (12, 12, 2, 'yo', 'admin'),
-(13, 13, 2, 'yo man', 'admin');
+(13, 13, 2, 'yo man', 'admin'),
+(14, 13, 1, 'heay', 'admin'),
+(15, 14, 1, 'yups', 'admin'),
+(16, 14, 1, 'hi vicky', 'admin'),
+(17, 13, 1, 'hi there', 'admin');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `map-markers`
+-- Table structure for table `map_markers`
 --
 
-CREATE TABLE IF NOT EXISTS `map-markers` (
+CREATE TABLE IF NOT EXISTS `map_markers` (
 `id` int(11) NOT NULL,
   `description` varchar(25) NOT NULL,
   `name` varchar(25) NOT NULL,
+  `city` varchar(30) NOT NULL,
   `latitude` double NOT NULL,
   `longitude` double NOT NULL,
   `content` varchar(500) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `map-markers`
+-- Dumping data for table `map_markers`
 --
 
-INSERT INTO `map-markers` (`id`, `description`, `name`, `latitude`, `longitude`, `content`) VALUES
-(1, 'restaurant', 'PRAKASH RESTAURANT', 29.86968, 77.890167, 'a high class restaurant of roorkee\r\ngood facilities and food in reasonable price'),
-(2, 'bar', 'HOTEL ROYAL PALACE', 29.869081, 77.889277, 'its a restaurant with a bar and a hotel..\r\nHere chicken is really awesome.'),
-(3, 'restaurant', 'PANJABI DHABA', 29.864084, 77.889197, 'another non veg venue'),
-(4, 'delievery', 'DOMINOS', 29.871517, 77.892003, 'a place for pizza lover..\r\nHome delievery is also available, call 6888-6888');
+INSERT INTO `map_markers` (`id`, `description`, `name`, `city`, `latitude`, `longitude`, `content`) VALUES
+(1, 'restaurant', 'PRAKASH RESTAURANT', 'Roorkee', 29.869738, 77.890167, 'a high class restaurant of roorkee\r\ngood facilities and food in reasonable price'),
+(2, 'bar', 'HOTEL ROYAL PALACE', 'Roorkee', 29.869081, 77.889277, 'its a restaurant with a bar and a hotel..\r\nHere chicken is really awesome.'),
+(3, 'restaurant', 'PANJABI DHABA', 'Roorkee', 29.864084, 77.889197, 'another non veg venue'),
+(4, 'delievery', 'DOMINOS', 'Roorkee', 29.871517, 77.892003, 'a place for pizza lover..\r\nHome delievery is also available, call 6888-6888'),
+(5, 'restaurant', 'PATANJALI YOGPITH', 'Roorkee', 29.907368, 78.001535, 'A place for herb lovers. Residence of ram dev baba.');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `map_tracker`
+--
+
+CREATE TABLE IF NOT EXISTS `map_tracker` (
+`tracking_id` int(11) NOT NULL,
+  `order_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `user_lat` double NOT NULL,
+  `user_lng` double NOT NULL,
+  `order_lat` double NOT NULL,
+  `order_lng` double NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `map_tracker`
+--
+
+INSERT INTO `map_tracker` (`tracking_id`, `order_id`, `user_id`, `user_lat`, `user_lng`, `order_lat`, `order_lng`) VALUES
+(1, 1, 12, 29.871517, 77.892003, 29.867533, 77.889539);
 
 -- --------------------------------------------------------
 
@@ -205,10 +234,16 @@ ALTER TABLE `chat`
  ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `map-markers`
+-- Indexes for table `map_markers`
 --
-ALTER TABLE `map-markers`
+ALTER TABLE `map_markers`
  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `map_tracker`
+--
+ALTER TABLE `map_tracker`
+ ADD PRIMARY KEY (`tracking_id`);
 
 --
 -- Indexes for table `payments`
@@ -246,12 +281,17 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 -- AUTO_INCREMENT for table `chat`
 --
 ALTER TABLE `chat`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=14;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=18;
 --
--- AUTO_INCREMENT for table `map-markers`
+-- AUTO_INCREMENT for table `map_markers`
 --
-ALTER TABLE `map-markers`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+ALTER TABLE `map_markers`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+--
+-- AUTO_INCREMENT for table `map_tracker`
+--
+ALTER TABLE `map_tracker`
+MODIFY `tracking_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `payments`
 --

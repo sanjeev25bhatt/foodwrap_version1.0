@@ -18,6 +18,7 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/jquery-ui.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/dashb.css">
     <!-- Custom CSS -->
     <link href="css/sb-admin.css" rel="stylesheet">
@@ -43,7 +44,6 @@
 
 	<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-	
 </head>
 
 <body>
@@ -216,47 +216,33 @@
                             <div class="panel-body">
 								<a id="toggle-place" href="javascript:void(0);" class="btn btn-default btn-sm">Place Order</a>
 								<a id="toggle-track" href="javascript:void(0);" class="btn btn-default btn-sm">Track Order</a>		
-									<div id="place">
+								<hr><div id="place">
+										<h2 class="heading">Find Nearby Restaurants</h2>
+										<div class="form-group">
+											<div class="row padded">
+												<div class="col-sm-4">
+													<input type="text" id="city" class="form-control" placeholder="Your City">
+												</div>
+												<div class="col-sm-5">
+													<input type="text" id="from" class="form-control" name="from" placeholder="Enter an area"/>
+												</div>
+												<div id="spin-animation" class="col-sm-3">
+													<a id="from-link" href="">Get my position</a>
+												</div>
+											</div>
+										</div>										
+										<a id="find-res" href="javascript:void(0);" class="btn btn-default btn-md">Find Restaurants</a>
 										<div class="form-group" id="map-canvas"></div>
 									</div>
 									<div id="track">
-													<h2>Track your order
-													<span id="caption">(Calculate your route)</span></h2>
-													<form id="calculate-route" method="POST" action="#" class="form-horizontal tpad" name="calculate-route" role="form">
-														<div class="form-group">
-															<div class="row">
-																<label for="from" class="col-sm-2 control-label">Address:</label>					
-																<div class="col-sm-7">
-																	<input type="text" id="from" class="form-control" name="from" placeholder="An address"/>
-																</div>
-																<div class="col-sm-3">
-																	<a id="from-link" href="">Get my position</a>
-																</div>
-															</div>
-														</div>
-														<div class="form-group tpad">
-															<div class="row">
-																<label for="to" class="col-sm-2 control-label">To:</label>
-																<div class="col-sm-7">
-																	<input type="text" id="to" class="form-control" name="to" placeholder="Another address"/>
-																</div>
-																<div class="col-sm-3"></div>
-															</div>
-														</div>
-														<div class="form-group tpad">
-															<div class="col-lg-offset-2 col-lg-10">
-																<input id="calculate-route" type="submit" class="btn btn-primary btn-md" />
-																<input type="reset" class="btn btn-primary btn-md" />
-															</div>
-														</div>
-													</form>
-													
+												<h2 class="heading">Track your order<span id="caption">(Calculate your route)</span></h2>
+												<a id="calculate-route" class="btn btn-primary btn-md">Track your order</a>
+												<a class="btn btn-primary btn-md">Reset</a>
 											<div class="row">
 												<div class="hidden pull-right ft_space" id="buttons-above-map">
-														<a id="toggle-route" href="javascript:void(0);" class="btn btn-default btn-sm"></a>
+													<a id="toggle-route" href="javascript:void(0);" class="btn btn-default btn-sm"></a>
 												</div>
 											</div>
-										
 										<div id="dvPanel"></div>
 										<div id="error"></div>
 										<div id="map"></div>
@@ -415,13 +401,12 @@
 	
     <!-- jQuery -->
     <script src="js/jquery.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
+    <script src="js/jquery-ui.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+	<script src="js/marker-clusterer.js"></script>
 	<script src="js/map.js"></script>
 	<script src="js/marker.js"></script>
 	<script src="js/dashboard.js"></script>
-
 </body>
 
 </html>

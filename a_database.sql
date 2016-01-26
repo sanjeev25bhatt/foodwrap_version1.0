@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 26, 2016 at 10:03 AM
+-- Generation Time: Jan 26, 2016 at 11:22 AM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -145,14 +145,16 @@ CREATE TABLE IF NOT EXISTS `map_tracker` (
   `user_lng` double NOT NULL,
   `order_lat` double NOT NULL,
   `order_lng` double NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `map_tracker`
 --
 
 INSERT INTO `map_tracker` (`tracking_id`, `order_id`, `user_id`, `user_lat`, `user_lng`, `order_lat`, `order_lng`) VALUES
-(1, 1, 12, 28.632237, 77.3526, 28.664271, 77.479468);
+(1, 1, 12, 28.632237, 77.3526, 28.664271, 77.479469),
+(2, 2, 12, 28.632237, 77.3526, 28.662313, 77.478212),
+(3, 3, 12, 28.632237, 77.3526, 28.660148, 77.476764);
 
 -- --------------------------------------------------------
 
@@ -295,7 +297,7 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
 -- AUTO_INCREMENT for table `map_tracker`
 --
 ALTER TABLE `map_tracker`
-MODIFY `tracking_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+MODIFY `tracking_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `payments`
 --

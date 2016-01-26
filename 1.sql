@@ -1,0 +1,10 @@
+use a_database ;
+DROP TABLE IF EXISTS payments;
+DROP TABLE IF EXISTS products;
+DROP TABLE IF EXISTS admin;
+DROP TABLE IF EXISTS admin_panel;
+DROP TABLE IF EXISTS admin_status;
+DROP TABLE IF EXISTS chat;
+DROP TABLE IF EXISTS map_markers ;
+DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS users1;

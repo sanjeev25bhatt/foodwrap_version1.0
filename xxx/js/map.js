@@ -1,8 +1,9 @@
 	var des;
 	var sou;
+	var oid = 1;
 	
-	function findLocation() {
-		$.ajax({type:'POST', url:'track.php',data: { order_id: '1'}, dataType: 'json', success: function(data){
+	function findLocation(oid) {
+		$.ajax({type:'POST', url:'track.php',data: { order_id: oid}, dataType: 'json', success: function(data){
 			for(var i=0;data[i]['user_lat']!='';i++) {
 				user_lat = data[i]['user_lat'];
 				user_lng = data[i]['user_lng'];
@@ -33,7 +34,8 @@
 		var directionsDisplay = new google.maps.DirectionsRenderer;
 
 		var interval = setInterval(function() {
-			findLocation();
+			findLocation(oid);
+			oid+=1;
 			var directionsRequest = {
 				origin: localStorage.getItem("des") ,
 				destination: localStorage.getItem("sou"),

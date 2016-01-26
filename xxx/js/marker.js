@@ -125,9 +125,6 @@ $(document).ready(function(){
 		var map = new google.maps.Map(mapDiv, options);
 		var markers = [];
 		var bounds = new google.maps.LatLngBounds();
-		var directionsService = new google.maps.DirectionsService();
-		var directionsDisplay = new google.maps.DirectionsRenderer;
-
 		// user as a marker
 		var latlng = new google.maps.LatLng(lat, lng);
 		var mark = new google.maps.Marker({
@@ -142,11 +139,30 @@ $(document).ready(function(){
 			for(var i=0;data[i]['latitude']!='';i++){
 				var latitude = data[i]['latitude'];
 				var longitude = data[i]['longitude'];
+				var distance;
+				
+				// checking the distance between markers and user
+				var directionsService = new google.maps.DirectionsService();
+				var	directionsDisplay = new google.maps.DirectionsRenderer();
+				var start = lat+","+lng;
+				var end = latitude+","+longitude;
+				var request = {
+					origin:start, 
+					destination:end,
+					travelMode: google.maps.DirectionsTravelMode.DRIVING
+				};
+				directionsService.route(request, function(response, status) {
+					if (status == google.maps.DirectionsStatus.OK) {
+						distance = response.routes[0].legs[0].distance.value / 1000;
+					}
+				});
+				
 				var id = data[i]['id'];
 				var content = data[i]['content'];
 				var description = data[i]['description'];
 				var latlng = new google.maps.LatLng(latitude, longitude);
-				var name = data[i]['name'];	
+				var name = data[i]['name'];
+				
 				var marker = new google.maps.Marker({
 					position: latlng,
 					map: map,
@@ -171,8 +187,8 @@ $(document).ready(function(){
 				google.maps.event.addListener(marker,"click", function(e){
 					
 				});
+				
 			}
-			
 		}, async: false
 		});
 		map.fitBounds(bounds);	

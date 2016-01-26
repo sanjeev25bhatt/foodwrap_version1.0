@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 26, 2016 at 06:49 AM
+-- Generation Time: Jan 26, 2016 at 10:03 AM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -152,7 +152,7 @@ CREATE TABLE IF NOT EXISTS `map_tracker` (
 --
 
 INSERT INTO `map_tracker` (`tracking_id`, `order_id`, `user_id`, `user_lat`, `user_lng`, `order_lat`, `order_lng`) VALUES
-(1, 1, 12, 29.871517, 77.892003, 29.867533, 77.889539);
+(1, 1, 12, 28.632237, 77.3526, 28.664271, 77.479468);
 
 -- --------------------------------------------------------
 

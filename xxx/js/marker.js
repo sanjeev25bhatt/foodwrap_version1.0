@@ -58,25 +58,25 @@ $(document).ready(function(){
 		latitude: 28.641438,
 		longitude: 77.295583,
 		content: 'A place for chicken lovers, enjoy a bucket now at just Rs. 549',
-		description: 'delievery',
+		description: 'chicken',
 		name: 'KFC'
 	},{
 		latitude: 28.639169,
 		longitude: 77.295014,
 		content: 'a place for pizza lover.. Home delievery is also available, call 6888-6888',
-		description: 'delievery',
+		description: 'pizza',
 		name: 'Dominos Pizza'
 	},{
 		latitude: 28.634691,
 		longitude: 77.290991,
-		content: 'One and only Asian Restaurant of New Delhi, be with us and enjoy happy evening meals',
-		description: 'restaurant',
+		content: 'One and only chinese Restaurant of New Delhi, be with us and enjoy happy evening meals',
+		description: 'chinese',
 		name: 'Berco\'s Restaurant'
 	},{
 		latitude: 28.626306,
 		longitude: 77.285744,
 		content: 'A non veg venue, a place for chicken lovers',
-		description: 'restaurant',
+		description: 'chicken',
 		name: 'Nazeer\'s Food Corner'
 	}];
 	
@@ -139,7 +139,7 @@ $(document).ready(function(){
 		bounds.extend(mark.position);
 		
 		$.ajax({type:'POST', url:'markers.php', data: { city: city}, dataType: 'json', success: function(data){
-			for(var i=1;data[i]['latitude']!='';i++){
+			for(var i=0;data[i]['latitude']!='';i++){
 				var latitude = data[i]['latitude'];
 				var longitude = data[i]['longitude'];
 				var id = data[i]['id'];

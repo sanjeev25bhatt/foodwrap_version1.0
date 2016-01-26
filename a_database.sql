@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 25, 2016 at 06:05 PM
+-- Generation Time: Jan 26, 2016 at 06:49 AM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -114,7 +114,7 @@ CREATE TABLE IF NOT EXISTS `map_markers` (
   `latitude` double NOT NULL,
   `longitude` double NOT NULL,
   `content` varchar(500) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `map_markers`
@@ -123,9 +123,13 @@ CREATE TABLE IF NOT EXISTS `map_markers` (
 INSERT INTO `map_markers` (`id`, `description`, `name`, `city`, `latitude`, `longitude`, `content`) VALUES
 (1, 'restaurant', 'PRAKASH RESTAURANT', 'Roorkee', 29.869738, 77.890167, 'a high class restaurant of roorkee\r\ngood facilities and food in reasonable price'),
 (2, 'bar', 'HOTEL ROYAL PALACE', 'Roorkee', 29.869081, 77.889277, 'its a restaurant with a bar and a hotel..\r\nHere chicken is really awesome.'),
-(3, 'restaurant', 'PANJABI DHABA', 'Roorkee', 29.864084, 77.889197, 'another non veg venue'),
-(4, 'delievery', 'DOMINOS', 'Roorkee', 29.871517, 77.892003, 'a place for pizza lover..\r\nHome delievery is also available, call 6888-6888'),
-(5, 'restaurant', 'PATANJALI YOGPITH', 'Roorkee', 29.907368, 78.001535, 'A place for herb lovers. Residence of ram dev baba.');
+(3, 'chicken', 'PANJABI DHABA', 'Roorkee', 29.864084, 77.889197, 'another non veg venue'),
+(4, 'pizza', 'DOMINOS', 'Roorkee', 29.871517, 77.892003, 'a place for pizza lover..\r\nHome delievery is also available, call 6888-6888'),
+(5, 'restaurant', 'PATANJALI YOGPITH', 'Roorkee', 29.907368, 78.001535, 'A place for herb lovers. Residence of ram dev baba.'),
+(6, 'restaurant', 'TUNDAY KABABI', 'New Delhi', 28.638733, 77.365607, 'Food quality is average and prices are reasonable.'),
+(7, 'fastfood', 'McDonalds', 'New Delhi', 28.634285, 77.370474, 'Classic, long-running fast-food chain known for its burgers, fries & shakes.'),
+(8, 'restaurant', 'Cinnamon Kitchen', 'New Delhi', 28.638511, 77.361783, 'Contemporary design and a full bar give this Indian and Chinese restaurant a funky edge.'),
+(9, 'pizza', 'DOMINOS', 'New Delhi', 28.638141, 77.360436, 'a place for pizza lover..\r\nHome delievery is also available, call 6888-6888');
 
 -- --------------------------------------------------------
 
@@ -286,7 +290,7 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=18;
 -- AUTO_INCREMENT for table `map_markers`
 --
 ALTER TABLE `map_markers`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `map_tracker`
 --

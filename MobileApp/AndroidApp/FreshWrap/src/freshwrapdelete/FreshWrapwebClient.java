@@ -1,4 +1,4 @@
-package com.freshwrapp.Androidapp;
+package freshwrapdelete;
 
 import android.net.Uri;
 import android.webkit.WebView;

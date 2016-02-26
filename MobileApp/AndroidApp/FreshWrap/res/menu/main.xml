@@ -3,9 +3,28 @@
     tools:context="com.example.test.MainActivity" >
 
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/search"
+       android:title="search"
+        android:icon="@drawable/search"
+         android:showAsAction="always"
+        
+       />
+    <item
+        android:id="@+id/username"
+        android:icon="@drawable/adduser"
+        android:title="user"
+        android:visible="true" 
+         android:showAsAction="always" 
+       />
+    <item
+        android:id="@+id/shoppingcart"
+        android:icon="@drawable/cart"
+        android:title="shoppingcart"
+        android:visible="true"
         android:orderInCategory="100"
-        android:showAsAction="never"
-        android:title="@string/action_settings"/>
+          android:showAsAction="always" 
+        />
+        
+
 
 </menu>

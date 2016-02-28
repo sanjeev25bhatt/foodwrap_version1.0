@@ -22,11 +22,13 @@
 					<li><a href="#">Delievery</a></li>
                 </ul>
             </li>
-			<li class="hidden" id="hide-it"><form action=""><a href="" data-toggle="modal" class="btn btn-danger navbar-btn to-signup">Sign Up</a></form></li>
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+			<li class="hidden" id="hide-it"><form><a href="" data-toggle="modal" class="btn btn-danger navbar-btn to-signup">Sign Up</a></form></li>
 			<li class="hidden" id="hide-it-login"><a href="" data-toggle="modal" class="to-login">Log in</a></li>
 			<li id="show-it"><a href="#"id="my-reg"></a></li>
-			<li class="hidden" id="show-it-dashboard"><a href="dashboard.php">Visit dashboard</a></li>
-			<li class="hidden" id="show-it-logout"><form action=""><a href="logout.php" class="btn btn-danger navbar-btn">Log out</a></form></li>
+			<li class="hidden" id="show-it-dashboard"><a href="dashboard.php">Dashboard</a></li>
+			<li class="hidden" id="show-it-logout"><form><a href="logout.php" class="btn btn-danger navbar-btn">Log out</a></form></li>	
 		</ul>
     </div>
 </nav>

@@ -20,19 +20,36 @@
 
 $(document).ready(function() {
 	//scroll to the top button
-	var $newdiv1 = $( "<div id='toTop' class='btn btn-primary'><i class='glyphicon glyphicon-arrow-up'></i>Back to Top</div>" );
+	var $newdiv1 = $( "<div id='toTop'><span id='Top' class='glyphicon glyphicon-chevron-up'></span></div>" );
+	var $chat = $("<div id='open_chat' class='cd_btn'><span id='Chat' class='glyphicon glyphicon-comment'></span></div>");
 	$('body').append($newdiv1);
-    	$(window).scroll(function () {
-			if ($(this).scrollTop() != 0) {
-				$('#toTop').fadeIn();
-			} else {
-				$('#toTop').fadeOut();
-			}
-		}); 
+	$('body').append($chat);
+    $(window).scroll(function () {
+		if ($(this).scrollTop() != 0) {
+			$('#toTop').fadeIn();
+		} else {
+			$('#toTop').fadeOut();
+		}
+	}); 
     $('#toTop').click(function(){
         $("html, body").animate({ scrollTop: 0 }, 600);
         return false;
     });
+	
+	$('#open_chat').on('click', function() {
+		event.preventDefault();
+		$('.cd-panel').addClass('is-visible');
+		$('#open_chat').addClass('hidden');
+		$('#toTop').addClass('hidden');
+	});
+	$('.cd-panel').on('click', function(event){
+		if( $(event.target).is('.cd-panel') || $(event.target).is('.cd-panel-close') ) { 
+			$('.cd-panel').removeClass('is-visible');
+			$('#open_chat').removeClass('hidden');
+			$('#toTop').removeClass('hidden');
+			event.preventDefault();
+		}
+	});
 	
 	//auto active
 	$("#index a:contains('Home')").parent().addClass('active');

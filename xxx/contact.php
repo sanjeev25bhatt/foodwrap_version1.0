@@ -19,17 +19,17 @@
 ?>
 <!--Navbar ends-->
 <div>
-<div class="map">
-	<iframe width="100%" height="400px" frameborder="0" scrolling="no" marginheight="no" marginwidth="no" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.7602366648107!2d77.3707827798427!3d28.6369471999864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5535873a947%3A0xebbf22864f7d31c9!2s21%2C+Cassia+Rd%2C+Shipra+Suncity%2C+Indirapuram%2C+Ghaziabad%2C+Uttar+Pradesh+201014%2C+India!5e0!3m2!1sen!2s!4v1445271690373"></iframe><br />
+	<div class="map">
+		<iframe width="100%" height="400px" frameborder="0" scrolling="no" marginheight="no" marginwidth="no" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.7602366648107!2d77.3707827798427!3d28.6369471999864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5535873a947%3A0xebbf22864f7d31c9!2s21%2C+Cassia+Rd%2C+Shipra+Suncity%2C+Indirapuram%2C+Ghaziabad%2C+Uttar+Pradesh+201014%2C+India!5e0!3m2!1sen!2s!4v1445271690373"></iframe><br />
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<small><a href="https://www.google.com/maps/place/21,+Cassia+Rd,+Shipra+Suncity,+Indirapuram,+Ghaziabad,+Uttar+Pradesh+201014,+India/@28.6369472,77.3707828,17z/data=!4m2!3m1!1s0x390ce5535873a947:0xebbf22864f7d31c9" target="_blank">View Larger map</a></small>
+			</div>
+		</div>
+	</div>
 </div>
-
-<div class="container">
-	<div class="row">
-	<div class="col-lg-12">
-	<small><a href="https://www.google.com/maps/place/21,+Cassia+Rd,+Shipra+Suncity,+Indirapuram,+Ghaziabad,+Uttar+Pradesh+201014,+India/@28.6369472,77.3707828,17z/data=!4m2!3m1!1s0x390ce5535873a947:0xebbf22864f7d31c9" target="_blank">View Larger map</a></small>
-	</div>
-	</div>
-</div></div>
 
 <div class="container padded">
     <div class="row">

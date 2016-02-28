@@ -21,10 +21,10 @@
 					if($chat_who == 'user'){
 						
 ?>
-<a><li id="float-right" class="right clearfix">
+<a class="messages"><li id="float-right" class="right clearfix">
     <div class="chat-body clearfix">
         <p><?php echo $chat_text; ?>
-			<small class=" text-muted"><span class="glyphicon glyphicon-time"></span>Just now</small>
+			<small class="text-muted"><span class="glyphicon glyphicon-time"></span>Just now</small>
         </p>
     </div>
 </li></a>
@@ -32,7 +32,7 @@
 <?php
 					} else if($chat_who == 'admin'){
 ?>
-<a><li id="float-left" class="left clearfix">
+<a class="messages"><li id="float-left" class="left clearfix">
 	<div  id="move-right" class="chat-body clearfix">
         <p><?php echo $chat_text; ?>
 		<small class="pull-right text-muted"><span class="glyphicon glyphicon-time"></span>Just now</small>

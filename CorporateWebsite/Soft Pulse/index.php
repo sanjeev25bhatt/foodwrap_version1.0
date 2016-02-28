@@ -62,6 +62,7 @@
             <li><a href="#tf-services" class="page-scroll">Services</a></li>
             <li><a href="#tf-works" class="page-scroll">Portfolio</a></li>
             <li><a href="#tf-testimonials" class="page-scroll">Testimonials</a></li>
+            <li><a href="#tf-careers" class="page-scroll">Carrer</a></li>
             <li><a href="#tf-contact" class="page-scroll">Contact</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
@@ -208,31 +209,32 @@
                 <em></em>
             </div>
             <div class="row tpad">
-                <div class="col-sm-6 col-md-3 col-lg-4 service">
+                <div class="col-sm-6 col-md-4 service">
                     <i class="fa fa-desktop"></i>
                     <h4><strong>Web design</strong></h4>
                     <p>Designing Wire frame and Responsive Web Experience for the user </p>
                 </div>
 
-                <div class="col-sm-6 col-md-3 col-lg-4 service">
+                <div class="col-sm-6 col-md-4 service">
                     <i class="fa fa-mobile"></i>
                     <h4><strong>Mobile Apps</strong></h4>
                     <p>Designs Mobile App across Various platform - Android ,IOS ,Windows for  Seamless User experience </p>
                 </div>
 
-                <div class="col-sm-6 col-md-3 col-lg-4 service">
+                <div class="col-sm-6 col-md-4 service">
                     <i class="fa fa-stethoscope"></i>
                     <h4><strong>Embedded System - HealthCare & IOT </strong></h4>
                     <p>We Design and Deliver Clinical Solutions in  Health Care domain </p>
                 </div>
 				
-                <div class="col-sm-6 col-md-3 col-lg-4 service">
+				<div class="clearfix visible-md-block"></div>
+                <div class="col-sm-6 col-md-4 service">
                     <i class="fa fa-dashcube"></i>
                     <h4><strong>On-line Product Branding</strong></h4>
                     <p>Works as a On-line Product Branding Partner for Clients . Runs Product Branding Campaigns across various On-line Channels </p>
                 </div>
 
-                <div class="col-sm-6 col-md-3 col-lg-4 service">
+                <div class="col-sm-6 col-md-4 service">
                     <i class="fa fa-bullhorn"></i>
                     <h4><strong>On-line Product Marketing</strong></h4>
                     <p>Product Marketing Partner - Specialize on running On-line Marketing with lasting User Experience on various On-line Social  channels  </p>
@@ -286,7 +288,7 @@
     <div id="tf-works">
         <div class="container"> <!-- Container -->
             <div class="section-title text-center center">
-                <h2>Take a look at <strong>our Product Lines Delivery</strong></h2>
+                <h2 class="resolve">Take a look at <strong>our Product Lines Delivery</strong></h2>
                 <div class="line">
                     <hr>
                 </div>
@@ -421,7 +423,7 @@
         <div class="overlay">
             <div class="container">
                 <div class="section-title center">
-                    <h2><strong>Our clients’</strong> testimonials</h2>
+                    <h2><strong>Our client's</strong> testimonials</h2>
                     <div class="line">
                         <hr>
                     </div>
@@ -449,7 +451,150 @@
             </div>
         </div>
     </div>
+	
+	<!-- Careers Section
+	==========================================-->
+	<div id="tf-careers" class="text-center">
+            <div class="container">
+                <div class="section-title center career">
+                    <h2><strong>Career</strong> and <strong>Job </strong>openings<i id="fly" class="fa fa-paper-plane"></i></h2>
+                    <div class="line">
+                        <hr>
+                    </div>
+                </div>
+                <div id="careers" class="row tpad">
+                    <div class="col-sm-6 col-md-4 col-lg-4 career"> 
+						<i class="fa fa-laptop yo"></i>
+                        <h4><strong>Software Development: </strong><br/>Engineering</h4>
+                        <ul class="about-list">
+                            <li>
+                                <span class="fa fa-dot-circle-o"></span>
+                                <strong>Experience</strong> - <small><em>2 to 4 year's.</em></small>
+                            </li>
+                            <li>
+                                <span class="fa fa-dot-circle-o"></span>
+                                <strong>Qualification</strong> - <small><em>BE/ BTech/ MTech/ MS from Top Institute.</em></small>
+                            </li>
+                            <li>
+                                <span class="fa fa-dot-circle-o"></span>
+                                <strong>Job Location</strong> - <small><em>Pithoragarh (Uttaranchal)– Engineering Development Center.</em></small>
+                            </li>
+							<li>
+                                <span class="fa fa-dot-circle-o"></span>
+                                <strong>Key Responsibilities</strong> - <small><em>
+									<ul class="careers-list">
+										<li>
+											<span class="fa fa-arrow-circle-o-right"></span>
+											<small><em>Sharp Technological Skills .</em></small>
+										</li>
+										<li>
+											<span class="fa fa-arrow-circle-o-right"></span>
+											<small><em>Out of box and passionate to delivery results.</em></small>
+										</li>
+										<li>
+											<span class="fa fa-arrow-circle-o-right"></span>
+											<small><em>Good analytical and problem solving Skills.</em></small>
+										</li>
+									</ul>
+								</em></small>
+                            </li>
+                        </ul>
+                    </div>
 
+					<div class="col-sm-6 col-md-4 col-lg-4 career">
+						<i class="fa fa-suitcase yo"></i>
+						<h4><strong>Bisuness Development Manager: </strong><br/>Sales</h4>
+						<ul class="about-list">
+                            <li>
+                                <span class="fa fa-dot-circle-o"></span>
+                                <strong>Experience</strong> - <small><em>5 to 8 year's.</em></small>
+                            </li>
+                            <li>
+                                <span class="fa fa-dot-circle-o"></span>
+                                <strong>Qualification</strong> - <small><em>MBA from top Bisuness School (MARKETING).</em></small>
+                            </li>
+                            <li>
+                                <span class="fa fa-dot-circle-o"></span>
+                                <strong>Job Location</strong> - <small><em>New Delhi.</em></small>
+                            </li><br class="visible-lg-block visible-md-block visible-sm-block">
+							<li>
+                                <span class="fa fa-dot-circle-o"></span>
+                                <strong>Key Responsibilities</strong> - <small><em>
+									<ul class="careers-list">
+										<li>
+											<span class="fa fa-arrow-circle-o-right"></span>
+											<small><em>Result oriented Marketing Professional with go getter attitude.</em></small>
+										</li>
+										<li>
+											<span class="fa fa-arrow-circle-o-right"></span>
+											<small><em>Good Sales and negotiation Skills.</em></small>
+										</li>
+										<li>
+											<span class="fa fa-arrow-circle-o-right"></span>
+											<small><em>Designing Marketing plan and Business strategies.</em></small>
+										</li>
+										<li>
+											<span class="fa fa-arrow-circle-o-right"></span>
+											<small><em>Past track record on selling Product and Services.</em></small>
+										</li>
+										<li>
+											<span class="fa fa-arrow-circle-o-right"></span>
+											<small><em>Sharp Business and Communication skills.</em></small>
+										</li>
+									</ul>
+								</em></small>
+                            </li>
+                        </ul>
+					</div>
+					<div class="clearfix visible-sm-block"></div>
+					<div class="col-sm-6 col-md-4 col-lg-4 career">
+						<i class="fa fa-line-chart yo"></i>
+						<h4><strong>Online Marketing: </strong><br/>Digital</h4>
+						<ul class="about-list">
+                            <li>
+                                <span class="fa fa-dot-circle-o"></span>
+                                <strong>Experience</strong> - <small><em>5 to 8 year's</em></small>
+                            </li>
+                            <li>
+                                <span class="fa fa-dot-circle-o"></span>
+                                <strong>Qualification</strong> - <small><em>MBA from Top Business School .</em></small>
+                            </li><br class="visible-lg-block visible-md-block">
+                            <li>
+                                <span class="fa fa-dot-circle-o"></span>
+                                <strong>Job Location</strong> - <small><em>New Delhi.</em></small>
+                            </li><br class="visible-lg-block visible-md-block">
+							<li>
+                                <span class="fa fa-dot-circle-o"></span>
+                                <strong>Key Responsibilities</strong> - <small><em>
+									<ul class="careers-list">
+										<li>
+											<span class="fa fa-arrow-circle-o-right"></span>
+											<small><em>Result oriented Marketing Professional with go getter attitude.</em></small>
+										</li>
+										<li>
+											<span class="fa fa-arrow-circle-o-right"></span>
+											<small><em>Good in Designing online marketing campaigns for Software products and services.</em></small>
+										</li>
+										<li>
+											<span class="fa fa-arrow-circle-o-right"></span>
+											<small><em>Track record in Managing online digital Campaign of significant value.</em></small>
+										</li>
+										<li>
+											<span class="fa fa-arrow-circle-o-right"></span>
+											<small><em>Track record on online digital marketing campaign with startup or Products.</em></small>
+										</li>
+										<li>
+											<span class="fa fa-arrow-circle-o-right"></span>
+											<small><em>Sharp Business and Communication skills.</em></small>
+										</li>
+									</ul>
+								</em></small>
+                            </li>
+                        </ul>
+					</div>
+                </div>
+            </div>
+    </div>
     <!-- Contact Section
     ==========================================-->
     <div id="tf-contact-up" class="text-center">

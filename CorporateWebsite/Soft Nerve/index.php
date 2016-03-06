@@ -62,7 +62,7 @@
             <li><a href="#tf-services" class="page-scroll">Services</a></li>
             <li><a href="#tf-works" class="page-scroll">Portfolio</a></li>
             <li><a href="#tf-testimonials" class="page-scroll">Testimonials</a></li>
-             <li><a href="#tf-testimonials" class="page-scroll">Case Studies</a></li>
+             <li><a href="#tf-case-study" class="page-scroll">Case Studies</a></li>
             <li><a href="#tf-careers" class="page-scroll">Career</a></li>
             <li><a href="#tf-contact" class="page-scroll">Contact</a></li>
           </ul>
@@ -596,9 +596,46 @@
                         </ul>
 					</div>
                 </div>
-            </div>
             	<h4><strong>All above positions carry high rewards with Top remuneration ,ESOP (Stocks options)and Flexible Workings hours </strong></h4>
+				<button id="apply" class="btn tf-btn btn-default">Apply</button>
+			</div>
     </div>
+	
+    <!-- Case Study Section
+    ==========================================-->
+    <div id="tf-case-study" class="text-center">
+        <div class="overlay">
+            <div class="container">
+                <div class="section-title center">
+                    <h2><strong>Case Studies</strong></h2>
+                    <div class="line">
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div id="case-study" class="owl-carousel owl-theme">
+                            <div class="item">
+                                <h5>Soft Nerve was part of our product journey from Ideation to  Market and IPR .</h5>
+                                <p><strong>Dean Martin</strong>, CEO Acme Inc.</p>
+                            </div>
+
+                            <div class="item">
+                                <h5>Best in Class Product Design and Delivery Skills for our HealthCare Product Line.</h5>
+                                <p><strong>Louis</strong>, XYZ .</p>
+                            </div>
+
+                            <div class="item">
+                                <h5>Redesign Seemless User Experience for our various Device Categories.</h5>
+                                <p><strong>Mr.Rangu</strong>, VP Device Engineering.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	
     <!-- Contact Section
     ==========================================-->
     <div id="tf-contact-up" class="text-center">

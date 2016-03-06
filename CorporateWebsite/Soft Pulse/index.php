@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9" /><![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Soft Pulse</title>
+    <title>Soft Nerve</title>
     <meta name="description" content="An offshore product Development Company who works to Realize ideas">
     <meta name="author" content="freshwrap.com">
     
@@ -50,7 +50,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">Soft Pulse</a>
+          <a class="navbar-brand" href="index.html">Soft Nerve</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -62,7 +62,8 @@
             <li><a href="#tf-services" class="page-scroll">Services</a></li>
             <li><a href="#tf-works" class="page-scroll">Portfolio</a></li>
             <li><a href="#tf-testimonials" class="page-scroll">Testimonials</a></li>
-            <li><a href="#tf-careers" class="page-scroll">Carrer</a></li>
+             <li><a href="#tf-testimonials" class="page-scroll">Case Studies</a></li>
+            <li><a href="#tf-careers" class="page-scroll">Career</a></li>
             <li><a href="#tf-contact" class="page-scroll">Contact</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
@@ -74,7 +75,7 @@
     <div id="tf-home" class="text-center">
         <div class="overlay">
             <div class="content">
-                <h1>Welcome to <strong><span class="color">Soft Pulse</span></strong></h1>
+                <h1>Welcome to <strong><span class="color">Soft Nerve</span></strong></h1>
                 <p class="lead">We are a offshore product development company ,who <strong>delivers great products </strong>and <strong>realize Peoples Dream. </strong> </p>
                 <a href="#tf-about" class="fa fa-angle-down page-scroll"></a>
             </div>
@@ -94,9 +95,12 @@
                             <hr>
                             <div class="clearfix"></div>
                         </div>
-                        <p class="intro">We are a Young Dynamic Software - Product Design company , with a Team, who deliver products with  <strong>WOW </strong> experience.<br>
-                        We works with the Customer from Ideation till the product releases ,with the Sense of Ownership at every stage of Product Development. <br />
-                         In addition ,Our Expert help our client , in seeking the IPR and Patents for their ideas.  </p>
+                        <p class="intro">We are a Young Dynamic Product Designing company , who deliver products with  <strong>WOW </strong> experience.<br>
+                       As a key Technological Partner we work very closely with customer from Ideation till the product releases with the sense of ownership at every stage of product life development to solve 
+                      Real time user Problems.
+                        
+                      <br />
+                         In addition ,Our Team of expert ,helps customer is seeking the IPR and Patents for their Products or Ideas</p>
                         <ul class="about-list">
                             <li>
                                 <span class="fa fa-dot-circle-o"></span>
@@ -140,7 +144,7 @@
                             <div class="caption">
                                 <h3>Mr. Sanjeev Kumar</h3>
                                 <p>CEO / Founder</p>
-                                <p>Entrepreneur and Worked with Fortune 500 Brands in Product Design and Delivery roles.</p>
+                                <p>Serial Entrepreneur ,having worked with Product Design and Delivery roles for leading Software companies.</p>
                             </div>
 							<ul class="meet-us footer-social">
 								<li><a href="https://in.linkedin.com/pub/sanjeev-kumar-bhatt/13/717/906" target="_blank"><i class="fa fa-linkedin"></i></a></li>
@@ -168,7 +172,7 @@
                             <div class="caption">
                                 <h3>Dr. Sangeeta Bhatt</h3>
                                 <p>Domain Expert – Healthcare</p>
-                                <p>Subject Matter Expert for Software Products and Delivery in Health Care domain .</p>
+                                <p>Subject Matter Expert in Health Care domain.Worked in Drug discovery ,Data Management and Delivery roles.</p>
                             </div>
 							<ul class="meet-us footer-social">
 								<li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
@@ -211,33 +215,32 @@
             <div class="row tpad">
                 <div class="col-sm-6 col-md-4 service">
                     <i class="fa fa-desktop"></i>
-                    <h4><strong>Web design</strong></h4>
-                    <p>Designing Wire frame and Responsive Web Experience for the user </p>
+                    <h4><strong>Web Experience</strong></h4>
+                    <p>Designing Wire frame with responsive Web Experience for the USERS.</p>
                 </div>
 
                 <div class="col-sm-6 col-md-4 service">
                     <i class="fa fa-mobile"></i>
-                    <h4><strong>Mobile Apps</strong></h4>
-                    <p>Designs Mobile App across Various platform - Android ,IOS ,Windows for  Seamless User experience </p>
+                    <h4><strong>Mobility</strong></h4>
+                    <p>Working a Technology Partner for full stack  and software components for server ,client and cloud side on multiple platforms- Android ,IOS ,Windows. </p>
                 </div>
-
                 <div class="col-sm-6 col-md-4 service">
                     <i class="fa fa-stethoscope"></i>
-                    <h4><strong>Embedded System - HealthCare & IOT </strong></h4>
-                    <p>We Design and Deliver Clinical Solutions in  Health Care domain </p>
+                    <h4><strong>Embedded System - HealthCare & Internet Of things (IOT)</strong></h4>
+                    <p>Closely work with Health Care industry on various areas of Drug Management - Clinical Trial,Data Management ,Software Solutions . </p>
                 </div>
 				
-				<div class="clearfix visible-md-block"></div>
-                <div class="col-sm-6 col-md-4 service">
+                            
+		          <div class="col-sm-6 col-md-4 service">
                     <i class="fa fa-dashcube"></i>
                     <h4><strong>On-line Product Branding</strong></h4>
-                    <p>Works as a On-line Product Branding Partner for Clients . Runs Product Branding Campaigns across various On-line Channels </p>
+                    <p>Working as On-line Branding Partner for Clients . And Running very successful product campaigns across multiple On-line Social Channels .</p>
                 </div>
 
                 <div class="col-sm-6 col-md-4 service">
                     <i class="fa fa-bullhorn"></i>
                     <h4><strong>On-line Product Marketing</strong></h4>
-                    <p>Product Marketing Partner - Specialize on running On-line Marketing with lasting User Experience on various On-line Social  channels  </p>
+                    <p>Product Marketing Partner - Specialize on running On-line Marketing camapigns across multiple social channels for upward marketing impact  </p>
                 </div>
             </div>
         </div>
@@ -293,7 +296,7 @@
                     <hr>
                 </div>
                 <div class="clearfix"></div>
-                <em>Soft Pulse Technologies exhibits following Domain Skills  .</em>
+                <em>Soft Nerve Technologies exhibits following Domain Skills  .</em>
             </div>
             <div class="space"></div>
 
@@ -304,9 +307,9 @@
                     <li class="pull-right">
                         <ol class="type">
                             <li><a href="#" data-filter="*" class="active">All</a></li>
-                            <li><a href="#" data-filter=".web">Web Design</a></li>
-                            <li><a href="#" data-filter=".app" >Mobile Apps</a></li>
-                            <li><a href="#" data-filter=".web">Embedded Software - Health Care & IOT</a></li>
+                            <li><a href="#" data-filter=".web">Web Experience</a></li>
+                            <li><a href="#" data-filter=".app" >Mobility</a></li>
+                            <li><a href="#" data-filter=".web">Embedded Systems - Health Care & IOT</a></li>
                             <li><a href="#" data-filter=".branding" >On-line Product Branding</a></li>
                             <li><a href="#" data-filter=".branding">On-line Product Marketing</a></li>
                         </ol>
@@ -432,7 +435,7 @@
                     <div class="col-md-8 col-md-offset-2">
                         <div id="testimonial" class="owl-carousel owl-theme">
                             <div class="item">
-                                <h5>Soft pulse was part of our product journey from Ideation to  Market and IPR .</h5>
+                                <h5>Soft Nerve was part of our product journey from Ideation to  Market and IPR .</h5>
                                 <p><strong>Dean Martin</strong>, CEO Acme Inc.</p>
                             </div>
 
@@ -481,7 +484,7 @@
                             </li>
 							<li>
                                 <span class="fa fa-dot-circle-o"></span>
-                                <strong>Key Responsibilities</strong> - <small><em>
+                                <strong>Key Deliverables</strong> - <small><em>
 									<ul class="careers-list">
 										<li>
 											<span class="fa fa-arrow-circle-o-right"></span>
@@ -503,7 +506,7 @@
 
 					<div class="col-sm-6 col-md-4 col-lg-4 career">
 						<i class="fa fa-suitcase yo"></i>
-						<h4><strong>Bisuness Development Manager: </strong><br/>Sales</h4>
+						<h4><strong>Business Development Manager: </strong><br/>Sales</h4>
 						<ul class="about-list">
                             <li>
                                 <span class="fa fa-dot-circle-o"></span>
@@ -511,7 +514,7 @@
                             </li>
                             <li>
                                 <span class="fa fa-dot-circle-o"></span>
-                                <strong>Qualification</strong> - <small><em>MBA from top Bisuness School (MARKETING).</em></small>
+                                <strong>Qualification</strong> - <small><em>MBA from top Business School (MARKETING).</em></small>
                             </li>
                             <li>
                                 <span class="fa fa-dot-circle-o"></span>
@@ -519,7 +522,7 @@
                             </li><br class="visible-lg-block visible-md-block visible-sm-block">
 							<li>
                                 <span class="fa fa-dot-circle-o"></span>
-                                <strong>Key Responsibilities</strong> - <small><em>
+                                <strong>Key Deliverables</strong> - <small><em>
 									<ul class="careers-list">
 										<li>
 											<span class="fa fa-arrow-circle-o-right"></span>
@@ -539,7 +542,7 @@
 										</li>
 										<li>
 											<span class="fa fa-arrow-circle-o-right"></span>
-											<small><em>Sharp Business and Communication skills.</em></small>
+											<small><em>Sharp Business ,Communication and Presentations skills.</em></small>
 										</li>
 									</ul>
 								</em></small>
@@ -549,7 +552,7 @@
 					<div class="clearfix visible-sm-block"></div>
 					<div class="col-sm-6 col-md-4 col-lg-4 career">
 						<i class="fa fa-line-chart yo"></i>
-						<h4><strong>Online Marketing: </strong><br/>Digital</h4>
+						<h4><strong>On-line Marketing: </strong><br/>Digital</h4>
 						<ul class="about-list">
                             <li>
                                 <span class="fa fa-dot-circle-o"></span>
@@ -565,7 +568,7 @@
                             </li><br class="visible-lg-block visible-md-block">
 							<li>
                                 <span class="fa fa-dot-circle-o"></span>
-                                <strong>Key Responsibilities</strong> - <small><em>
+                                <strong>Key Deliverables</strong> - <small><em>
 									<ul class="careers-list">
 										<li>
 											<span class="fa fa-arrow-circle-o-right"></span>
@@ -573,15 +576,15 @@
 										</li>
 										<li>
 											<span class="fa fa-arrow-circle-o-right"></span>
-											<small><em>Good in Designing online marketing campaigns for Software products and services.</em></small>
+											<small><em>Good in Designing on-line marketing campaigns for Software products and services.</em></small>
 										</li>
 										<li>
 											<span class="fa fa-arrow-circle-o-right"></span>
-											<small><em>Track record in Managing online digital Campaign of significant value.</em></small>
+											<small><em>Track record in Managing on-line digital Campaign of significant value.</em></small>
 										</li>
 										<li>
 											<span class="fa fa-arrow-circle-o-right"></span>
-											<small><em>Track record on online digital marketing campaign with startup or Products.</em></small>
+											<small><em>Track record on running successful on-line digital marketing campaigns with start up or Products .</em></small>
 										</li>
 										<li>
 											<span class="fa fa-arrow-circle-o-right"></span>
@@ -594,6 +597,7 @@
 					</div>
                 </div>
             </div>
+            	<h4><strong>All above positions carry high rewards with Top remuneration ,ESOP (Stocks options)and Flexible Workings hours </strong></h4>
     </div>
     <!-- Contact Section
     ==========================================-->
@@ -607,7 +611,7 @@
                             <hr>
                         </div>
                         <div class="clearfix"></div>
-                        <em>Need a quote, enquiry about our team or have a suggestion for Soft Pulse, we need to hear from you. Drop a line to us, your word is most important to us.</em>         
+                        <em>Need a quote, enquiry about our team or have a suggestion for Soft Nerve, we need to hear from you. Drop a line to us, your word is most important to us.</em>         
                     </div>
 				</div>
 			</div>
@@ -661,7 +665,7 @@
     <nav id="footer">
         <div class="container">
             <div class="pull-left fnav">
-                <p>ALL RIGHTS RESERVED. COPYRIGHT © 2016. Designed by <a href="#">Soft-Pulse Technologies</a>, Pvt ltd </p>
+                <p>ALL RIGHTS RESERVED. COPYRIGHT © 2016. Designed by <a href="#">SoftNerve Technologies</a>, Pvt ltd </p>
             </div>
             <div class="pull-right fnav">
                 <ul class="footer-social">

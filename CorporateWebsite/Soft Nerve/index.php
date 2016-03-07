@@ -6,8 +6,10 @@
     <meta charset="utf-8">
     <!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9" /><![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Soft Nerve</title>
-    <meta name="description" content="An offshore product Development Company who works to Realize ideas">
+	<title>Soft Nerve: Software and Product Development Company</title>
+	<meta name="keywords" content="Software Development New Delhi, Software development, software designing, IPR, Medical Software, Offshore Product Development,softnerve, Software and Product Development New Delhi, Product Development New Delhi, Website Designing, Mobile App Design, Online Marketing, Online Product Branding" />
+	<meta name="robots" content="nofollow" />
+    <meta name="description" content="We are an offshore product Software and Development Company who realize peoples dreams. We have some of the great minds working with us.">
     <meta name="author" content="freshwrap.com">
     
     <!-- Favicons
@@ -18,23 +20,20 @@
     <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
 	
     <!-- Bootstrap -->
-    <link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css"  href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.min.css">
 
     <!-- Slider
     ================================================== -->
-    <link href="css/owl.carousel.css" rel="stylesheet" media="screen">
     <link href="css/owl.theme.css" rel="stylesheet" media="screen">
 
     <!-- Stylesheet
     ================================================== -->
     <link rel="stylesheet" type="text/css"  href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/responsive.css">
 
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400' rel='stylesheet' type='text/css'>
 
-    <script type="text/javascript" src="js/modernizr.custom.js"></script>
 
   </head>
   <body>
@@ -62,9 +61,9 @@
             <li><a href="#tf-services" class="page-scroll">Services</a></li>
             <li><a href="#tf-works" class="page-scroll">Portfolio</a></li>
             <li><a href="#tf-testimonials" class="page-scroll">Testimonials</a></li>
-             <li><a href="#tf-case-study" class="page-scroll">Case Studies</a></li>
             <li><a href="#tf-careers" class="page-scroll">Career</a></li>
-            <li><a href="#tf-contact" class="page-scroll">Contact</a></li>
+             <li><a href="#tf-case-study" class="page-scroll">Case Studies</a></li>
+            <li><a href="#tf-contact-up" class="page-scroll">Contact</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
@@ -614,22 +613,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                        <div id="case-study" class="owl-carousel owl-theme">
-                            <div class="item">
-                                <h5>Soft Nerve was part of our product journey from Ideation to  Market and IPR .</h5>
-                                <p><strong>Dean Martin</strong>, CEO Acme Inc.</p>
-                            </div>
-
-                            <div class="item">
-                                <h5>Best in Class Product Design and Delivery Skills for our HealthCare Product Line.</h5>
-                                <p><strong>Louis</strong>, XYZ .</p>
-                            </div>
-
-                            <div class="item">
-                                <h5>Redesign Seemless User Experience for our various Device Categories.</h5>
-                                <p><strong>Mr.Rangu</strong>, VP Device Engineering.</p>
-                            </div>
-                        </div>
+                        <button id="download" class="btn tf-btn btn-default">Download</button>
                     </div>
                 </div>
             </div>
@@ -676,24 +660,24 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Email address</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                    <label for="Email">Email address</label>
+                                    <input type="email" class="form-control" id="Email" placeholder="Enter email">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Subject</label>
-                                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Subject">
+                                    <label for="Subject">Subject</label>
+                                    <input type="text" class="form-control" id="Subject" placeholder="Subject">
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Message</label>
-                            <textarea class="form-control" rows="3"></textarea>
+                            <label for="Message">Message</label>
+                            <textarea id="Message" class="form-control" rows="3"></textarea>
                         </div>
-                        
-                        <button id="submit" class="btn tf-btn btn-default">Submit</button>
+						<p id="mail_status"></p>
                     </form>
+				   <button id="mail_submit" class="btn tf-btn btn-default">Submit</button>
 				</div>
 			</div>
         </div>
@@ -715,18 +699,29 @@
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script type="text/javascript" src="js/bootstrap.js"></script>
-    <script type="text/javascript" src="js/SmoothScroll.js"></script>
     <script type="text/javascript" src="js/jquery.isotope.js"></script>
-
-    <script src="js/owl.carousel.js"></script>
 
     <!-- Javascripts
     ================================================== -->
     <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript">
+		$(document).ready(function(){
+			$("#mail_submit").on("click", function(){
+				var email = $("#Email").val();
+				var subject = $("#Subject").val();
+				var message = $("#Message").val();
+				if(email!=""&&subject!=""&&message!=""){					
+					$.ajax({type:'POST', url:'Operational/contact/email.php', data: { email: email, subject: subject, message: message}, success: function(data){
+							$("#mail_status").text(data);
+						}, async: false
+					});
+				}
+			});
+		});
+	</script>
 
   </body>
 </html>

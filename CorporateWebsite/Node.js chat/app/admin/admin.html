@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Chat</title>
+		<link rel="stylesheet" href="css/main.css">
+	<script type="text/javascript" src='http://localhost:8080/socket.io/socket.io.js'></script>
+	</head>
+	<body>
+	<form id="login_chat">
+		<div class="login">
+			<strong>adminname: </strong><input type="text" id="login_name" placeholder="Enter your name" /><br />
+			<strong>Password: </strong><input type="password" id="login_pass" placeholder="Enter your password" /><br />
+			<input id="loggedin" type="button" value="Login!">
+		</div>
+	</form>
+	<form class="" id="form">
+		<div class="chat">
+			<div id="chat_with">Online Chat Support</div>
+			<div id="messages" class="chat-messages">
+				<div id="adminname">
+					<input type="text" id="name" class="chat-name" placeholder="Enter your name" />
+				</div>
+				<div id="adminmail">
+					<input type="email" id="email" class="email" placeholder="Enter your email id" />
+				</div>
+				<div id="adminerror"></div>
+				<input id="nameandemail" type="button" name="name" value="Start Chat">
+			</div>
+			<div id="message-input">
+				<textarea id="message" class="chat-textarea" placeholder="Type your message"></textarea>
+			</div>
+			<input id="new" type="submit" name="chat" value="Send!">
+		</div>
+	</form>
+	
+	<form class="" id="another_form">
+		<div class="chat">
+			<div id="another_chat_with">Online Chat Support</div>
+			<div id="another_messages" class="chat-messages">
+				
+			</div>
+			<div id="message-input">
+				<textarea id="another_message" class="chat-textarea" placeholder="Type your message"></textarea>
+			</div>
+			<input id="another_new" type="submit" name="chat" value="Send!">
+		</div>
+	</form>	
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			//creating a connection from the front end, we use forceNew inorder to create a new connection for every new client
+			var socket = io.connect('http://localhost:8080', {'forceNew':true});
+			
+			var $messageForm = $('#form');
+			var $anotherForm = $("#another_form")
+			var $loginForm = $('#login_chat');
+			var $login_btn = $('#loggedin');
+			$('#loggedin').click(function() {
+				var Details = {
+					adminName: document.getElementById("login_name").value,
+					password: document.getElementById("login_pass").value
+				};
+				socket.emit("admin-login", Details, function(data) {
+					if(data){
+						$loginForm.css("display","none");
+						$messageForm.css("display","block");
+					} else {
+						alert('invalid adminname and password');
+					}
+				});
+			});
+			var $message = $('#message');
+			var $another_message = $('#another_message');
+			var $messages = $('#messages');
+			var $another_messages = $('#another_messages');
+			document.getElementById("message").disabled = true;
+			document.getElementById("new").disabled = true;
+			
+			$("#nameandemail").click(function(e) {
+				e.preventDefault();
+				var value_name = $('#name').val();
+				var value_mail = $('#email').val();
+				
+				if(value_name!=''&&value_mail!=''){
+					socket.emit("new admin", value_name, function(data) {
+						if(data){
+							$('#adminname').css("display",'none');
+							$('#adminmail').css("display", 'none');
+							$('#nameandemail').css("display", 'none');
+							document.getElementById("message").disabled = false;
+							document.getElementById("new").disabled = false;
+							$("#adminerror").css("display", "none");
+						} else {
+							$("#adminerror").text("The adminname already exist");
+						}
+					});
+				} else {
+					$("#adminerror").text("Please fill all the above fields");
+				}
+			});
+			
+			socket.on('user ready', function(data) {
+				if(data.noOfUsers == 0){
+					var content = 'be ready to chat with ' + data.name;
+					$("#chat_with").text(data.name);
+					$messages.append('<i>' + content + '</i><br />');
+				} else if(data.noOfUsers == 1){
+						var content = 'be ready to chat with ' + data.name;
+					$("#another_chat_with").text(data.name);
+					$anotherForm.css("display","block");
+					$another_messages.append('<i>' + content + '</i><br />');	
+				}
+			});
+			
+			
+			$messageForm.submit(function(e) {
+				e.preventDefault();
+				var msg_to = $("#chat_with").text();
+				var value = $('#message').val();
+				socket.emit("message-to-user",{msg: value, to: msg_to});
+			});
+			
+			$anotherForm.submit(function(e) {
+				e.preventDefault();
+				var msg_to = $("#another_chat_with").text();
+				var value = $("#another_message").val();
+				socket.emit("message-to-user",{msg: value, to: msg_to});
+			});
+
+			socket.on("user disconnected", function(data) {
+				var check = $("#chat_with").text();
+				var another_check = $("#another_chat_with").text();
+				var content = 'chat has been disconnected by '+data;
+				if(check == data){
+					$messages.append('<i>'+ content +'</i><br />');
+					document.getElementById("message").disabled = true;
+					document.getElementById("new").disabled = true;
+				} else if(another_check == data){
+					$another_messages.append('<i>'+ content +'</i><br />');
+					document.getElementById("another_message").disabled = true;
+					document.getElementById("another_new").disabled = true;
+				}
+			});
+			
+			// listining the data which we are getting from the server
+			socket.on('new-message', function(data) {
+				var u_name = $messages.prev().text();
+				var another_u_name = $another_messages.prev().text();
+				if(u_name == data.name){
+					$messages.append(data.message + "<br />");
+				} else if(another_u_name == data.name){
+					$another_messages.append(data.message + "<br />");
+				}
+			});
+			
+		});
+	</script>
+	</body>
+</html>

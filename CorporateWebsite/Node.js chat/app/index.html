@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Chat</title>
+		<link rel="stylesheet" href="css/main.css">
+	<script type="text/javascript" src='http://localhost:8080/socket.io/socket.io.js'></script>
+	</head>
+	<body>
+	<form class="" id="form">
+		<div class="chat">
+			<div id="chat_with">Online Chat Support</div>
+			<div id="messages" class="chat-messages">
+				<div id="username">
+					<input type="text" id="name" class="chat-name" placeholder="Enter your name" />
+				</div>
+				<div id="usermail">
+					<input type="email" id="email" class="email" placeholder="Enter your email id" />
+				</div>
+				<div id="usererror"></div>
+				<input id="nameandemail" type="button" name="name" value="Start Chat">
+			</div>
+			<div id="message-input">
+				<textarea id="message" class="chat-textarea" placeholder="Type your message"></textarea>
+			</div>
+			<input id="new" type="submit" name="chat" value="Send!">
+		</div>
+	</form>	
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			//creating a connection from the front end, we use forceNew inorder to create a new connection for every new client
+			var socket = io.connect('http://localhost:8080', {'forceNew':true});
+			
+			var $message = $('#message');
+			var $messages = $('#messages');
+			var $messageForm = $('#form');
+			document.getElementById("message").disabled = true;
+			document.getElementById("new").disabled = true;
+		
+			$("#nameandemail").click(function(e) {
+				e.preventDefault();
+				var value_name = $('#name').val();
+				var value_mail = $('#email').val();
+				
+				if(value_name!=''&&value_mail!=''){
+					socket.emit("new user", value_name, function(data) {
+						if(data){
+							$('#username').css("display",'none');
+							$('#usermail').css("display", 'none');
+							$('#nameandemail').css("display", 'none');
+							document.getElementById("message").disabled = false;
+							document.getElementById("new").disabled = false;
+							$("#usererror").css("display", "none");
+						} else {
+							$("#usererror").text("The username already exist");
+						}
+					});
+				} else {
+					$("#usererror").text("Please fill all the above fields");
+				}
+			});
+			
+			socket.on('Finding admin', function(data) {
+				if(data!='Oops'){
+					var content = data + ' has joined the chat';
+					$("#chat_with").text(data);
+					$messages.append('<i>' + content + '</i><br />');
+				} else {
+					$messages.append('<i>' + 'Sorry but no admins are available to chat' + '</i><br />');
+				}
+			})
+			
+			$messageForm.submit(function(e) {
+				e.preventDefault();
+				var msg_to = $("#chat_with").text();
+				var value = $('#message').val();
+				socket.emit("message-to-admin",{msg: value, to: msg_to});
+			});
+			
+			socket.on("admin disconnected", function(data) {
+				var content = 'chat has been disconnected by '+data;
+					$messages.append('<i>'+ content +'</i><br />');
+					document.getElementById("message").disabled = true;
+					document.getElementById("new").disabled = true;
+			});
+			
+			// listining the data which we are getting from the server
+			socket.on('new-message', function(data) {
+				$messages.append(data + "<br />");
+			});
+			
+			
+		});
+	</script>
+	</body>
+</html>

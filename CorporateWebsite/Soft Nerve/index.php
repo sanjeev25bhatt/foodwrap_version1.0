@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -137,19 +138,7 @@
                 </div>
 
                 <div id="team" class="owl-carousel owl-theme row">
-                    <div class="item">
-                        <div class="thumbnail">
-                            <img src="img/team/sanjeev.jpg" alt="..." class="img-circle team-img">
-                            <div class="caption">
-                                <h3>Mr. Sanjeev Kumar</h3>
-                                <p>CEO / Founder</p>
-                                <p>Serial Entrepreneur ,having worked with Product Design and Delivery roles for leading Software companies.</p>
-                            </div>
-							<ul class="meet-us footer-social">
-								<li><a href="https://in.linkedin.com/pub/sanjeev-kumar-bhatt/13/717/906" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-							</ul>
-                        </div>
-                    </div>
+                    
 
                     <div class="item">
                         <div class="thumbnail">
@@ -257,29 +246,7 @@
                         <hr>
                     </div>
                 </div>
-                <div id="clients" class="owl-carousel owl-theme">
-                    <div class="item">
-                        <img src="img/client/01.png">
-                    </div>
-                    <div class="item">
-                        <img src="img/client/02.png">
-                    </div>
-                    <div class="item">
-                        <img src="img/client/03.png">
-                    </div>
-                    <div class="item">
-                        <img src="img/client/04.png">
-                    </div>
-                    <div class="item">
-                        <img src="img/client/05.png">
-                    </div>
-                    <div class="item">
-                        <img src="img/client/06.png">
-                    </div>
-                    <div class="item">
-                        <img src="img/client/07.png">
-                    </div>
-                </div>
+                
 
             </div>
         </div>
@@ -406,7 +373,7 @@
                                 <div class="hover-text">
                                     <h4>Web Design</h4>
                                     <small>Branding</small>
-                                    <div class="clearfix"></div>
+									<div class="clearfix"></div>
                                     <i class="fa fa-plus"></i>
                                 </div>
                                 <img src="img/portfolio/08.jpg" class="img-responsive" alt="...">
@@ -641,12 +608,12 @@
 	
 	<div id="map">
 		<div class="map">
-			<iframe width="100%" height="400px" frameborder="0" scrolling="no" marginheight="no" marginwidth="no" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.7602366648107!2d77.3707827798427!3d28.6369471999864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5535873a947%3A0xebbf22864f7d31c9!2s21%2C+Cassia+Rd%2C+Shipra+Suncity%2C+Indirapuram%2C+Ghaziabad%2C+Uttar+Pradesh+201014%2C+India!5e0!3m2!1sen!2s!4v1445271690373"></iframe><br />
+			<iframe width="100%" height="400px" frameborder="0" scrolling="no" marginheight="no" marginwidth="no" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.745235088384!2d77.72960681452771!3d12.988139918030049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae122786f2ecd1%3A0x435a1cd5ed3a7562!2sITPL+Main+Rd%2C+Whitefield%2C+Bengaluru%2C+Karnataka!5e0!3m2!1sen!2sin!4v1457707728905"></iframe><br />
 		</div>
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 pull-right">
-					<small><a href="https://www.google.com/maps/place/21,+Cassia+Rd,+Shipra+Suncity,+Indirapuram,+Ghaziabad,+Uttar+Pradesh+201014,+India/@28.6369472,77.3707828,17z/data=!4m2!3m1!1s0x390ce5535873a947:0xebbf22864f7d31c9" target="_blank">View Larger map</a></small>
+					<small><a href="https://www.google.co.in/maps/place/ITPL+Main+Rd,+Whitefield,+Bengaluru,+Karnataka/@12.9881399,77.7296068,17z/data=!3m1!4b1!4m2!3m1!1s0x3bae122786f2ecd1:0x435a1cd5ed3a7562?hl=en" target="_blank">View Larger map</a></small>
 				</div>
 			</div>
 		</div>
@@ -719,6 +686,9 @@
 						}, async: false
 					});
 				}
+			});
+			$("#download").on("click", function() {
+				$.post('Operational/download/download.php', { file_name: 'download.pdf'});
 			});
 		});
 	</script>

@@ -57,10 +57,11 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#tf-home" class="page-scroll">Home</a></li>
-            <li><a href="#tf-about" class="page-scroll">About</a></li>
+            <li><a href="#tf-about" class="page-scroll">About us</a></li>
             <li><a href="#tf-team" class="page-scroll">Team</a></li>
             <li><a href="#tf-services" class="page-scroll">Services</a></li>
             <li><a href="#tf-works" class="page-scroll">Portfolio</a></li>
+            <li><a href="#tf-works" class="page-scroll">Clients</a></li>
             <li><a href="#tf-testimonials" class="page-scroll">Testimonials</a></li>
             <li><a href="#tf-careers" class="page-scroll">Career</a></li>
              <li><a href="#tf-case-study" class="page-scroll">Case Studies</a></li>
@@ -76,7 +77,7 @@
         <div class="overlay">
             <div class="content">
                 <h1>Welcome to <strong><span class="color">Soft Nerve</span></strong></h1>
-                <p class="lead">We are a offshore product development company ,who <strong>delivers great products </strong>and <strong>realize Peoples Dream. </strong> </p>
+                <p class="lead">We are a offshore product development start-up ,<strong>delivering Awesome products </strong>and <strong>realizing Peoples Dream. </strong> </p>
                 <a href="#tf-about" class="fa fa-angle-down page-scroll"></a>
             </div>
         </div>
@@ -95,12 +96,12 @@
                             <hr>
                             <div class="clearfix"></div>
                         </div>
-                        <p class="intro">We are a Young Dynamic Product Designing company , who deliver products with  <strong>WOW </strong> experience.<br>
-                       As a key Technological Partner we work very closely with customer from Ideation till the product releases with the sense of ownership at every stage of product life development to solve 
-                      Real time user Problems.
-                        
+                        <p class="intro">We are a offshore Product Designing start-up ,delivering product with  <strong>WOW </strong> experience .<br>
+                       As a key Technological Partner ,We innovate products from  ideation to the product commercialization  to solve Real time Problems. 
+                                              
                       <br />
-                         In addition ,Our Team of expert ,helps customer is seeking the IPR and Patents for their Products or Ideas</p>
+                        With our expertise in Product Designing , we help clients to scale their products for larger user base and a enabler in Patents filing and seeking Intellectual Property Rights for their Ideas or  Products.
+                       </p>
                         <ul class="about-list">
                             <li>
                                 <span class="fa fa-dot-circle-o"></span>
@@ -108,7 +109,7 @@
                             </li>
                             <li>
                                 <span class="fa fa-dot-circle-o"></span>
-                                <strong>Skills</strong> - <em>Top Notch Product Designing And Delivery Skills.</em>
+                                <strong>Skills</strong> - <em>High Rated Product Designing And Delivery Skills.</em>
                             </li>
                             <li>
                                 <span class="fa fa-dot-circle-o"></span>
@@ -204,31 +205,37 @@
                 <div class="col-sm-6 col-md-4 service">
                     <i class="fa fa-desktop"></i>
                     <h4><strong>Web Experience</strong></h4>
-                    <p>Designing Wire frame with responsive Web Experience for the USERS.</p>
+                    <p>Designing Wire frames ,Assets Creation ,Creating Design Flow ,Template Designing with Responsive Experience for the USERS .
+                    </p>
                 </div>
 
                 <div class="col-sm-6 col-md-4 service">
                     <i class="fa fa-mobile"></i>
                     <h4><strong>Mobility</strong></h4>
-                    <p>Working a Technology Partner for full stack  and software components for server ,client and cloud side on multiple platforms- Android ,IOS ,Windows. </p>
+                    <p>Technology Partner with full software Stack development on multiple platforms - Android ,iPhone OS ,Windows and Cloud . </p>
                 </div>
                 <div class="col-sm-6 col-md-4 service">
                     <i class="fa fa-stethoscope"></i>
-                    <h4><strong>Embedded System - HealthCare & Internet Of things (IOT)</strong></h4>
-                    <p>Closely work with Health Care industry on various areas of Drug Management - Clinical Trial,Data Management ,Software Solutions . </p>
+                    <h4><strong>Embedded System & Internet Of things </strong>(IoT)</h4>
+                    <p>Developing Embedded products ,Software Porting, Software Integration for all connected devices and soc  . </p>
                 </div>
 				
+                 <div class="col-sm-6 col-md-4 service">
+                    <i class="fa fa-stethoscope"></i>
+                    <h4><strong>Health Care </strong></h4>
+                    <p>Closely work with Health Care industry on various areas of Drug Management - Clinical Trial,Data Management ,Software Solutions . </p>
+                </div>
                             
 		          <div class="col-sm-6 col-md-4 service">
                     <i class="fa fa-dashcube"></i>
                     <h4><strong>On-line Product Branding</strong></h4>
-                    <p>Working as On-line Branding Partner for Clients . And Running very successful product campaigns across multiple On-line Social Channels .</p>
+                    <p>Working as On-line Branding Partner for Clients . And Running successful product campaigns across multiple On-line Social Channels .</p>
                 </div>
 
                 <div class="col-sm-6 col-md-4 service">
                     <i class="fa fa-bullhorn"></i>
                     <h4><strong>On-line Product Marketing</strong></h4>
-                    <p>Product Marketing Partner - Specialize on running On-line Marketing camapigns across multiple social channels for upward marketing impact  </p>
+                    <p>Product Marketing Partner - Specialize on running On-line Marketing campaigns across multiple social channels for upward marketing impact  </p>
                 </div>
             </div>
         </div>
@@ -257,12 +264,12 @@
     <div id="tf-works">
         <div class="container"> <!-- Container -->
             <div class="section-title text-center center">
-                <h2 class="resolve">Take a look at <strong>our Product Lines Delivery</strong></h2>
+                <h2 class="resolve">Take a look at <strong>our  Products Portfolio</strong></h2>
                 <div class="line">
                     <hr>
                 </div>
                 <div class="clearfix"></div>
-                <em>Soft Nerve Technologies exhibits following Domain Skills  .</em>
+                <em>Soft Nerve Technologies exhibits  following Products Skills with WOW Experience .</em>
             </div>
             <div class="space"></div>
 
@@ -275,7 +282,8 @@
                             <li><a href="#" data-filter="*" class="active">All</a></li>
                             <li><a href="#" data-filter=".web">Web Experience</a></li>
                             <li><a href="#" data-filter=".app" >Mobility</a></li>
-                            <li><a href="#" data-filter=".web">Embedded Systems - Health Care & IOT</a></li>
+                            <li><a href="#" data-filter=".web">Embedded Systems & IoT</a></li>
+                             <li><a href="#" data-filter=".web">Health Care </a></li>
                             <li><a href="#" data-filter=".branding" >On-line Product Branding</a></li>
                             <li><a href="#" data-filter=".branding">On-line Product Marketing</a></li>
                         </ol>
@@ -432,6 +440,44 @@
                     </div>
                 </div>
                 <div id="careers" class="row tpad">
+                  <div class="col-sm-6 col-md-4 col-lg-4 career"> 
+						<i class="fa fa-laptop yo"></i>
+                        <h4><strong>Software Development: </strong><br/>Design</h4>
+                        <ul class="about-list">
+                            <li>
+                                <span class="fa fa-dot-circle-o"></span>
+                                <strong>Experience</strong> - <small><em>2 to 4 year's.</em></small>
+                            </li>
+                            <li>
+                                <span class="fa fa-dot-circle-o"></span>
+                                <strong>Qualification</strong> - <small><em>NID or Top Design College Pass-out.</em></small>
+                            </li>
+                            <li>
+                                <span class="fa fa-dot-circle-o"></span>
+                                <strong>Job Location</strong> - <small><em>Pithoragarh (Uttaranchal)– Engineering Development Center.</em></small>
+                            </li>
+							<li>
+                                <span class="fa fa-dot-circle-o"></span>
+                                <strong>Key Deliverables</strong> - <small><em>
+									<ul class="careers-list">
+										<li>
+											<span class="fa fa-arrow-circle-o-right"></span>
+											<small><em>Out of Box and Great Product Designing Skills .</em></small>
+										</li>
+										<li>
+											<span class="fa fa-arrow-circle-o-right"></span>
+											<small><em>Imaginative and Aspire to deliver WOW experience to User.</em></small>
+										</li>
+										<li>
+											<span class="fa fa-arrow-circle-o-right"></span>
+											<small><em>Well Versed with the Software and Work flow designing Tools.</em></small>
+										</li>
+									</ul>
+								</em></small>
+                            </li>
+                        </ul>
+                    </div>
+                
                     <div class="col-sm-6 col-md-4 col-lg-4 career"> 
 						<i class="fa fa-laptop yo"></i>
                         <h4><strong>Software Development: </strong><br/>Engineering</h4>
@@ -550,7 +596,7 @@
 										</li>
 										<li>
 											<span class="fa fa-arrow-circle-o-right"></span>
-											<small><em>Track record on running successful on-line digital marketing campaigns with start up or Products .</em></small>
+											<small><em>Track record on running successful on-line digital marketing campaigns with start up or Products.</em></small>
 										</li>
 										<li>
 											<span class="fa fa-arrow-circle-o-right"></span>

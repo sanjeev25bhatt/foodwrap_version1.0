@@ -96,24 +96,24 @@
                             <hr>
                             <div class="clearfix"></div>
                         </div>
-                        <p class="intro">We are a offshore Product Designing start-up ,delivering product with  <strong>WOW </strong> experience .<br>
-                       As a key Technological Partner ,We innovate products from  ideation to the product commercialization  to solve Real time Problems. 
+                        <p class="intro">We are a offshore Product Designing start-up ,delivering products with  a <strong>WOW </strong> experience .<br>
+                       As a key Technological Partner ,We innovate products to solve Real time Problems. 
                                               
                       <br />
-                        With our expertise in Product Designing , we help clients to scale their products for larger user base and a enabler in Patents filing and seeking Intellectual Property Rights for their Ideas or  Products.
+                        With our expertise in Product Designing and Development , we help clients to scale their products for larger user base, and secure their Ideas for Patents and Intellectual property (IP) .
                        </p>
                         <ul class="about-list">
                             <li>
                                 <span class="fa fa-dot-circle-o"></span>
-                                <strong>Mission</strong> - <em>Best in class Software  Product Design and Delivery .</em>
+                                <strong>Mission</strong> - <em>Best in class Software  Product Design ,Development and Delivery .</em>
                             </li>
                             <li>
                                 <span class="fa fa-dot-circle-o"></span>
-                                <strong>Skills</strong> - <em>High Rated Product Designing And Delivery Skills.</em>
+                                <strong>Skills</strong> - <em>Top Rated Product Designing ,Development and Delivery Skills.</em>
                             </li>
                             <li>
                                 <span class="fa fa-dot-circle-o"></span>
-                                <strong>Clients</strong> - <em>Technologies start-up and Fortune Companies .</em>
+                                <strong>Clients</strong> - <em>Technologies start-up and Fortune Companies.</em>
                             </li>
                         </ul>
 						<button type="submit" class="btn tf-btn btn-default">Discover Us</button>
@@ -202,17 +202,24 @@
                 <em></em>
             </div>
             <div class="row tpad">
+             <div class="col-sm-6 col-md-4 service">
+                    <i class="fa fa-desktop"></i>
+                    <h4><strong>User Experience Design</strong></h4>
+                    <p>Persona's  ,User Journey ,Flowchart ,Visual Design ,Wire-frame ,Assets Creation & Prototyping,.
+                    </p>
+                </div>
+                
                 <div class="col-sm-6 col-md-4 service">
                     <i class="fa fa-desktop"></i>
                     <h4><strong>Web Experience</strong></h4>
-                    <p>Designing Wire frames ,Assets Creation ,Creating Design Flow ,Template Designing with Responsive Experience for the USERS .
+                    <p>Web App Development ,Website Optimization ,Boot Strapping with Response Web Experience to  the USERS .
                     </p>
                 </div>
 
                 <div class="col-sm-6 col-md-4 service">
                     <i class="fa fa-mobile"></i>
                     <h4><strong>Mobility</strong></h4>
-                    <p>Technology Partner with full software Stack development on multiple platforms - Android ,iPhone OS ,Windows and Cloud . </p>
+                    <p>Technology Partner with End to End Software Stack Development across Multiple platforms - Android ,iPhone OS ,Windows and Cloud . </p>
                 </div>
                 <div class="col-sm-6 col-md-4 service">
                     <i class="fa fa-stethoscope"></i>
@@ -280,6 +287,7 @@
                     <li class="pull-right">
                         <ol class="type">
                             <li><a href="#" data-filter="*" class="active">All</a></li>
+                               <li><a href="#" data-filter=".web">User Experience</a></li>
                             <li><a href="#" data-filter=".web">Web Experience</a></li>
                             <li><a href="#" data-filter=".app" >Mobility</a></li>
                             <li><a href="#" data-filter=".web">Embedded Systems & IoT</a></li>
@@ -442,7 +450,7 @@
                 <div id="careers" class="row tpad">
                   <div class="col-sm-6 col-md-4 col-lg-4 career"> 
 						<i class="fa fa-laptop yo"></i>
-                        <h4><strong>Software Development: </strong><br/>Design</h4>
+                        <h4><strong>Software Development: </strong><br/>User Design</h4>
                         <ul class="about-list">
                             <li>
                                 <span class="fa fa-dot-circle-o"></span>
@@ -488,7 +496,7 @@
                             </li>
                             <li>
                                 <span class="fa fa-dot-circle-o"></span>
-                                <strong>Qualification</strong> - <small><em>BE/ BTech/ MTech/ MS from Top Institute.</em></small>
+                                <strong>Qualification</strong> - <small><em>B.E/ B.Tech./ M.Tech/ M.S from Top Institute.</em></small>
                             </li>
                             <li>
                                 <span class="fa fa-dot-circle-o"></span>

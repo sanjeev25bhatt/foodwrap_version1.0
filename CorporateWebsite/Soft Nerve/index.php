@@ -120,8 +120,8 @@
                     </div>
                 </div>
 				<div class="col-md-6">
-           
-                <iframe width="420" height="345" src="https://www.youtube.com/embed/IqX5WTYtlqQ?rel=0" frameborder="0" allowfullscreen ></iframe>
+         
+                <iframe width="420" height="345" src="https://www.youtube.com/embed/r15ZHShMqek?rel=0" frameborder="0" allowfullscreen ></iframe>
                 </div>
             </div>
         </div>

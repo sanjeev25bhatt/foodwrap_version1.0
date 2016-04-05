@@ -77,7 +77,7 @@
         <div class="overlay">
             <div class="content">
                 <h1>Welcome to <strong><span class="color">Soft Nerve</span></strong></h1>
-                <p class="lead">We are a offshore product development start-up ,<strong>delivering Awesome products </strong>and <strong>realizing Peoples Dream. </strong> </p>
+                <p class="lead">We are a offshore product development Startup ,<strong>delivering Awesome products </strong>and <strong>realizing Peoples Dream. </strong> </p>
                 <a href="#tf-about" class="fa fa-angle-down page-scroll"></a>
             </div>
         </div>
@@ -96,16 +96,16 @@
                             <hr>
                             <div class="clearfix"></div>
                         </div>
-                        <p class="intro">We are a offshore Product Designing start-up ,delivering products with  a <strong>WOW </strong> experience .<br>
-                       As a key Technological Partner ,We innovate products to solve Real time Problems. 
+                        <p class="intro">We are a offshore Product Designing Startup,delivering products with  a <strong>WOW </strong> experience.<br>
+                       As a key Technological Partner,We innovate products to Solve Real Time Problems. 
                                               
                       <br />
-                        With our expertise in Product Designing and Development , we help clients to scale their products for larger user base, and secure their Ideas for Patents and Intellectual property (IP) .
+                        With our expertise in Product Designing and Development,we help clients to scale their products,for larger User Base and Secure their ideas for Patents and Intellectual property (IP).
                        </p>
                         <ul class="about-list">
                             <li>
                                 <span class="fa fa-dot-circle-o"></span>
-                                <strong>Mission</strong> - <em>Best in class Software  Product Design ,Development and Delivery .</em>
+                                <strong>Mission</strong> - <em>Best in class Software  Product Design ,Development and Delivery.</em>
                             </li>
                             <li>
                                 <span class="fa fa-dot-circle-o"></span>
@@ -113,14 +113,15 @@
                             </li>
                             <li>
                                 <span class="fa fa-dot-circle-o"></span>
-                                <strong>Clients</strong> - <em>Technologies start-up and Fortune Companies.</em>
+                                <strong>Clients</strong> - <em>Start-up and Fortune Companies.</em>
                             </li>
                         </ul>
 						<button type="submit" class="btn tf-btn btn-default">Discover Us</button>
                     </div>
                 </div>
 				<div class="col-md-6">
-                    <img src="img/feature-2.png" class="img-responsive">
+           
+                <iframe width="420" height="345" src="https://www.youtube.com/embed/IqX5WTYtlqQ?rel=0" frameborder="0" allowfullscreen ></iframe>
                 </div>
             </div>
         </div>
@@ -212,37 +213,37 @@
                 <div class="col-sm-6 col-md-4 service">
                     <i class="fa fa-desktop"></i>
                     <h4><strong>Web Experience</strong></h4>
-                    <p>Web App Development ,Website Optimization ,Boot Strapping with Response Web Experience to  the USERS .
+                    <p>Web App Development ,Website Optimization ,Boot Strapping with Responsive Web Experience for USERS .
                     </p>
                 </div>
 
                 <div class="col-sm-6 col-md-4 service">
                     <i class="fa fa-mobile"></i>
                     <h4><strong>Mobility</strong></h4>
-                    <p>Technology Partner with End to End Software Stack Development across Multiple platforms - Android ,iPhone OS ,Windows and Cloud . </p>
+                    <p>Technology Partner for end-to-end Software Stack Development across Multiple platforms - Android ,iPhone OS ,Windows and Cloud . </p>
                 </div>
                 <div class="col-sm-6 col-md-4 service">
                     <i class="fa fa-stethoscope"></i>
                     <h4><strong>Embedded System & Internet Of things </strong>(IoT)</h4>
-                    <p>Developing Embedded products ,Software Porting, Software Integration for all connected devices and soc  . </p>
+                    <p>Developing Embedded Software Components ,Software Porting , Software Integration ,Software Testing on Linux and other Operating System for Connected Devices and SOC  . </p>
                 </div>
 				
                  <div class="col-sm-6 col-md-4 service">
                     <i class="fa fa-stethoscope"></i>
                     <h4><strong>Health Care </strong></h4>
-                    <p>Closely work with Health Care industry on various areas of Drug Management - Clinical Trial,Data Management ,Software Solutions . </p>
+                    <p>Closely work with Health Care industry on various areas of Drug Management - Clinical Trial,Medial Data Management ,Software Support and Development  . </p>
                 </div>
                             
 		          <div class="col-sm-6 col-md-4 service">
                     <i class="fa fa-dashcube"></i>
                     <h4><strong>On-line Product Branding</strong></h4>
-                    <p>Working as On-line Branding Partner for Clients . And Running successful product campaigns across multiple On-line Social Channels .</p>
+                    <p>Working as On-line Branding Partner for  Clients and running successful product campaigns across  On-line Social Channels .</p>
                 </div>
 
                 <div class="col-sm-6 col-md-4 service">
                     <i class="fa fa-bullhorn"></i>
                     <h4><strong>On-line Product Marketing</strong></h4>
-                    <p>Product Marketing Partner - Specialize on running On-line Marketing campaigns across multiple social channels for upward marketing impact  </p>
+                    <p>Product Marketing Partner - Specialize on running On-line Marketing campaigns across social channels for upward marketing impact  </p>
                 </div>
             </div>
         </div>
@@ -615,7 +616,40 @@
                             </li>
                         </ul>
 					</div>
+                    
+                    	<div class="col-sm-6 col-md-4 col-lg-4 career">
+						<i class="fa fa-line-chart yo"></i>
+						<h4><strong>HealtCare: </strong><br/></h4>
+						<ul class="about-list">
+                            <li>
+                                <span class="fa fa-dot-circle-o"></span>
+                                <strong>Experience</strong> - <small><em>2 to 3 year's</em></small>
+                            </li>
+                            <li>
+                                <span class="fa fa-dot-circle-o"></span>
+                                <strong>Qualification</strong> - <small><em>Medico Professional .</em></small>
+                            </li><br class="visible-lg-block visible-md-block">
+                            <li>
+                                <span class="fa fa-dot-circle-o"></span>
+                                <strong>Job Location</strong> - <small><em>New Delhi.</em></small>
+                            </li><br class="visible-lg-block visible-md-block">
+							<li>
+                                <span class="fa fa-dot-circle-o"></span>
+                                <strong>Key Deliverables</strong> - <small><em>
+									<ul class="careers-list">
+										<li>
+											<span class="fa fa-arrow-circle-o-right"></span>
+											<small><em>Result oriented Medico Professional work on Various Medical Trail .</em></small>
+										</li>
+										
+									
+									</ul>
+								</em></small>
+                            </li>
+                        </ul>
+					</div>
                 </div>
+                
             	<h4><strong>All above positions carry high rewards with Top remuneration ,ESOP (Stocks options)and Flexible Workings hours </strong></h4>
 				<button id="apply" class="btn tf-btn btn-default">Apply</button>
 			</div>

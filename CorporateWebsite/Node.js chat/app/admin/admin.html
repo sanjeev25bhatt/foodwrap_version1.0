@@ -3,7 +3,7 @@
 	<head>
 		<title>Chat</title>
 		<link rel="stylesheet" href="css/main.css">
-	<script type="text/javascript" src='http://localhost:8080/socket.io/socket.io.js'></script>
+	<script type="text/javascript" src='https://tranquil-hamlet-87322.herokuapp.com/socket.io/socket.io.js'></script>
 	</head>
 	<body>
 	<form id="login_chat">
@@ -49,7 +49,7 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
 			//creating a connection from the front end, we use forceNew inorder to create a new connection for every new client
-			var socket = io.connect('http://localhost:8080', {'forceNew':true});
+			var socket = io.connect('https://tranquil-hamlet-87322.herokuapp.com/', {'forceNew':true});
 			
 			var $messageForm = $('#form');
 			var $anotherForm = $("#another_form")
@@ -61,12 +61,17 @@
 					password: document.getElementById("login_pass").value
 				};
 				socket.emit("admin-login", Details, function(data) {
-					if(data){
+					//if(data)
+					{
 						$loginForm.css("display","none");
 						$messageForm.css("display","block");
-					} else {
+					} 
+				/*
+					else {
 						alert('invalid adminname and password');
 					}
+					*/
+					
 				});
 			});
 			var $message = $('#message');
@@ -83,16 +88,19 @@
 				
 				if(value_name!=''&&value_mail!=''){
 					socket.emit("new admin", value_name, function(data) {
-						if(data){
+						if(data)
+						{
 							$('#adminname').css("display",'none');
 							$('#adminmail').css("display", 'none');
 							$('#nameandemail').css("display", 'none');
 							document.getElementById("message").disabled = false;
 							document.getElementById("new").disabled = false;
 							$("#adminerror").css("display", "none");
-						} else {
+						} 
+						else {
 							$("#adminerror").text("The adminname already exist");
 						}
+						
 					});
 				} else {
 					$("#adminerror").text("Please fill all the above fields");

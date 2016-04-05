@@ -3,7 +3,7 @@
 	<head>
 		<title>Chat</title>
 		<link rel="stylesheet" href="css/main.css">
-	<script type="text/javascript" src='http://localhost:8080/socket.io/socket.io.js'></script>
+	<script type="text/javascript" src='https://tranquil-hamlet-87322.herokuapp.com/socket.io/socket.io.js'></script>
 	</head>
 	<body>
 	<form class="" id="form">
@@ -29,7 +29,7 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
 			//creating a connection from the front end, we use forceNew inorder to create a new connection for every new client
-			var socket = io.connect('http://localhost:8080', {'forceNew':true});
+			var socket = io.connect('https://tranquil-hamlet-87322.herokuapp.com/', {'forceNew':true});
 			
 			var $message = $('#message');
 			var $messages = $('#messages');
@@ -44,7 +44,8 @@
 				
 				if(value_name!=''&&value_mail!=''){
 					socket.emit("new user", value_name, function(data) {
-						if(data){
+					
+					if(data){
 							$('#username').css("display",'none');
 							$('#usermail').css("display", 'none');
 							$('#nameandemail').css("display", 'none');

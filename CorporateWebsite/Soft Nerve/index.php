@@ -96,7 +96,7 @@
                             <hr>
                             <div class="clearfix"></div>
                         </div>
-                        <p class="intro">We are a offshore Product Designing Startup,delivering products with  a <strong>WOW </strong> experience.<br>
+                        <p class="intro">We are a Offshore Product Designing Startup,delivering products with  a <strong>WOW </strong> Experience.<br>
                        As a key Technological Partner,We innovate products to Solve Real Time Problems. 
                                               
                       <br />

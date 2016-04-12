@@ -4,7 +4,8 @@
 		<title>Admin Chat</title>
 		<link rel="stylesheet" href="../css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/admin.css">
-	<script type="text/javascript" src='http://localhost:8080/socket.io/socket.io.js'></script>
+	<script type="text/javascript" src='http://desolate-retreat-78839.herokuapp.com/socket.io/socket.io.js'></script>
+    
 	</head>
 	<body>
 	<form id="login_chat">
@@ -142,7 +143,7 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
 			//creating a connection from the front end, we use forceNew inorder to create a new connection for every new client
-			var socket = io.connect('http://localhost:8080', {'forceNew':true});
+			var socket = io.connect('http://desolate-retreat-78839.herokuapp.com', {'forceNew':true});
 			
 			var $panel = $('#panel');
 			var $anotherPanel = $("#another_panel")
@@ -190,12 +191,15 @@
 					password: document.getElementById("login_pass").value
 				};
 				socket.emit("admin-login", Details, function(data) {
-					if(data){
+					//if(data)
+                    {
 						$loginForm.css("display","none");
 						$panel.css("display","block");
-					} else {
+					} 
+                   /* else 
+                    {
 						alert('invalid adminname and password');
-					}
+					}*/
 				});
 			});
 			

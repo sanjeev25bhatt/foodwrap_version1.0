@@ -1,6 +1,6 @@
 $(document).ready(function() {
 			//creating a connection from the front end, we use forceNew inorder to create a new connection for every new client
-			var socket = io.connect('http://localhost:8080', {'forceNew':true});
+			var socket = io.connect('http://desolate-retreat-78839.herokuapp.com', {'forceNew':true});
 			
 			var user_name = '';
 			var $message = $('#message');

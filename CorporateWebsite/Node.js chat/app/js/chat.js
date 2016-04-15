@@ -81,7 +81,7 @@ $(document).ready(function() {
 					$("#messages").animate({scrollTop: $("#messages")[0].scrollHeight},'slow');
 				} else if(data.what == 'Oops'){
 					bleep.play();
-					$messages.append('<div class="alert_instructions"><span data-toggle="tooltip" title="' + data.time+ '" class="myToolTip">' + ' Sorry but no admins are available to chat' + '</span></div><br />');
+					$messages.append('<div class="alert_instructions"><span data-toggle="tooltip" title="' + data.time+ '" class="myToolTip">' + ' Sorry ,Our expert are not availble for help ,drop us message, we will get in touch with you .' + '</span></div><br />');
 					$("#messages").animate({scrollTop: $("#messages")[0].scrollHeight},'slow');
 					$messages.css('height','260px');
 					$("#another-one").removeClass('hidden');

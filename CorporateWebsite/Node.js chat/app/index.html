@@ -40,8 +40,13 @@
 	<script type="text/javascript" src='http://desolate-retreat-78839.herokuapp.com/socket.io/socket.io.js'></script>
   </head>
   <body>
+   <header id="header">
+
+    
+        
     <!-- Navigation
     ==========================================-->
+    
     <nav id="tf-menu" class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -55,24 +60,82 @@
           <a class="navbar-brand" href="index.html">Soft Nerve</a>
         </div>
 
+
+
+
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#tf-home" class="page-scroll">Home</a></li>
-            <li><a href="#tf-about" class="page-scroll">About us</a></li>
-            <li><a href="#tf-team" class="page-scroll">Team</a></li>
-            <li><a href="#tf-services" class="page-scroll">Services</a></li>
-            <li><a href="#tf-works" class="page-scroll">Portfolio</a></li>
-            <li><a href="#tf-works" class="page-scroll">Clients</a></li>
-            <li><a href="#tf-testimonials" class="page-scroll">Testimonials</a></li>
-            <li><a href="#tf-careers" class="page-scroll">Career</a></li>
-             <li><a href="#tf-case-study" class="page-scroll">Case Studies</a></li>
-            <li><a href="#tf-contact-up" class="page-scroll">Contact</a></li>
+          
+
+        
+             <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">SoftNerve <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                             <li><a href="#tf-home" class="page-scroll"><i class="fa fa-home" aria-hidden="true">Home</i></a></li>
+                               <li><a href="#tf-about" class="page-scroll">About us</a></li>
+                                <li><a href="#tf-team" class="page-scroll">Our Team</a></li>
+                          
+                             
+                            </ul>
+             <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Service Expertises <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                              <li><a href="#tf-services" class="page-scroll">Services</a></li>
+                              <li><a href="#tf-works" class="page-scroll">Product Portfolio</a></li>
+                         
+                            </ul>
+                            
+             </li>
+             <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Technology <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                              <li><a href="#tf-services" class="page-scroll">Mobile Platform</a></li>
+                              <li><a href="#tf-works" class="page-scroll">Cloud Computing</a></li>
+                              <li><a href="#tf-works" class="page-scroll">Middleware</a></li>
+                             <li><a href="#tf-works" class="page-scroll">Framework Design and Developement</a></li>
+                            <li><a href="#tf-works" class="page-scroll">Clincal Data Mangement</a></li>
+                            </ul>
+                            
+             </li>
+              <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Our Customers <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                            
+                              <li><a href="#tf-clients" class="page-scroll">Clients</a></li>
+                         
+                               <li><a href="#tf-testimonials" class="page-scroll">Testimonials</a></li>
+                            </ul>
+                            
+             </li>
+             <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Engagement Model <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                            
+                              <li><a href="#tf-clients" class="page-scroll">Pay for Service Model</a></li>
+                         
+                             
+                            </ul>
+                            
+             </li>
+              <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact us <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                         
+                             <li><a href="#tf-careers" class="page-scroll">Career & Job opening</a></li>
+                <li><a href="#tf-case-study" class="page-scroll">Case Studies</a></li>
+            <li><a href="#tf-contact-up" class="page-scroll">Contact us</a></li>
+             </ul>
+                            
+           
+           
+                <li><a href="#chat_head" class="page-scroll">  <i class="fa fa-comment-o" aria-hidden="true"></i> expert help</a></li>             
+             </li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
-
+</header>
     <!-- Home Page
     ==========================================-->
     <div id="tf-home" class="text-center first-tf-home">
@@ -102,11 +165,11 @@
                             <hr>
                             <div class="clearfix"></div>
                         </div>
-                        <p class="intro">SoftNerve is a Offshore Product Designing Startup,Working on cutting edge Technologies and delivering products with <strong>WOW </strong> Experience.<br>
-                       As a key Technological Partner,We innovate products to solve Real Time user Problem . 
+                        <p class="intro">SoftNerve is a Offshore Product Designing Startup,Working on Cutting edge Technologies to deliver products with <strong>WOW </strong> Experience.<br>
+                       As a key Technological Partner,We innovate products and services to solve Real Time user Problem . 
                                               
                       <br />
-                        With our expertise in Product Designing and Development,we help clients with our Software Plugin components  to scale their products for large User Base and secure their ideas for Patents and Intellectual property (IP).
+                        With our expertise in Product Designing and Development and Software Plugins ,we help our clients to scale their products for large User Base ,while securing their ideas for Patents and Intellectual property (IP).
                        </p>
                         <ul class="about-list">
                             <li>
@@ -125,11 +188,10 @@
 						<button type="submit" class="btn tf-btn btn-default">Discover Us</button>
                     </div>
                 </div>
-				<div class="col-md-6">
-                 <iframe width="420" height="345" src="https://www.youtube.com/embed/r15ZHShMqek?rel=0" frameborder="0" allowfullscreen ></iframe>
-                
-                </div>
+                  <p class="intro"> <iframe width="420" height="345" src="https://www.youtube.com/embed/r15ZHShMqek?rel=0" frameborder="0" allowfullscreen ></iframe> <p> 
             </div>
+          
+			
         </div>
     </div>
 
@@ -197,7 +259,8 @@
             </div>
             <div class="row tpad">
              <div class="col-sm-6 col-md-4 service">
-                    <i class="fa fa-desktop"></i>
+             <i class="fa fa-paint-brush" aria-hidden="true"></i>
+                  
                     <h4><strong>User Experience Design</strong></h4>
                     <p>Persona's  ,User Journey ,Flowchart ,Visual Design ,Wire-frame ,Assets Creation & Prototyping,Template Collections.
                     </p>
@@ -216,7 +279,7 @@
                     <p>Technology Partner for end-to-end Software Stack Development across Multiple platforms - Android ,iPhone OS ,Windows and Cloud . </p>
                 </div>
                 <div class="col-sm-6 col-md-4 service">
-                    <i class="fa fa-stethoscope"></i>
+                    <i class="fa fa-linux"></i>
                     <h4><strong>Embedded System & Internet Of things </strong>(IoT)</h4>
                     <p>Developing Embedded Software Components ,Software Porting , Software Integration ,Software Testing on Linux and other Operating System for Connected Devices and SOC  . </p>
                 </div>
@@ -448,7 +511,8 @@
                 </div>
                 <div id="careers" class="row tpad">
                   <div class="col-sm-6 col-md-4 col-lg-4 career"> 
-						<i class="fa fa-laptop yo"></i>
+                
+						<i class="fa fa-paint-brush yo"></i>
                         <h4><strong>Software Development: </strong><br/>User Design</h4>
                         <ul class="about-list">
                             <li>
@@ -616,7 +680,8 @@
 					</div>
                     
                     	<div class="col-sm-6 col-md-4 col-lg-4 career">
-						<i class="fa fa-line-chart yo"></i>
+                    
+						<i class="fa fa-stethoscope yo"></i>
 						<h4><strong>HealthCare: </strong><br/></h4>
 						<ul class="about-list">
                             <li>
@@ -681,6 +746,7 @@
                 <div class="col-md-8 col-md-offset-2">
                     <div class="section-title center">
                         <h2>Feel free to <strong>contact us</strong></h2>
+                        <h3> Registered Office : 415 ,ITPL Main Road,White Field ,Bengaluru ,Karnataka</h3>
                         <div class="line">
                             <hr>
                         </div>
@@ -751,7 +817,7 @@
 			<div class="chat">
 				<div class="panel-heading">
 					<div id="chat_head" class="row">
-						<span class="glyphicon glyphicon-comment"></span><span id="chat_with">Live Help with our Experts? </span>
+						<span class="glyphicon glyphicon-comment"></span><span id="chat_with">live help with our experts? </span>
 						<span id="right_glyph">
 							<span class="hidden slide-toggle glyphicon glyphicon-chevron-up"></span>
 							<span class="slide-toggle glyphicon glyphicon-chevron-down"></span>
@@ -775,7 +841,7 @@
 					<div id="onClose" class="hidden"><button class="end-chat btn tf-btn btn-default">End Chat</button><button id="cancel" class="btn tf-btn btn-default">Cancel</button></div>
 					<div id="another-one" class="hidden"><button id="start-another-chat" class="btn tf-btn btn-default">Start Another Chat</button><button id="close" class="btn tf-btn btn-default">Close Window</button></div>
 					<textarea id="message" class="form-control panel-footer chat-message btn-admin-input" placeholder="Type your message here..."></textarea>
-					<div id="bottom-most"><span data-toggle="tooltip" title="Rate us with +1" id="like" class="hidden myToolTip glyphicon glyphicon-thumbs-up"></span><span data-toggle="tooltip" title="Rate us with -1" id="unlike" class="hidden myToolTip glyphicon glyphicon-thumbs-down"></span>softnerve</div>
+					<div id="bottom-most"><span data-toggle="tooltip" title="Rate us with +1" id="like" class="hidden myToolTip glyphicon glyphicon-thumbs-up"></span><span data-toggle="tooltip" title="Rate us with -1" id="unlike" class="hidden myToolTip glyphicon glyphicon-thumbs-down"></span>powered by  square-chat@softnerve.com</div>
 				</div>
 			</div>
 		</form>

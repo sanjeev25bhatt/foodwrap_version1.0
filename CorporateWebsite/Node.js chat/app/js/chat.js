@@ -380,7 +380,7 @@ $(document).ready(function() {
 			
 			$(".glyphicon-remove").click(function() {
 				if($("#nameandemail").is(':visible')) {
-					$('.panel-primary').hide();
+					$('.panel-primary').addClass('hidden');
 				} else { 
 					if($("#another-one").is(':visible')) {
 						$("#another-one").addClass('hidden');
@@ -451,4 +451,6 @@ $(document).ready(function() {
 			}); 
 			
 			$(".myToolTip").tooltip();
+			
+			
 		});

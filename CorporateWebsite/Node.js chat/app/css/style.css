@@ -68,7 +68,13 @@ ul, ol{
 	webkit-padding: 0;
 	moz-padding: 0;
 }
-
+#video {
+	height: 300px;
+	width: auto;
+}
+#width-issue {
+	width: 260px;
+}
 /* Navigation */
 #tf-menu {
 	padding: 20px;
@@ -103,6 +109,13 @@ ul, ol{
 	background-color: transparent;
 	font-weight: 700;
 }
+.navbar-default .navbar-nav > .dropdown > a:target, 
+.navbar-default .navbar-nav > .dropdown > a:hover, 
+.navbar-default .navbar-nav > .dropdown > a:focus {
+	color: #72c05b !important;
+	background-color: transparent;
+	font-weight: 700;
+}
 
 .navbar-toggle {
 	border-radius: 0;
@@ -114,8 +127,10 @@ ul, ol{
 	}
 .navbar-default .navbar-toggle:hover>.icon-bar {
 	background-color: #FFF;
-	}
-
+}
+.dropdown-menu {
+	width: 100%;
+}
 
 
 @media (min-width : 768px) {	
@@ -665,6 +680,39 @@ ul.careers-list li span{
 }
 
 /* Contact Section */
+.gmap-area {
+  background-image: url("../img/map.jpg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 70px 0;
+}
+
+.gmap-area .gmap iframe {
+  border-radius: 50%;
+  height: 280px;
+  width: 300px;
+}
+
+.gmap{
+    border: 10px solid #f6f5f0;
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+    box-shadow: 0px 0px 3px 3px #e7e4dc;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+}
+
+.gmap-area .map-content ul {
+  list-style: none; 
+}
+
+.gmap-area .map-content address h5{
+  font-weight: 700;
+  /* font-size: 16px; */
+}
 #tf-contact-up{
 	padding-top: 80px;
 	padding-bottom: 20px;
@@ -787,14 +835,6 @@ nav#footer p{
 	background: #72c05b;
 	border-color: #72c05b;
 	color: #ffffff;
-}
-@media(min-width: 768px){
-	.map{
-		height: 450px;
-	}
-	.map > iframe{
-		height: 450px;
-	}
 }
 
 @media (max-width: 768px){

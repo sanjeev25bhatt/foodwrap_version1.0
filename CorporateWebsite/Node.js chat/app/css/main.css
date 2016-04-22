@@ -1,4 +1,4 @@
-.panel {
+.chat-panel {
 	width: 400px;
 	position: fixed;
 	right: 10px;
@@ -9,7 +9,7 @@
 #message {
 	background-color: #ebebe4;
 }
-.panel-heading {
+.chat-panel-heading {
 	width: 100%;
 	background-color: #4c4c4c;
 	font-size: 14px;

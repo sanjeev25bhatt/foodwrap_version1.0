@@ -38,35 +38,7 @@
 	padding-left: 10px;
 	cursor: pointer;
 }
-button.btn {
-	background: #72c05b;
-	border: 0;
-	border-radius: 0;
-	padding: 10px 20px;
-	margin-top: 20px;
-	color: #ffffe5;
-	text-transform: uppercase;
-}
-button.btn:hover {
-	background: #72c05b;
-	color: #ffffe5;
-	text-transform: uppercase;	
-}
-button.btn:active {
-	background: #72c05b;
-	color: #ffffe5;
-	text-transform: uppercase;
-}
-button.btn:target {
-	background: #72c05b;
-	color: #ffffe5;
-	text-transform: uppercase;
-}
-button.btn:focus {
-	background: #72c05b;
-	color: #ffffe5;
-	text-transform: uppercase;
-}
+
 #startagain {
 	display: none;
 }

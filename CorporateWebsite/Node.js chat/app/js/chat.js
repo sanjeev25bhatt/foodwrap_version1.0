@@ -7,7 +7,7 @@ $(document).ready(function() {
 			var $messages = $('#messages');
 			var $messageForm = $('#form');
 			var bleep = new Audio();
-			bleep.src = "sound.mpa3";
+			bleep.src = "sound.mp3";
 			document.getElementById("message").disabled = true;
 			var count = 0;
 			var check_timer=false;
@@ -362,7 +362,7 @@ $(document).ready(function() {
 			
 			
 			$(".slide-toggle").click(function() {
-				if($(".panel-body").is(':visible')) {
+				if($("#messages").is(':visible')) {
 					$(".glyphicon-chevron-down").hide();
 					$(".glyphicon-cog").hide();
 					$(".glyphicon-remove").hide();

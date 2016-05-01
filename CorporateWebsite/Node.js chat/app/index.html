@@ -34,7 +34,8 @@
 
 	<link rel="stylesheet" type="text/css"  href="css/style.css">
     <link rel="stylesheet" href="css/main.css">
-    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/jquery.floating-social-share.css" />
+	<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400' rel='stylesheet' type='text/css'>
 	
 	<script type="text/javascript" src='http://desolate-retreat-78839.herokuapp.com/socket.io/socket.io.js'></script>
@@ -48,93 +49,106 @@
     ==========================================-->
 	<div id="tf-home" class="text-center first-tf-home">
 		<div class="overlay">
-		<header id="header">
-        <div class="top-bar">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6 col-xs-4">
-                        <div class="top-number pull-left"><p><i class="fa fa-phone-square"></i>  +0123 456 70 90</p></div>
-                    </div>
-                    <div class="col-sm-6 col-xs-8">
-                       <div class="social">
-                            <ul class="social-share">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li> 
-                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                            </ul>
-                            <div class="search">
-                                <form role="form">
-                                    <input type="text" class="search-form" autocomplete="off" placeholder="Search">
-                                    <i class="fa fa-search"></i>
-                                </form>
-                           </div>
-                       </div>
-                    </div>
-                </div>
-            </div><!--/.container-->
-        </div><!--/.top-bar-->
+			<header id="header">
+				<div class="top-bar">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-6 col-xs-4">
+								<div class="top-number pull-left"><p><i class="fa fa-phone-square"></i>  +0123 456 70 90</p></div>
+							</div>
+							<div class="col-sm-6 col-xs-8">
+							   <div class="social">
+									<div class="search">
+			
+			
+								   </div>
+							   </div>
+							</div>
+						</div>
+					</div><!--/.container-->
+				</div><!--/.top-bar-->
 
-        <nav class="navbar navbar-inverse" role="banner">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="index.html">Soft Nerve</a>
-                </div>
+				<nav class="navbar navbar-inverse" role="banner">
+					<div class="container">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<a class="navbar-brand" href="index.html">Soft Nerve</a>
+						</div>
+						
+						<div class="collapse navbar-collapse navbar-right">
+							<ul class="nav navbar-nav">
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Service Expertises <b class="caret"></b></a>
+									<ul class="dropdown-menu">
+										<li><a href="#tf-services" class="page-scroll">Services</a></li>
+										<li><a href="#tf-works" class="page-scroll">Product Portfolio</a></li> 
+									</ul>        
+								</li>
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Our Customers <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a href="#tf-clients" class="page-scroll">Clients</a></li>
+											<li><a href="#tf-testimonials" class="page-scroll">Testimonials</a></li>
+										</ul>    
+								</li>
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Engagement Model <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											  <li><a href="#tf-clients" class="page-scroll">Pay for Service Model</a></li>     
+										</ul>   
+								</li>
+							  
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact Us <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a href="#carrier" class="page-scroll">carrier & Job opening</a></li>
+											<li><a href="#tf-case-study" class="page-scroll">Case Studies</a></li>
+											<li><a href="#tf-contact-up" class="page-scroll">Contact us</a></li>
+											<li><a href="#tf-about" class="page-scroll">About us</a></li>
+											<li><a href="#tf-team" class="page-scroll">Our Team</a></li>
+										</ul>
+								</li>
+								<li><a href="#chat_head" onclick="$('.panel-primary').removeClass('hidden');" class="page-scroll">  <i class="fa fa-comment-o" aria-hidden="true"></i> Expert Help</a></li>
+														
+							</ul>
+						</div>
+					</div><!--/.container-->
+				</nav><!--/nav-->
 				
-                <div class="collapse navbar-collapse navbar-right">
-                    <ul class="nav navbar-nav">
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Service Expertises <i class="fa fa-angle-down"></i></a>
-							<ul class="dropdown-menu">
-								<li><a href="#tf-services" class="page-scroll">Services</a></li>
-								<li><a href="#tf-works" class="page-scroll">Product Portfolio</a></li> 
-							</ul>        
-						</li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Our Customers <i class="fa fa-angle-down"></i></a>
-								<ul class="dropdown-menu">
-									<li><a href="#tf-clients" class="page-scroll">Clients</a></li>
-									<li><a href="#tf-testimonials" class="page-scroll">Testimonials</a></li>
-								</ul>    
-						</li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Engagement Model <i class="fa fa-angle-down"></i></a>
-								<ul class="dropdown-menu">
-									  <li><a href="#tf-clients" class="page-scroll">Pay for Service Model</a></li>     
-								</ul>   
-						</li>
-					  
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact us <i class="fa fa-angle-down"></i></a>
-								<ul class="dropdown-menu">
-									<li><a href="#carrier" class="page-scroll">carrier & Job opening</a></li>
-									<li><a href="#tf-case-study" class="page-scroll">Case Studies</a></li>
-									<li><a href="#tf-contact-up" class="page-scroll">Contact us</a></li>
-									<li><a href="#tf-about" class="page-scroll">About us</a></li>
-									<li><a href="#tf-team" class="page-scroll">Our Team</a></li>
-								</ul>
-						</li>
-						<li><a href="#chat_head" onclick="$('.panel-primary').removeClass('hidden');" class="page-scroll">  <i class="fa fa-comment-o" aria-hidden="true"></i> expert help</a></li>
-                                                
-                    </ul>
+			</header><!--/header-->
+			
+		    <div class="products container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="testimonial" class="owl-carousel owl-theme">
+                            <div class="item">
+                                <h5>Soft Nerve was part of our product journey from Ideation to  Market and IPR .</h5>
+                                <p><strong>Dean Martin</strong>, CEO Acme Inc.</p>
+                            </div>
+
+                            <div class="item">
+                                <h5>Best in Class Product Design and Delivery Skills for our HealthCare Product Line.</h5>
+                                <p><strong>Louis</strong>, XYZ .</p>
+                            </div>
+
+                            <div class="item">
+                                <h5>Redesign Seemless User Experience for our various Device Categories.</h5>
+                                <p><strong>Mr.Rangu</strong>, VP Device Engineering.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div><!--/.container-->
-        </nav><!--/nav-->
-		
-    </header><!--/header-->
-            <div class="content ">
-                <h1>Welcome to <strong><span class="color">Soft Nerve</span></strong></h1>
-                <p class="lead">SoftNerve is a offshore product development Startup ,<strong>delivering Awesome products </strong>and <strong>realizing Peoples Dream. </strong> </p>
-                
+            </div>
+        
+			
+            <div class="content">
+                    
                 <a href="#tf-about" class="fa fa-angle-down page-scroll"></a>
-                
             </div>
         </div>
     </div>
@@ -686,7 +700,7 @@
         </div>
     </div>
 	
-	
+		
     <!-- Contact Section
     ==========================================-->
     <div id="tf-contact-up" class="text-center">
@@ -819,19 +833,21 @@
     <script type="text/javascript" src="js/bootstrap.js"></script>
     <script type="text/javascript" src="js/jquery.isotope.js"></script>
 	<script type="text/javascript" src="js/chat.js"></script>
+	<script type="text/javascript" src="js/jquery.floating-social-share.js"></script>
 	<script type="text/javascript">
 		
     $(document).ready(function(){
       $(window).scroll(function() { // check if scroll event happened
         if ($(document).scrollTop() > 40) { // check if user scrolled more than 50 from top of the browser window
-			$(".navbar-inverse").css("background", "#151515"); // if yes, then change the color of class "navbar-fixed-top" to white (#f8f8f8)
+			$(".navbar-inverse").css("background", "#2c2c2c"); // if yes, then change the color of class "navbar-fixed-top" to white (#f8f8f8)
 			$(".navbar-inverse").addClass("navbar-fixed-top");
-			$(".navbar-nav>li").css("padding-bottom", "25px");
+			$(".navbar-nav>li").css("padding-bottom", "15px");
 		} else {
 			$(".navbar-inverse").css("background", "transparent"); // if not, change it back to transparent
 			$(".navbar-inverse").removeClass("navbar-fixed-top");
 			$(".navbar-nav>li").css("padding-bottom", "3px");
 		}
+
       });
 	  
 		// accordian
@@ -841,6 +857,12 @@
 			 });
 
 			$(this).closest('.panel-heading').toggleClass('active');
+		});
+		
+		$("body").floatingSocialShare({
+			buttons: ["facebook", "twitter", "google-plus", "linkedin", "pinterest"],
+			text: "share with: ",
+			url: "https://google.com"
 		});
     });
 	</script>

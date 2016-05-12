@@ -50,7 +50,7 @@
 	
 
       <!-- Start  Logo & Naviagtion  -->
-       <nav id="tf-menu" class="navbar navbar-default navbar-fixed-top">
+    <nav id="tf-menu" class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -73,14 +73,10 @@
             <li><a href="#tf-services" class="page-scroll">Industry</a></li>
             <li><a href="#tf-works" class="page-scroll">Product Portfolio</a></li>
             <li><a href="#tf-works" class="page-scroll">Case Study</a></li>
-              <li><a href="#tf-works" class="page-scroll">Work with us </a></li>
+            <li><a href="#tf-works" class="page-scroll">Work with us </a></li>
             <li><a href="#tf-contact-up" class="page-scroll">Contact Us</a></li>
-            <li></li>
-            <li></li>
-           <a href="#" class="button orange active"><span><img src="img/chat-icon-small.png" height="40" width="40"></span>24/7 Live Support</a>
-                      
- 
-          </ul>
+			<a href="#chat_head" onclick="$('.panel-primary').removeClass('hidden');" class="button orange active"><span><img src="img/chat-icon-small.png" height="40" width="40"></span>24/7 Live Support</a>
+		  </ul>
           
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
@@ -676,36 +672,16 @@
 	<script type="text/javascript" src="js/jquery.floating-social-share.js"></script>
 	<script type="text/javascript">
     
-    
-    
-    
-    
-    
-    
- 
-
-    
-    
-    
-    
-    
-    
-    
-    
-		
     $(document).ready(function(){
-      $(window).scroll(function() { // check if scroll event happened
-        if ($(document).scrollTop() > 40) { // check if user scrolled more than 50 from top of the browser window
-			$(".navbar-inverse").css("background", "#2c2c2c"); // if yes, then change the color of class "navbar-fixed-top" to white (#f8f8f8)
-			$(".navbar-inverse").addClass("navbar-fixed-top");
-			$(".navbar-nav>li").css("padding-bottom", "15px");
+		$(window).scroll(function() { // check if scroll event happened
+        if ($(document).scrollTop() > 4) { // check if user scrolled more than 50 from top of the browser window
+			$(".navbar-default").css("background", "#2c2c2c"); // if yes, then change the color of class "navbar-fixed-top" to white (#f8f8f8)
+            $('.navbar-default').addClass('on');
 		} else {
-			$(".navbar-inverse").css("background", "transparent"); // if not, change it back to transparent
-			$(".navbar-inverse").removeClass("navbar-fixed-top");
-			$(".navbar-nav>li").css("padding-bottom", "3px");
+			$(".navbar-default").css("background", "transparent"); // if not, change it back to transparent
+			$('.navbar-default').removeClass('on');
 		}
-
-      });
+		});
 	  
 		// accordian
 		$('.accordion-toggle').on('click', function(){

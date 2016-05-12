@@ -1134,10 +1134,6 @@ label{
      Slideshow
  ================================================== */
 
-
-
-
-
 #main-slide .carousel-control.left,
 #main-slide .carousel-control.right {
 	opacity: 1;
@@ -4347,18 +4343,3 @@ label{
 #main-slide .carousel-indicators .active {
     background-color: #0bb586;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

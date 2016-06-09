@@ -384,6 +384,34 @@ img.img-circle.team-img {
 }
 
 
+
+/* Services Section */
+#tf-roi{
+	padding: 50px 0;
+	background-color: #72c05b;
+}
+
+.space{
+	margin-top: 40px;
+}
+
+#tf-roi i.fa {
+	font-size: 40px;
+	width: 100px;
+	height: 100px;
+	padding: 27px 25px;
+	margin-bottom: 10px;
+	border-radius: 50%;
+	transition: all 0.5s;
+}
+
+
+#tf-roi .roi:hover>i.fa{
+	background: #FFA500;
+	color: #ffffff;
+
+}
+
 /* Services Section */
 #tf-services{
 	padding: 50px 0;

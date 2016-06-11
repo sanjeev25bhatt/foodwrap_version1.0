@@ -94,7 +94,7 @@
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						  <ul class="nav navbar-nav navbar-right">
-							<li><a href="index.html" class="page-scroll">Home</a></li>
+							<li><a href="#home" class="page-scroll">Home</a></li>
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">About us <b class="caret"></b></a>
 								<ul class="dropdown-menu">
@@ -259,9 +259,6 @@
 					</div>
 				<div class="col-md-8">
                     <div class="about-text">
-                    
-                    
-
 
 						<p class="intro">Soft Nerve is a Product Designing Start-up with expertise in innovating products and services in solving Real Time user Problem. 
                         </br>
@@ -442,9 +439,9 @@
 				<div class="first-col col-md-3 col-sm-6 col-xs-12"> 
 					<div class="industries-item">
 						<div class="hover-bg">
-							<a href="#">
+							<a href="clinical_trial.html">
 								<div class="hover-text">
-									<h4>healhcare</h4>
+									<h4>healthcare</h4>
 									<small>Working in All Stages of Clinical Trial </small>
 									<div class="clearfix"></div>
 									<i class="fa fa-plus"></i>
@@ -650,7 +647,7 @@
                 </em>
                 
                 <h3><strong>Check out Existing Job Opportunities     <strong> </h3>
-               	<button id="apply-btn" type="submit" class="btn tf-btn btn-default apply-btn">Apply</button>
+               	<button id="apply-btn" type="submit" onClick="parent.location='carrier&job.html'" class="btn tf-btn btn-default apply-btn">Apply</button>
             </div>
 			
                 </div>                                                
@@ -693,12 +690,13 @@
 		<div class="map_content container">
 			<div class="row tpad">
                 <div class="contact_addr col-sm-6 col-md-6 service">
-					<div><strong> Registered office :</strong>
-                        415 ,ITPL ,White field Main Road 
-                        Bangalore - 560066 
+					<div><strong> Registered office :</strong><br />
+                        415, ITPL, White field Main Road<br /> 
+                        Bangalore - 560066<br />
+						India
                     </div>
-                    <div>contact us : <span class="contact_mail">sales@softnerve.com</span> </div>
-                    <div>contact details : +919650014358 </div>
+                    <div>Contact us : <span class="contact_mail">sales@softnerve.com</span> </div>
+                    <div>Contact details : +919650014358 </div>
 				</div>
                         
                 <div class="col-sm-6 col-md-6">
@@ -814,15 +812,6 @@
 		});
 		
 
-		
-		// accordian
-		$('.accordion-toggle').on('click', function(){
-			$(this).closest('.panel-group').children().each(function(){
-			$(this).find('>.panel-heading').removeClass('active');
-			 });
-
-			$(this).closest('.panel-heading').toggleClass('active');
-		});
 		
 		$("body").floatingSocialShare({
 			buttons: ["facebook", "twitter", "google-plus", "linkedin", "pinterest"],

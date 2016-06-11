@@ -104,6 +104,7 @@ ul, ol{
   border-top: 4px solid #000000;
   border-bottom: 4px solid #000000;
   margin-top: 25px;
+  padding-left: 20px;
 }
 @media(min-width: 768px){
 	.top-bar > div > .row > .border_anim > a:hover {
@@ -769,6 +770,7 @@ label {
 .contact_addr {
 	padding-top: 20px;
 	text-align: left;
+	padding-left: 30px;
 }
 button.btn.tf-btn.btn-default {
 	background: #72c05b;

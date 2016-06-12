@@ -630,57 +630,6 @@ ol.type li a.active { font-weight: 700; }
 	color: #72c05b;
 }
 
-/* Testimonials and Case Studies */
-
-
-
-
-#container2 {
-    clear:left;
-	float:left;
-	width:100%;
-	overflow:hidden;
-	background:#fff; /* column 2 background colour */
-}
-
-#container1 {
-	float:left;
-	width:100%;
-	position:relative;
-	right:50%;
-	background:#fff /* column 1 background colour */
-}
-#col1 {
-	float:left;
-    padding: 120px;
-	width:46%;
-	position:relative;
-	left:52%;
-	overflow:hidden;
-}
-#col1 h3{
-    font-size : 25px;
-    color: #000000;
-}
-#col2 {
-	float:left;
-    padding: 120px;
-	width:46%;
-	position:relative;
-	left:56%;
-	overflow:hidden;
-}
-#col2 h3{
-    font-size : 25px;
-    color: #000000;
-}
-
-  
-    	
-
-
-
-
 
 /* carriers Section */
 
@@ -766,12 +715,24 @@ label {
 }
 .map_content {
 	padding: 50px 0;
+    font-size: 18px;
 }
+.map_content .font {
+    color: #0bb586;
+    font-size: 20px;
+    }
+
 .contact_addr {
 	padding-top: 20px;
 	text-align: left;
 	padding-left: 30px;
-}
+   } 
+.contact_addr i{
+    color: #0bb586;
+        
+    }
+
+
 button.btn.tf-btn.btn-default {
 	background: #72c05b;
 	border: 0;

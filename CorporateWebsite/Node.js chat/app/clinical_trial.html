@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,8 +10,8 @@
 	<title>Soft Nerve: Software and Product Development Company</title>
 	<meta name="keywords" content="Software Development New Delhi, Software development, software designing, IPR, Medical Software, Offshore Product Development,softnerve, Software and Product Development New Delhi, Product Development New Delhi, Website Designing, Mobile App Design, Online Marketing, Online Product Branding" />
 	<meta name="robots" content="nofollow" />
-    <meta name="description" content="We are an offshore product Software and Development Company who realize peoples dreams. We have some of the great minds working with us.">
-    <meta name="author" content="freshwrap.com">
+    <meta name="description" content="Softnerve is a product Software and Development Company ,working on cutting edge software Components and help people to realize dreams. We have some of the great minds working with us.">
+    <meta name="author" content="softnerve.com">
     
     <!-- Favicons
     ================================================== -->
@@ -21,7 +22,9 @@
 	
     <!-- Bootstrap -->
     <link rel="stylesheet" type="text/css"  href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css"  href="css/clinical.css">
+	<link href="css/animate.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.min.css">
 
     <!-- Slider
     ================================================== -->
@@ -29,16 +32,21 @@
 
     <!-- Stylesheet
     ================================================== -->
-    <link rel="stylesheet" href="css/main.css">
 
-		<link rel="stylesheet" type="text/css"  href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/clinical.css">
-    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css"  href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.floating-social-share.css" />
+	<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400' rel='stylesheet' type='text/css'>
 	
+	<script type="text/javascript" src='http://desolate-retreat-78839.herokuapp.com/socket.io/socket.io.js'></script>
+    
+    
+     
   </head>
   <body>
-    
+  
+
     <header class="clearfix">
 		
 		<!-- Start Top Bar -->
@@ -60,7 +68,6 @@
 			</div>
 		</div> 
 	</header>
-
 	<!-- Start  Logo & Naviagtion  -->
     
 
@@ -92,21 +99,21 @@
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">About us <b class="caret"></b></a>
 								<ul class="dropdown-menu">
-									<li><a href="#tf-about" class="page-scroll">Who we are</a></li>
-									<li><a href="#tf-team" class="page-scroll">Our Team</a></li>
+									<li><a id="#tf-about" class="move_to_index">Who we are</a></li>
+									<li><a id="#tf-team" class="move_to_index">Our Team</a></li>
 									<li class="divider"></li>
-									<li><a href="#tf-contact-up" class="page-scroll">Contact Us</a></li>
+									<li><a id="#tf-contact-up" class="move_to_index">Contact Us</a></li>
 								</ul>
 							</li>
-							<li><a href="#tf-services" class="page-scroll">Expertise</a></li>
-							<li><a href="#tf-industries" class="page-scroll">Industry</a></li>
-							<li><a href="#tf-works" class="page-scroll">Product Portfolio</a></li>
+							<li><a id="#tf-services" class="move_to_index">Expertise</a></li>
+							<li><a id="#tf-industries" class="move_to_index">Industry</a></li>
+							<li><a id="#tf-works" class="move_to_index">Product Portfolio</a></li>
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle more-index" data-toggle="dropdown">Our Customers <b class="caret"></b></a>
 									<ul class="dropdown-menu">
-										<li><a href="#tf-clients" class="page-scroll">Clients</a></li>
-										<li><a href="#tf-Testimonials" class="page-scroll">Testimonials</a></li>
-										<li><a href="#tf-casestudy" class="page-scroll">Case study</a></li>
+										<li><a id="#tf-clients" class="move_to_index">Clients</a></li>
+										<li><a id="#tf-Testimonials" class="move_to_index">Testimonials</a></li>
+										<li><a id="#tf-casestudy" class="move_to_index">Case study & Business Proposal</a></li>
 									</ul>    			
 							</li>
 						</div><!-- /.navbar-collapse -->
@@ -130,11 +137,11 @@
         <div class="carousel-inner">
    
           <div class="item active">
-            <img class="img-responsive" src="img/healhcare_Banner.jpg" alt="slider">
+            <img class="img-responsive" src="img/healthcare-banner.png" alt="slider">
             <div class="slider-content">
               <div class="col-md-12 text-center">
                 <h2 class="animated2 white">
-                    <span>Clinical Trial is our <strong>Expertise</strong></span>
+                    <span>Connectivity is our <strong>Product DNA</strong></span>
                 </h2>
                 <h3 class="animated3 white">
                     <span>To Solve User Problem</span>
@@ -142,21 +149,39 @@
               </div>
             </div>
           </div>
+          
           <!--/ Carousel item end -->
           <div class="item">
-            <img class="img-responsive" src="img/healthcare-banner2.jpg" alt="slider">
+            <img class="img-responsive" src="img/Medical.jpg" alt="slider">
             <div class="slider-content">
               <div class="col-md-12 text-center">
                 <h2 class="animated4 white">
-					<span><strong>Data analytics is our   </strong> DNA</span>
+					<span><strong> Products with </strong> WOW Experience</span>
                 </h2>
                 <h3 class="animated5 white">
-					<span>The Key to Care your Loved one</span>
+					<span>The Key of your Success</span>
                 </h3>   
               </div>
             </div>
           </div>
-         
+          <!--/ Carousel item end -->
+          <div class="item">
+            <img class="img-responsive" src="img/clinical-home.jpg" alt="slider">
+            <div class="slider-content">
+              <div class="col-md-12 text-center">
+                <h2 class="animated7 white">
+                    <span>We Connect  <strong>Everything </strong></span>
+                </h2>
+                <h3 class="animated8 white">
+                    <span>With Soft Nerve IOT and Mobile Stack </span>
+                </h3>
+                <div class="">
+                  <a class="animated4 slider btn btn-system btn-large btn-min-block" href="#">Get Now</a>
+                  <a class="animated4 slider btn btn-default btn-min-block" href="#">Live Demo</a>
+                </div>
+              </div>
+            </div>
+          </div>
           <!--/ Carousel item end -->
         </div>
         <!-- Carousel inner end-->
@@ -188,7 +213,7 @@
 					</div>
 				<div class="col-md-8">
 						<p>
-							Health Care at Soft nerve is a core focus area ,offering  comprehensive services in Clinical Trial and Data Management 
+							Health Care at Soft nerve is core focus area ,offering  comprehensive services in Clinical Trial and Data Management 
                             With our subject Matter Experts team with ICH-GCP certification.
                             Soft Nerve - Clinical Research ensure the feasibility analysis are done in advance before trial was started . 
 							
@@ -508,7 +533,7 @@
     </nav>
 
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script type="text/javascript" src="js/bootstrap.js"></script>
@@ -529,9 +554,7 @@
 				$(".navbar-default").removeClass("navbar-fixed-top");
 			}
 		});
-		
 
-				
 		$("body").floatingSocialShare({
 			buttons: ["facebook", "twitter", "google-plus", "linkedin", "pinterest"],
 			text: "share with: ",
@@ -549,6 +572,13 @@
 		$(".navbar-toggle").on('click',function() {
 			$(".navbar-default").css("background", "#2c2c2c"); // if yes, then change the color of class "navbar-fixed-top" to white (#2c2c2c)
 			$("navbar-default").css("float", "left");
+		});
+		
+		$(".move_to_index").on('click', function() {
+			window.location.href = "index.html";
+			var att = $(this).attr('id');
+			localStorage.setItem("temp", att);
+			$("#tf-about").scrollView();
 		});
     });
 	</script>

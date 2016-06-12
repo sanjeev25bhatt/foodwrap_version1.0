@@ -95,25 +95,25 @@
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						  <ul class="nav navbar-nav navbar-right">
-							<li><a href="#home" class="page-scroll">Home</a></li>
+							<li><a href="index.html">Home</a></li>
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">About us <b class="caret"></b></a>
 								<ul class="dropdown-menu">
-									<li><a href="#tf-about" class="page-scroll">Who we are</a></li>
-									<li><a href="#tf-team" class="page-scroll">Our Team</a></li>
+									<li><a id="#tf-about" class="move_to_index">Who we are</a></li>
+									<li><a id="#tf-team" class="move_to_index">Our Team</a></li>
 									<li class="divider"></li>
-									<li><a href="#tf-contact-up" class="page-scroll">Contact Us</a></li>
+									<li><a id="#tf-contact-up" class="move_to_index">Contact Us</a></li>
 								</ul>
 							</li>
-							<li><a href="#tf-services" class="page-scroll">Expertise</a></li>
-							<li><a href="#tf-industries" class="page-scroll">Industry</a></li>
-							<li><a href="#tf-works" class="page-scroll">Product Portfolio</a></li>
+							<li><a id="#tf-services" class="move_to_index">Expertise</a></li>
+							<li><a id="#tf-industries" class="move_to_index">Industry</a></li>
+							<li><a id="#tf-works" class="move_to_index">Product Portfolio</a></li>
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle more-index" data-toggle="dropdown">Our Customers <b class="caret"></b></a>
 									<ul class="dropdown-menu">
-										<li><a href="#tf-clients" class="page-scroll">Clients</a></li>
-										<li><a href="#tf-Testimonials" class="page-scroll">Testimonials</a></li>
-										<li><a href="#tf-casestudy" class="page-scroll">Case study & Business Proposal</a></li>
+										<li><a id="#tf-clients" class="move_to_index">Clients</a></li>
+										<li><a id="#tf-Testimonials" class="move_to_index">Testimonials</a></li>
+										<li><a id="#tf-casestudy" class="move_to_index">Case study & Business Proposal</a></li>
 									</ul>    			
 							</li>
 						</div><!-- /.navbar-collapse -->
@@ -137,7 +137,7 @@
         <div class="carousel-inner">
    
           <div class="item active">
-            <img class="img-responsive" src="img/b37.jpg" alt="slider">
+            <img class="img-responsive" src="img/03.jpg" alt="slider">
             <div class="slider-content">
               <div class="col-md-12 text-center">
                 <h2 class="animated2 white">
@@ -152,7 +152,7 @@
           
           <!--/ Carousel item end -->
           <div class="item">
-            <img class="img-responsive" src="img/b11.jpg" alt="slider">
+            <img class="img-responsive" src="img/b23.jpg" alt="slider">
             <div class="slider-content">
               <div class="col-md-12 text-center">
                 <h2 class="animated4 white">
@@ -166,7 +166,7 @@
           </div>
           <!--/ Carousel item end -->
           <div class="item">
-            <img class="img-responsive" src="img/b19.jpg" alt="slider">
+            <img class="img-responsive" src="img/b32.jpg" alt="slider">
             <div class="slider-content">
               <div class="col-md-12 text-center">
                 <h2 class="animated7 white">
@@ -701,6 +701,14 @@
 			$(".navbar-default").css("background", "#2c2c2c"); // if yes, then change the color of class "navbar-fixed-top" to white (#2c2c2c)
 			$("navbar-default").css("float", "left");
 		});
+		
+		$(".move_to_index").on('click', function() {
+			window.location.href = "index.html";
+			var att = $(this).attr('id');
+			localStorage.setItem("temp", att);
+			$("#tf-about").scrollView();
+		});
+		
     });
 	</script>
 	

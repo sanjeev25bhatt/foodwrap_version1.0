@@ -54,7 +54,7 @@
 				<div class="row">
 					<div class="border_anim col-md-9 col-sm-5">
 						<a href="#tf-contact" class="page-scroll" style="color:#fff" > <i class="fa fa-phone"></i> +919650014358</a>
-                        <a href="#tf-contact" class="page-scroll" style="color:#6E33FF" ><i class="fa fa-envelope-o"></i> sales@softnerve.com</a>
+                        <a href="#tf-contact" class="page-scroll" style="color:#0bb586" ><i class="fa fa-envelope-o"></i> sales@softnerve.com</a>
                         <a href="#tf-contact" class="page-scroll" style="color:#FFC300"><i class="fa fa-map-marker"></i> 415 ,ITPL ,White field Main Road Bangalore - 560066</a>
                         
 					</div>
@@ -582,7 +582,7 @@
                                     <div class="clearfix"></div>
                                     <i class="fa fa-plus"></i>
                                 </div>
-                                <img src="img/portfolio/05.jpg" class="img-responsive" alt="...">
+                                <img src="img/portfolio/09.png" class="img-responsive" alt="...">
                             </a>
                         </div>
                     </div>
@@ -614,7 +614,7 @@
 									<div class="clearfix"></div>
                                     <i class="fa fa-plus"></i>
                                 </div>
-                                <img src="img/portfolio/08.jpg" class="img-responsive" alt="...">
+                                <img src="img/portfolio/10.png" class="img-responsive" alt="...">
                             </a>
                         </div>
                     </div>
@@ -691,14 +691,14 @@
 			<div class="row tpad">
                 <div class="contact_addr col-sm-6 col-md-6 service">
 					<div><strong> Registered office :</strong><br />
-                        415, ITPL, White field Main Road<br /> 
+                        <span style="color:#FFC300">415, ITPL, White field Main Road<br /> 
                         Bangalore - 560066<br />
-						India
+						India</span>
                     </div>
                     <div>Contact us : <span class="contact_mail">sales@softnerve.com</span> </div>
                     <div>Contact details : +919650014358 </div>
 				</div>
-                        
+                       
                 <div class="col-sm-6 col-md-6">
                   	<form>
                         <div class="row">
@@ -799,6 +799,21 @@
 	<script type="text/javascript">
     
     $(document).ready(function(){
+		var temp = '';
+		$.fn.scrollView = function() {
+			return this.each(function () {
+				$('html, body').animate({
+					scrollTop: $(this).offset().top
+				}, 1000);
+			}); 
+		}
+		var $a = localStorage.getItem("temp");
+		if($a!='')
+		{
+			$($a).scrollView();
+			localStorage.setItem("temp", '');
+		}
+		
 		$(window).scroll(function() { // check if scroll event happened
 			if ($(document).scrollTop() > 10) { // check if user scrolled more than 50 from top of the browser window
 				$(".navbar-default").css("background", "#2c2c2c"); // if yes, then change the color of class "navbar-fixed-top" to white (#2c2c2c)

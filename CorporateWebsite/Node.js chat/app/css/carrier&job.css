@@ -4,6 +4,9 @@
 #move_center {
 	text-align: center;
 }
+.move_to_index:hover {
+	cursor: pointer;
+}
 .accordion h2{
   margin-bottom: 25px;
 }

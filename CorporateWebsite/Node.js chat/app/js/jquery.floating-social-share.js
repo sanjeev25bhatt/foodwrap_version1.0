@@ -143,6 +143,7 @@
         switch(network) {
             case "facebook":
                 $.get('https://graph.facebook.com/'+ url, function(data) {
+					console.log(data);
                     appendButtons(data.shares, $component);
                 },'jsonp');
                 break;

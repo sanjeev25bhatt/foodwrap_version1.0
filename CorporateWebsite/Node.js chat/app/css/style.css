@@ -171,6 +171,7 @@ ul, ol{
 	color: #72c05b;
 	background-color: rgba(231,231,231,0.3);
 	border-radius: 5px;
+	cursor: pointer;
 }
 .on {
 	background-color: #222222 !important;
@@ -245,19 +246,22 @@ ul.about-list li{
 ul.about-list li span{ 
 	margin-right: 10px;
 }
+#video {
+	margin-top: 30px;
+}
 #tf-industries{
         background-color: #ffffff;
         background-position: center;
 		background-attachment: fixed;
 		background-repeat: no-repeat;
-        
+        margin-bottom: 20px;
 }
 
 
 /* Team Section */
 @media (min-width : 768px) {	
 	#tf-team{
-		background: url(../img/b1.png);
+		background: url(../img/b1.jpg);
 		background-size: cover;
 		background-position: center;
 		background-attachment: fixed;
@@ -4321,7 +4325,7 @@ label{
 	}
 }
 
-@media(max-width: 1000px){
+@media(max-width: 1100px){
 	@media(min-width: 768px){
 		.carousel-inner > .item{
 			height: 550px;   
@@ -4339,7 +4343,22 @@ label{
 	}
 }
 
-
+#toTop{
+	background-color: #333333;
+	position: fixed;
+	bottom: 5px;
+	right: 5px;
+	cursor: pointer;
+	text-align: center;
+	display: none;
+	border-radius: 50%;
+	z-index: 20;
+}
+#toTop > i {
+	color: #fff;
+	font-size: 20px;
+	padding: 15px;
+}
 
 
 

@@ -144,7 +144,7 @@
                     <span>Develop Cutting Edge <strong> SOLUTION'S</strong></span>
                 </h2>
                 <h3 class="animated3 white">
-                    <span>To Distrub Industries</span>
+                    <span>To Disturb Industries</span>
                 </h3>        
               </div>
             </div>
@@ -663,6 +663,22 @@
 	<script type="text/javascript">
     
     $(document).ready(function(){
+	
+		//scroll to the top button
+		var $newdiv1 = $( "<div id='toTop'><i class='fa fa-arrow-up'></i></div>" );
+		$('body').append($newdiv1);
+		$(window).scroll(function () {
+			if ($(this).scrollTop() != 0) {
+				$('#toTop').fadeIn();
+			} else {
+				$('#toTop').fadeOut();
+			}
+		}); 
+		$('#toTop').click(function(){
+			$("html, body").animate({ scrollTop: 0 }, 600);
+			return false;
+		});
+		
 		$(window).scroll(function() { // check if scroll event happened
 			if ($(document).scrollTop() > 10) { // check if user scrolled more than 50 from top of the browser window
 				$(".navbar-default").css("background", "#2c2c2c"); // if yes, then change the color of class "navbar-fixed-top" to white (#2c2c2c)
@@ -687,7 +703,7 @@
 		$("body").floatingSocialShare({
 			buttons: ["facebook", "twitter", "google-plus", "linkedin", "pinterest"],
 			text: "share with: ",
-			url: "https://google.com"
+			url: "https://www.softnerve.com"
 		});
 		$(".top-left").addClass('hidden');
 		$(window).scroll(function() { // check if scroll event happened

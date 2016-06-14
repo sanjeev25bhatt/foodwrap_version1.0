@@ -285,7 +285,7 @@
                     </div>
                 </div>
 				<div class="col-md-4">
-					<iframe id="video" class="img-responsive" src="https://www.youtube.com/embed/r15ZHShMqek?rel=0" frameborder="0" allowfullscreen ></iframe>			
+					<iframe id="video" class="img-responsive" src="https://www.youtube.com/embed/r15ZHShMqek?rel=0" width="400px" frameborder="0" allowfullscreen ></iframe>			
 				</div>
             </div>
           
@@ -479,7 +479,20 @@
                     <div class="item">
                         <img src="img/client/03.png">
                     </div>
+					<div class="item">
+                        <img src="img/client/01.png">
+                    </div>
+					<div class="item">
+                        <img src="img/client/05.png">
+                    </div>
+					<div class="item">
+                        <img src="img/client/06.png">
+                    </div>
+					<div class="item">
+                        <img src="img/client/07.png">
+                    </div>
                 </div>
+				
             </div>
         </div>
     </div>
@@ -755,6 +768,23 @@
 	<script type="text/javascript">
     
     $(document).ready(function(){
+		
+		//scroll to the top button
+		var $newdiv1 = $( "<div id='toTop'><i class='fa fa-arrow-up'></i></div>" );
+		$('body').append($newdiv1);
+		$(window).scroll(function () {
+			if ($(this).scrollTop() != 0) {
+				$('#toTop').fadeIn();
+			} else {
+				$('#toTop').fadeOut();
+			}
+		}); 
+		$('#toTop').click(function(){
+			$("html, body").animate({ scrollTop: 0 }, 600);
+			return false;
+		});
+		
+	
 		var temp = '';
 		$.fn.scrollView = function() {
 			return this.each(function () {

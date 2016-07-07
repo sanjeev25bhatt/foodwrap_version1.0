@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="nav_drawer_width">280dp</dimen>
+    <dimen name="image_margin_top">24dp</dimen>
+    <dimen name="toolbar_padding_top">0dp</dimen>
+    <dimen name="collapsing_image_margin">24dp</dimen>
+</resources>

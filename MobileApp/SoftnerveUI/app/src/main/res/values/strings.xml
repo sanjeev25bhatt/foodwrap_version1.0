@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">SN</string>
+    <string name="action_settings">Settings</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+
+    <string-array name="roi_titles">
+        <item>Idea Security</item>
+        <item>Initial Chat and Prototyping</item>
+        <item>Complete Product Development</item>
+        <item>Post Market Support</item>
+    </string-array>
+    <string-array name="roi_description">
+        <item>Your idea is of utmost importance to us. All our discussions begin with an Non Disclosure Agreement (NDA) and securing your ideas as a IP.</item>
+        <item>You can discuss your idea with our team without any commitment.We will align our Subject matter expert to answer your queries and come up
+         with working prototype in First Sprint cycle.</item>
+        <item>Subject matter experts will develop product ,with your team taking shots and product review at every stage of Development.</item>
+        <item>We extends post market support to our partners to address customer queries.</item>
+    </string-array>
+
+    <string-array name="expertise_description">
+        <item>Persona, User Journey, Flowchart, Visual Design, Wire-frame, Assets Creation, Prototyping and Template Collections.</item>
+        <item>Web App Development, Website Optimization, Social Integration, Boot Strap with Responsive Web Experience to the USERS.</item>
+        <item>Technology Partner for full Stack Development across Multiple platforms - Android, iPhone OS, Windows with LAMP, MEAN and Cloud.</item>
+        <item>Developing Embedded Software Components, Software Porting, Software Integration, Software Testing on Linux and other Operating System for Connected Devices and SOC.</item>
+        <item>Cloud - Specialised in developing software in cloud and PAAS Platform.</item>
+        <item>Working as a On-line Branding Partner for clients, with expertise in running successful Digital Campaigns across On-line Social Channels.</item>
+    </string-array>
+
+</resources>

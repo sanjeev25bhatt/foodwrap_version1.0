@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="12dp">
+    <RelativeLayout
+        android:id="@+id/experience"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@mipmap/ic_keyboard_arrow_right_black_24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/glyph"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:paddingLeft="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Experience:"
+            android:textStyle="bold"
+            android:textColor="#6b6b6b"
+            android:id="@+id/experience_head"
+            android:layout_toRightOf="@+id/glyph"
+            android:layout_toEndOf="@+id/glyph" />
+
+        <TextView
+            android:paddingLeft="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#6b6b6b"
+            android:id="@+id/experience_yr"
+            android:layout_toRightOf="@+id/glyph"
+            android:layout_below="@+id/experience_head" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/qualification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp">
+        <ImageView
+            android:src="@mipmap/ic_keyboard_arrow_right_black_24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/glyph1"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:paddingLeft="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Qualification:"
+            android:textStyle="bold"
+            android:textColor="#6b6b6b"
+            android:id="@+id/qualification_head"
+            android:layout_toRightOf="@+id/glyph1"
+            android:layout_toEndOf="@+id/glyph1" />
+
+        <TextView
+            android:paddingLeft="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#6b6b6b"
+            android:id="@+id/qualification_what"
+            android:layout_toRightOf="@+id/glyph1"
+            android:layout_below="@+id/qualification_head"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/job_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp">
+        <ImageView
+            android:src="@mipmap/ic_keyboard_arrow_right_black_24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/glyph2"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:paddingLeft="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Job Location:"
+            android:textStyle="bold"
+            android:textColor="#6b6b6b"
+            android:id="@+id/job_location_head"
+            android:layout_toRightOf="@+id/glyph2"
+            android:layout_toEndOf="@+id/glyph2" />
+
+        <TextView
+            android:paddingLeft="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#6b6b6b"
+            android:id="@+id/job_location_area"
+            android:layout_toRightOf="@+id/glyph2"
+            android:layout_below="@+id/job_location_head"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/deliverables"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp">
+        <ImageView
+            android:src="@mipmap/ic_keyboard_arrow_right_black_24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/glyph3"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:paddingLeft="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Key Deliverables:"
+            android:textStyle="bold"
+            android:textColor="#6b6b6b"
+            android:id="@+id/deliverables_head"
+            android:layout_toRightOf="@+id/glyph3"
+            android:layout_toEndOf="@+id/glyph3" />
+
+        <LinearLayout
+            android:id="@+id/inflate_deliverable_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/deliverables_head"
+            android:layout_toRightOf="@+id/glyph3"
+            android:paddingLeft="16dp"
+            android:orientation="vertical">
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="Apply"
+        android:background="@drawable/button"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:id="@+id/apply_button"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>

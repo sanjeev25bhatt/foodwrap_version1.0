@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent" android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/roi_image"
+            android:src="@drawable/roi1"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="12dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Idea Security"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="8dp"
+            android:layout_toRightOf="@+id/roi_image"
+            android:textColor="#111"
+            android:id="@+id/roi_title"
+            android:layout_centerHorizontal="true"
+            android:layout_alignTop="@+id/roi_image" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="4"
+            android:ellipsize="end"
+            android:layout_marginRight="8dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Your idea is of utmost importance to us. All our discussions begin with an Non Disclosure Agreement (NDA) and securing your ideas as a IP."
+            android:id="@+id/roi_description"
+            android:textColor="@android:color/darker_gray"
+            android:layout_toRightOf="@+id/roi_image"
+            android:layout_below="@+id/roi_title"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Know more"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="5dp"
+            android:id="@+id/textView3"
+            android:textColor="@color/colorAccent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/roi_description" />
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

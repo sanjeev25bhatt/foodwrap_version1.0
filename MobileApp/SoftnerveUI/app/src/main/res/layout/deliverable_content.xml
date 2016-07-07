@@ -1,0 +1,18 @@
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:id="@+id/glyph30_data"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_keyboard_arrow_right_black_24dp"
+        android:id="@+id/glyph30"/>
+    <TextView
+        android:paddingLeft="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#6b6b6b"
+        android:id="@+id/glyph30_content"
+        android:layout_toRightOf="@+id/glyph30" />
+</RelativeLayout>

@@ -1,0 +1,372 @@
+<ScrollView xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#f5f5f5">
+<LinearLayout
+    android:layout_height="wrap_content" android:layout_width="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:onClick="playVideo" >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="155dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/intro_video_img"
+            android:id="@+id/video_view_img"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_play_circle_outline_white_24dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textColor="#6b6b6b"
+            android:text="Our Expertise"
+            android:padding="15dp"/>
+
+        <RelativeLayout
+            android:background="#ffffff"
+            android:layout_width="fill_parent"
+            android:layout_height="105dp">
+            <HorizontalScrollView
+                android:id="@+id/hsv"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:fillViewport="true"
+                android:measureAllChildren="false"
+                android:scrollbars="none" >
+
+                <LinearLayout
+                    android:id="@+id/innerLay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+                    <LinearLayout
+                        android:id="@+id/design_studio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:clickable="true"
+                        android:onClick="expertiseItemClicked"
+                        android:background="@drawable/horizontal_scroll_border"
+                        android:orientation="vertical" >
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:id="@+id/design_studio_img"
+                                android:layout_centerHorizontal="true"
+                                android:layout_width="wrap_content"
+                                android:layout_margin="15dp"
+                                android:src="@mipmap/ic_brush_black_24dp"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:id="@+id/design_studio_txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#6b6b6b"
+                                android:gravity="center"
+                                android:layout_marginBottom="5dp"
+                                android:layout_below="@+id/design_studio_img"
+                                android:text="Design Studio"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/web_experience"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:onClick="expertiseItemClicked"
+                        android:background="@drawable/horizontal_scroll_border"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+                            <ImageView
+                                android:id="@+id/web_experience_img"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="15dp"
+                                android:src="@mipmap/ic_airplay_black_24dp"
+                                android:layout_centerHorizontal="true" />
+                            <TextView
+                                android:id="@+id/web_experience_txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#6b6b6b"
+                                android:gravity="center"
+                                android:layout_marginBottom="5dp"
+                                android:layout_below="@+id/web_experience_img"
+                                android:text="Web Experience"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/mobility"
+                        android:layout_width="wrap_content"
+                        android:clickable="true"
+                        android:onClick="expertiseItemClicked"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/horizontal_scroll_border"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:id="@+id/mobility_img"
+                                android:layout_margin="15dp"
+                                android:src="@mipmap/ic_phonelink_setup_black_24dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:id="@+id/mobility_txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#6b6b6b"
+                                android:layout_marginBottom="5dp"
+                                android:gravity="center"
+                                android:layout_below="@+id/mobility_img"
+                                android:text="Mobility"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/iot"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:onClick="expertiseItemClicked"
+                        android:background="@drawable/horizontal_scroll_border"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/iot_img"
+                                android:src="@mipmap/ic_description_black_24dp"
+                                android:layout_margin="15dp"
+                                android:layout_centerHorizontal="true" />
+                            <TextView
+                                android:id="@+id/iot_txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#6b6b6b"
+                                android:gravity="center"
+                                android:layout_marginBottom="5dp"
+                                android:layout_below="@+id/iot_img"
+                                android:text="Embedded System and IOT"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/cloud_and_pass"
+                        android:clickable="true"
+                        android:onClick="expertiseItemClicked"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/horizontal_scroll_border"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/cloud_img"
+                                android:src="@mipmap/ic_cloud_black_24dp"
+                                android:layout_margin="15dp"
+                                android:layout_centerHorizontal="true" />
+                            <TextView
+                                android:id="@+id/cloud_txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#6b6b6b"
+                                android:gravity="center"
+                                android:layout_marginBottom="5dp"
+                                android:layout_below="@+id/cloud_img"
+                                android:text="Cloud and Pass"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/product_branding"
+                        android:layout_width="wrap_content"
+                        android:clickable="true"
+                        android:onClick="expertiseItemClicked"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/horizontal_scroll_border"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="15dp"
+                                android:id="@+id/branding_img"
+                                android:src="@mipmap/ic_trending_up_black_24dp"
+                                android:layout_centerHorizontal="true"/>
+                            <TextView
+                                android:id="@+id/branding_txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#6b6b6b"
+                                android:gravity="center"
+                                android:layout_marginBottom="5dp"
+                                android:layout_below="@+id/branding_img"
+                                android:text="Online Product Branding"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:name="com.version_first.blackpearl.softnerveui.ExpertiseDescriptionFragment"
+            android:id="@+id/to_be_replaced"
+            android:orientation="horizontal"/>
+
+        <TextView
+            android:id="@+id/browse_products"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textColor="#6b6b6b"
+            android:text="Browse Products"
+            android:padding="15dp"/>
+
+        <RelativeLayout
+            android:background="#ffffff"
+            android:layout_width="fill_parent"
+            android:layout_marginBottom="15dp"
+            android:layout_height="105dp">
+            <HorizontalScrollView
+                android:id="@+id/products_hsv"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:fillViewport="true"
+                android:measureAllChildren="false"
+                android:scrollbars="none" >
+
+                <LinearLayout
+                    android:id="@+id/products_innerLay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+                    <LinearLayout
+                        android:id="@+id/freshwrap"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:clickable="true"
+                        android:background="@drawable/horizontal_scroll_border"
+                        android:orientation="vertical" >
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:id="@+id/freshwrap_img"
+                                android:layout_centerHorizontal="true"
+                                android:layout_width="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="7dp"
+                                android:layout_marginBottom="7dp"
+                                android:src="@mipmap/ic_airplay_black_24dp"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:id="@+id/freshwrap_txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#6b6b6b"
+                                android:gravity="center"
+                                android:layout_marginBottom="5dp"
+                                android:layout_below="@+id/freshwrap_img"
+                                android:text="Freshwrap: E-Commerce Prototype"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/square_chat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:background="@drawable/horizontal_scroll_border"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+                            <ImageView
+                                android:id="@+id/square_chat_img"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="7dp"
+                                android:layout_marginBottom="7dp"
+                                android:src="@mipmap/ic_help_black_24dp"
+                                android:layout_centerHorizontal="true" />
+                            <TextView
+                                android:id="@+id/square_chat_txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#6b6b6b"
+                                android:gravity="center"
+                                android:layout_marginBottom="5dp"
+                                android:layout_below="@+id/square_chat_img"
+                                android:text="Square Chat: Web based chat application"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/much_more"
+                        android:layout_width="wrap_content"
+                        android:clickable="true"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/horizontal_scroll_border"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:id="@+id/much_more_img"
+                                android:layout_margin="15dp"
+                                android:src="@mipmap/ic_trending_flat_black_24dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:id="@+id/much_more_txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#6b6b6b"
+                                android:layout_marginBottom="5dp"
+                                android:gravity="center"
+                                android:layout_below="@+id/much_more_img"
+                                android:text="Much More"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

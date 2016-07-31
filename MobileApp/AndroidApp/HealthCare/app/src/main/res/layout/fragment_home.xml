@@ -1,0 +1,394 @@
+<ScrollView xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#f5f5f5">
+    <LinearLayout
+        android:layout_height="wrap_content" android:layout_width="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <android.support.v4.view.ViewPager
+                android:layout_width="match_parent"
+                android:layout_height="155dp"
+                android:id="@+id/intro_carousel_viewpager"></android.support.v4.view.ViewPager>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radiogroup"
+                android:orientation="horizontal"
+                android:layout_alignBottom="@+id/intro_carousel_viewpager"
+                android:layout_centerHorizontal="true">
+                <RadioButton
+                    style="@style/carousel_indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton"
+                    android:checked="true"/>
+                <RadioButton
+                    style="@style/carousel_indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton2"/>
+                <RadioButton
+                    style="@style/carousel_indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton3"/>
+
+            </RadioGroup>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/checking_click"
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:clickable="true"
+            android:background="@android:color/white"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_chat_black_24dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/question_icon"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ask a FREE Question"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/question_txt"
+                android:layout_toRightOf="@+id/question_icon"
+                android:layout_toEndOf="@+id/question_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#6b6b6b"
+                android:layout_marginRight="10dp"
+                android:text="Ask a general health query and get a free answer within 24 hours."
+                android:id="@+id/question_des"
+                android:layout_below="@+id/question_txt"
+                android:layout_toLeftOf="@+id/question_next_icon"
+                android:layout_alignLeft="@+id/question_txt"
+                android:layout_alignStart="@+id/question_txt" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/question_next_icon"
+                android:src="@mipmap/ic_keyboard_arrow_right_black_24dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/seperation"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:paddingTop="3dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:id = "@+id/cosultdoctorlayout"
+            android:background="@android:color/white"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_local_hospital_black_24dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/consult_icon"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Consult a Specialist"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/consult_head"
+                android:layout_toRightOf="@+id/consult_icon"
+                android:layout_toEndOf="@+id/consult_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#6b6b6b"
+                android:layout_marginRight="10dp"
+                android:text="Talk to a doctor online privately or book a clinic appointment."
+                android:id="@+id/textView2"
+                android:layout_below="@+id/consult_head"
+                android:layout_toLeftOf="@+id/consult_next_icon"
+                android:layout_alignLeft="@+id/consult_head"
+                android:layout_alignStart="@+id/consult_head" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/consult_next_icon"
+                android:src="@mipmap/ic_keyboard_arrow_right_black_24dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/second_seperation"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:paddingTop="3dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:background="@android:color/white"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_fitness_center_black_24dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/health_icon"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Complete Health Fitness"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/health_head"
+                android:layout_toRightOf="@+id/health_icon"
+                android:layout_toEndOf="@+id/health_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#6b6b6b"
+                android:layout_marginRight="10dp"
+                android:text="Get a complete schedule for achieving your goal."
+                android:id="@+id/health_des"
+                android:layout_below="@+id/health_head"
+                android:layout_toLeftOf="@+id/health_next_icon"
+                android:layout_alignLeft="@+id/health_head"
+                android:layout_alignStart="@+id/health_head" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/health_next_icon"
+                android:src="@mipmap/ic_keyboard_arrow_right_black_24dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/third_seperation"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:paddingTop="3dp"/>
+
+        <RelativeLayout
+            android:id="@+id/online_medicinelayout"
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:background="@android:color/white"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_shopping_cart_black_24dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/store_icon"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Online Medical Store"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/store_head"
+                android:layout_toRightOf="@+id/store_icon"
+                android:layout_toEndOf="@+id/store_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#6b6b6b"
+                android:layout_marginRight="10dp"
+                android:text="Get all the medicines"
+                android:id="@+id/store_content"
+                android:layout_below="@+id/store_head"
+                android:layout_toLeftOf="@+id/store_next_icon"
+                android:layout_alignLeft="@+id/store_head"
+                android:layout_alignStart="@+id/store_head" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/store_next_icon"
+                android:src="@mipmap/ic_keyboard_arrow_right_black_24dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textColor="#6b6b6b"
+            android:text="Our Specialities"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/dermatologist">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:id="@+id/dermatologist_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/facial"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dermatologist"
+                        android:textColor="@android:color/white"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true" />
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:id="@+id/endocrinologist"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/dermatologist">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:id="@+id/endocrinologist_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/endocrinologist"
+                        android:scaleType="fitXY"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Endocrinologist"
+                        android:textColor="@android:color/white"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true" />
+
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:id="@+id/gynec"
+                android:layout_below="@+id/dermatologist"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:id="@+id/gynec_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/gynec"
+                        android:scaleType="fitXY"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gynecologist"
+                        android:textColor="@android:color/white"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:id="@+id/general_physician"
+                android:layout_below="@+id/endocrinologist"
+                android:layout_toRightOf="@+id/gynec"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/general_physician_img"
+                        android:layout_width="match_parent"
+                        android:src="@drawable/general_physician"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="General Physician"
+                        android:textColor="@android:color/white"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true" />
+
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Admin Chat</title>
+		<link rel="stylesheet" href="../css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/admin.css">
+	<script type="text/javascript" src='http://desolate-retreat-78839.herokuapp.com/socket.io/socket.io.js'></script>
+    
+	</head>
+	<body>
+	<form id="login_chat">
+		<div class="login">
+			<strong>adminname: </strong><input type="text" id="login_name" placeholder="Enter your name" /><br />
+			<strong>Password: </strong><input type="password" id="login_pass" placeholder="Enter your password" /><br />
+			<input id="loggedin" type="button" value="Login!">
+		</div>
+	</form>
+	
+	<div id="settings">
+		<ul id="conversation" class="link">
+			<li id="mute-conversation">Mute Conversation</li>
+			<li id="delete-conversation">Delete Conversation</li>
+		</ul>
+		<ul id="previledges" class="link">
+			<li id="add-admin">Add Another Admin</li>
+		</ul>
+		<ul id="ending" class="link">
+			<li class="report">Report as spam</li>
+			<li id="end-chat">End Chat</li>
+		</ul>
+	</div>
+	
+	<div id="another_settings">
+		<ul id="conversation" class="link">
+			<li id="mute-conversation">Mute Conversation</li>
+			<li id="delete-conversation">Delete Conversation</li>
+		</ul>
+		<ul id="previledges" class="link">
+			<li id="another_add-admin">Add Another Admin</li>
+		</ul>
+		<ul id="ending" class="link">
+			<li class="report">Report as spam</li>
+			<li id="another_end-chat">End Chat</li>
+		</ul>
+	</div>
+		
+	<div id="panel" class="panel panel-primary">
+			<form id="form">			
+				<div class="chat">
+					<div class="panel-heading">
+						<div id="chat_head" class="row">
+							<span class="glyphicon glyphicon-comment"></span><span class="with_name" id="chat_with">Live Chat</span>
+							<span id="right_glyph">
+								<span class="hidden slide-toggle glyphicon glyphicon-chevron-up"></span>
+								<span class="slide-toggle glyphicon glyphicon-chevron-down"></span>
+								<span data-toggle="tooltip" title="Voice Call" id="voice-call" class="myToolTip hidden glyphicon glyphicon glyphicon-earphone"></span>
+								<span data-toggle="tooltip" title="Options" id="display-box" class="myToolTip hidden glyphicon glyphicon-cog"></span>
+								<span data-toggle="tooltip" title="End Chat" class="myToolTip glyphicon glyphicon-remove"></span>
+							</span>
+						</div>
+					</div>
+				
+					<div id="body-and-all">
+						<div id="messages" class="chat-messages panel-body">
+							<div id="adminname">
+								<input type="text" id="name" class="chat-name" placeholder="Enter your name" />
+							</div>
+							<div id="adminmail">
+								<input type="email" id="email" class="email" placeholder="Enter your email id" />
+							</div>
+							<div id="adminerror" class="alert_instructions"></div>
+							<button id="nameandemail" class="btn tf-btn btn-default">Start Chat</button>
+						</div>
+						<div id="listing_admins" class="hidden panel-body"></div>
+						<div class="onClose hidden"><button class="end-chat btn tf-btn btn-default">End Chat</button><button class="cancel btn tf-btn btn-default">Cancel</button></div>
+						<textarea id="message" class="form-control panel-footer chat-message btn-admin-input" placeholder="Type your message here..."></textarea>
+						<div id="bottom-most">softnerve</div>
+					</div>
+				</div>
+			</form>
+		</div>
+		
+			
+		<div id="another_panel" class="panel panel-primary">
+			<form id="another_form">		
+				<div class="chat">
+					<div class="panel-heading">
+						<div id="chat_head" class="row">
+							<span class="glyphicon glyphicon-comment"></span><span class="with_name" id="another_chat_with">Live Chat</span>
+							<span id="right_glyph">
+								<span class="hidden slide-toggle glyphicon glyphicon-chevron-up"></span>
+								<span class="slide-toggle glyphicon glyphicon-chevron-down"></span>
+								<span data-toggle="tooltip" title="Voice Call" id="voice-call" class="myToolTip glyphicon glyphicon glyphicon-earphone"></span>
+								<span data-toggle="tooltip" title="Options" id="display-box" class="myToolTip glyphicon glyphicon-cog"></span>
+								<span data-toggle="tooltip" title="End Chat" class="myToolTip glyphicon glyphicon-remove"></span>
+							</span>
+						</div>
+					</div>
+					
+					<div id="body-and-all">
+						<div id="another_messages" class="chat-messages panel-body">
+						
+						</div>
+						<div id="another_listing_admins" class="hidden panel-body"></div>
+						<div id="" class="onClose hidden"><button class="end-chat btn tf-btn btn-default">End Chat</button><button class="cancel btn tf-btn btn-default">Cancel</button></div>
+						<textarea id="another_message" class="form-control panel-footer chat-message btn-admin-input" placeholder="Type your message here..."></textarea>
+						<div id="bottom-most"><span data-toggle="tooltip" title="Rate us with +1" id="like" class="hidden myToolTip glyphicon glyphicon-thumbs-up"></span><span data-toggle="tooltip" title="Rate us with -1" id="unlike" class="hidden myToolTip glyphicon glyphicon-thumbs-down"></span>softnerve</div>
+					</div>
+				</div>
+			</form>
+		</div>
+		
+		<div id="request_panel" class="panel panel-primary">
+			<form id="request_form">		
+				<div class="chat">
+					<div class="panel-heading">
+						<div id="chat_head" class="row">
+							<span class="glyphicon glyphicon-comment"></span><span class="with_name" id="request_chat_with">Live Chat</span>
+							<span id="right_glyph">
+								<span class="hidden slide-toggle glyphicon glyphicon-chevron-up"></span>
+								<span class="slide-toggle glyphicon glyphicon-chevron-down"></span>
+								<span data-toggle="tooltip" title="Voice Call" id="voice-call" class="myToolTip glyphicon glyphicon glyphicon-earphone"></span>
+								<span data-toggle="tooltip" title="Options" id="display-box" class="myToolTip glyphicon glyphicon-cog"></span>
+								<span data-toggle="tooltip" title="End Chat" class="myToolTip glyphicon glyphicon-remove"></span>
+							</span>
+						</div>
+					</div>
+					
+					<div id="body-and-all">
+						<div id="request_messages" class="chat-messages panel-body">
+						
+						</div>
+						<div id="" class="onClose hidden"><button class="end-chat btn tf-btn btn-default">End Chat</button><button class="cancel btn tf-btn btn-default">Cancel</button></div>
+						<textarea id="request_message" class="form-control panel-footer chat-message btn-admin-input" placeholder="Type your message here..."></textarea>
+						<div id="bottom-most"><span data-toggle="tooltip" title="Rate us with +1" id="like" class="hidden myToolTip glyphicon glyphicon-thumbs-up"></span><span data-toggle="tooltip" title="Rate us with -1" id="unlike" class="hidden myToolTip glyphicon glyphicon-thumbs-down"></span>softnerve</div>
+					</div>
+				</div>
+			</form>
+		</div>
+		
+	<script type="text/javascript" src="../js/jquery.1.11.1.js"></script>
+	<script type="text/javascript" src="../js/bootstrap.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			//creating a connection from the front end, we use forceNew inorder to create a new connection for every new client
+			var socket = io.connect('http://desolate-retreat-78839.herokuapp.com', {'forceNew':true});
+			
+			var $panel = $('#panel');
+			var $anotherPanel = $("#another_panel")
+			var $loginForm = $('#login_chat');
+			var $login_btn = $('#loggedin');
+			var bleep = new Audio();
+			var chatroom = {
+				room_createdBy : '',
+				user_connected : ''
+			};
+			var another_chatroom = {
+				room_createdBy : '',
+				user_connected : ''
+			}
+			var request_chatroom = {
+				room_createdBy : '',
+				user_connected : ''
+			}
+			bleep.src = "../sound.mp3";
+			function getCurrentTime()
+			{
+				var dt = new Date();
+				var hrs = dt.getHours();
+				var mins = dt.getMinutes();
+				if(mins < 10)
+				{
+					mins = '0' + mins;
+				}
+				if(hrs > 12 && hrs != 0)
+				{
+					hrs -= 12;
+					var time = hrs + ":" + mins + "PM";
+				} else if(hrs == 0){
+					hrs = 12;
+					var time = hrs + ":" + mins + "AM";
+				} else {
+					var time = hrs + ":" + mins + "AM";
+				}
+				return time;
+			}
+			
+			$('#loggedin').click(function() {
+				var Details = {
+					adminName: document.getElementById("login_name").value,
+					password: document.getElementById("login_pass").value
+				};
+				socket.emit("admin-login", Details, function(data) {
+					//if(data)
+                    {
+						$loginForm.css("display","none");
+						$panel.css("display","block");
+					} 
+                   /* else 
+                    {
+						alert('invalid adminname and password');
+					}*/
+				});
+			});
+			
+			var $message = $('#message');
+			var $another_message = $('#another_message');
+			var $messages = $('#messages');
+			var $another_messages = $('#another_messages');
+			document.getElementById("message").disabled = true;
+			
+			$("#nameandemail").click(function(e) {
+				e.preventDefault();
+				var value_name = $('#name').val();
+				var value_mail = $('#email').val();
+				
+				if(value_name!=''&&value_mail!=''){
+					socket.emit("new admin", value_name, function(data) {
+						if(data){
+							$('#adminname').css("display",'none');
+							$('#adminmail').css("display", 'none');
+							$('#nameandemail').css("display", 'none');
+							document.getElementById("message").disabled = false;
+							$("#adminerror").css("display", "none");
+							$('#voice-call').removeClass('hidden');
+							$("#display-box").removeClass('hidden');
+						} else {
+							$("#adminerror").text("The adminname already exist");
+						}
+					});
+				} else {
+					$("#adminerror").text("Please fill all the above fields");
+				}
+			});
+			
+			socket.on('user ready', function(data) {
+				if(data.noOfUsers == 0){
+					var content = 'be ready to chat with ' + data.name;
+					$messages.text("");
+					$("#chat_with").text(data.name);
+					document.getElementById("message").disabled = false;
+					bleep.play();
+					$messages.append('<div class="instructions"><span data-toggle="tooltip" title="' + data.time+ '" class="myToolTip">' + content + '</span></div><br />');
+					$("#messages").animate({scrollTop: $("#messages")[0].scrollHeight},'slow');
+				} else if(data.noOfUsers == 1){
+					var with_whom = $("#another_chat_with").text();
+					if(with_whom != 'Live Chat') {
+						var content = 'be ready to chat with ' + data.name;
+						$messages.text("");
+						$("#chat_with").text(data.name);
+						document.getElementById("message").disabled = false;
+						bleep.play();
+						$messages.append('<div class="instructions"><span data-toggle="tooltip" title="' + data.time+ '" class="myToolTip">'+ content + '</span></div><br />');
+						$("#messages").animate({scrollTop: $("#messages")[0].scrollHeight},'slow');
+					} else {
+						var content = 'be ready to chat with '+ data.name;
+						$another_messages.text("");
+						document.getElementById("another_message").disabled = false;
+						$("#another_chat_with").text(data.name);
+						$anotherPanel.css("display","block");
+						bleep.play();
+						$another_messages.append('<div class="instructions"><span data-toggle="tooltip" title="' + data.time+ '" class="myToolTip">' + content + '</span></div><br />');												
+						$("#another_messages").animate({scrollTop: $("#another_messages")[0].scrollHeight},'slow');
+					}	
+				}
+			});
+
+			$("#mute-conversation").click(function(e) {
+				e.preventDefault();
+				if(bleep.muted == true)
+				{
+					bleep.muted = false;
+					$("#mute-conversation").text("Mute Conversation");		
+				} else {
+					bleep.muted = true;
+					$("#mute-conversation").text("Unmute Conversation");
+				}
+			});
+			$('#message').bind('keypress',function(e) {
+				if(e.keyCode == '13'){
+					var now = getCurrentTime();
+					e.preventDefault();
+					var msg_to = $("#chat_with").text();
+					var value = $('#message').val();
+					$message.val('');
+					socket.emit("message-to-user",{msg: value, time: now, to: msg_to, chatroom_data: chatroom});
+				}
+			});
+
+			$("#another_message").bind('keypress', function(e) {
+				if(e.keyCode == '13'){	
+					e.preventDefault();
+					var now = getCurrentTime();
+					var msg_to = $("#another_chat_with").text();
+					var value = $("#another_message").val();
+					$another_message.val('');
+					socket.emit("message-to-user",{msg: value, time: now, to: msg_to, chatroom_data: another_chatroom});	
+				}
+			});
+			
+			$("#request_message").bind('keypress', function(e) {
+				if(e.keyCode == '13'){
+					e.preventDefault();
+					var now = getCurrentTime();
+					var msg_to = request_chatroom.user_connected;
+					var value = $("#request_message").val();
+					$("#request_message").val('');
+					socket.emit("message-to-user", {msg: value, time: now, to: msg_to, chatroom_data: request_chatroom});
+				}
+			});
+			
+			socket.on("user disconnected", function(data) {
+				var check = $("#chat_with").text();
+				var another_check = $("#another_chat_with").text();
+				if(data.what == 'self')
+				{
+					var content = 'You have disconnected the chat';
+					if(check == data.username){
+						$("#chat_with").text('Live Chat');
+						bleep.play();
+						$messages.append('<div class="alert_instructions"><span data-toggle="tooltip" title="' + data.time + '" class="myToolTip">' + content + '</span></div><br />');
+						$("#messages").animate({scrollTop: $("#messages")[0].scrollHeight},'slow');
+						document.getElementById("message").disabled = true;
+					} else if(another_check == data.username){
+						$("#another_chat_with").text('Live Chat');
+						bleep.play();
+						$another_messages.append('<div class="alert_instructions"><span data-toggle="tooltip" title="' + data.time + '" class="myToolTip">' + content +'</span></div><br />');
+						$("#another_messages").animate({scrollTop: $("#another_messages")[0].scrollHeight},'slow');
+						document.getElementById("another_message").disabled = true;
+					}
+					socket.emit("connect automatically", {time: data.time});
+
+				} else {
+					var content = 'Chat has been disconnected by '+ data.username;
+					if(data.time == undefined)
+					{
+						var now = getCurrentTime();
+					} else {
+						var now = data.time;
+					}
+					if(check == data.username){
+						$("#chat_with").text('Live Chat');
+						bleep.play();
+						$messages.append('<div class="alert_instructions"><span data-toggle="tooltip" title="' + now + '" class="myToolTip">' + content + '</span></div><br />');
+						$("#messages").animate({scrollTop: $("#messages")[0].scrollHeight},'slow');
+						document.getElementById("message").disabled = true;
+						delete chatroom.admins_connected;
+						chatroom.user_connected = '';
+						chatroom.room_createdBy = '';
+					} else if(another_check == data.username){
+						$("#another_chat_with").text('Live Chat');
+						bleep.play();
+						$another_messages.append('<div class="alert_instructions"><span data-toggle="tooltip" title="' + now + '" class="myToolTip">' + content +'</span></div><br />');
+						$("#another_messages").animate({scrollTop: $("#another_messages")[0].scrollHeight},'slow');
+						document.getElementById("another_message").disabled = true;
+						delete another_chatroom.admins_connected;
+						another_chatroom.user_connected = '';
+						another_chatroom.room_createdBy = '';
+					} else {
+						bleep.play();
+						$("#request_messages").append('<div class="alert_instructions"><span data-toggle="tooltip" title="' + now + '" class="myToolTip">' + content +'</span></div><br />');
+						$("#request_messages").animate({scrollTop: $("#request_messages")[0].scrollHeight},'slow');
+						document.getElementById("request_message").disabled = true;
+						delete request_chatroom.admins_connected;
+						request_chatroom.user_connected = '';
+						request_chatroom.room_createdBy = '';
+					}
+					socket.emit("connect automatically", {time: now});
+				}
+				
+			});
+			
+			socket.on("no user", function(data) {
+				$messages.text("");
+				bleep.play();
+				$messages.append('<div class="alert_instructions"><span data-toggle="tooltip" title="' + data.time+ '" class="myToolTip">' + data.what + '</span></div><br />');
+				$("#messages").animate({scrollTop: $("#messages")[0].scrollHeight},'slow');
+			});
+			
+			// listining the data which we are getting from the server
+			socket.on('new-message', function(data) {
+				var u_name = $messages.parent().prev().find('.with_name').text();
+				var another_u_name = $another_messages.parent().prev().find('.with_name').text();
+				if(data.what == 'Chatroom')
+				{	
+					if(data.createdBy == data.myname)
+					{	
+						if(u_name == data.name){
+							if(data.by == 'self'){
+								if(data.sendbywhom == data.myname){
+									var $strike = $("#messages div").last();
+									var att = $strike.attr('id');
+									$messages.append('<div id="right">'+ data.message + '<span>'+ data.time +'</span></div>');
+									$("#messages").animate({scrollTop: $("#messages")[0].scrollHeight},'slow');
+									var pad = $("#messages div").last();
+									if(att == 'left' || att == undefined) {
+										pad.css("margin-top", "6px");
+										pad.addClass('hvr-bubble-right');
+									} else {
+										pad.css("margin-top", "2px");
+										var atr = pad.prev().attr('class');
+										if(atr == 'hvr-bubble-right') {
+											pad.prev().css("border-radius", "10px 7px 0px 0px");
+										} else {
+											pad.prev().css("border-radius", "0px");
+										}
+										pad.css("border-radius", "0px 0px 10px 10px");
+									}	
+								} else {
+									bleep.play();
+									var $strike = $("#messages div").last();
+									var $strike_text = $("#messages div p").last().text();
+									var att = $strike.attr('id');
+									$messages.append('<div id="left"><p id="send_by">' + data.sendbywhom + '</p>'+ data.message + '<span>'+ data.time +'</span></div>');
+									$("#messages").animate({scrollTop: $("#messages")[0].scrollHeight},'slow');
+									var pad = $("#messages div").last();
+									var pad_text = $("#messages div p").last().text();
+									if(att == 'right' || att == undefined) {
+										pad.css("margin-top", "6px");
+										pad.addClass('hvr-bubble-left');
+									} else {
+										var atr = pad.prev().attr('class');
+										if(atr == 'hvr-bubble-left') {
+											if($strike_text == pad_text)
+											{
+												pad.prev().css("border-radius", "7px 10px 0px 0px");
+												pad.css("margin-top", "2px");
+												pad.find("#send_by").hide();
+												pad.css("border-radius", "0px 0px 10px 10px");									
+											} else {
+												pad.addClass('hvr-bubble-left');
+												pad.css("margin-top", "6px");
+											}
+										} else {
+											if($strike_text != pad_text)
+											{
+												pad.css("padding-top", "0px");
+												pad.addClass('hvr-bubble-left');
+												pad.css("margin-top", "6px");
+											} else {
+												pad.find("#send_by").hide();
+												pad.prev().css("border-radius", "0px");
+												pad.css("margin-top", "2px");
+												pad.css("border-radius", "0px 0px 10px 10px");
+											}											
+										}
+									}
+								}
+								
+							} else if(data.by == 'user'){
+								var $strike = $("#messages div").last();
+								var $strike_text = $("#messages div p").last().text();
+								var att = $strike.attr('id');
+								bleep.play();
+								$messages.append('<div id="left"><p id="send_by">' + data.sendbywhom+ '</p>'+ data.message + '<span>'+ data.time +'</span></div>');
+								$("#messages").animate({scrollTop: $("#messages")[0].scrollHeight},'slow');
+								var pad = $("#messages div").last();
+								var pad_text = $("#messages div p").last().text();
+								if(att == 'right' || att == undefined) {
+									pad.css("margin-top", "6px");
+									pad.addClass('hvr-bubble-left');
+								} else {
+									var atr = pad.prev().attr('class');
+									if(atr == 'hvr-bubble-left') {
+										if($strike_text == pad_text)
+											{
+												pad.prev().css("border-radius", "7px 10px 0px 0px");
+												pad.css("margin-top", "2px");
+												pad.find("#send_by").hide();
+												pad.css("border-radius", "0px 0px 10px 10px");									
+											} else {
+												pad.addClass('hvr-bubble-left');
+												pad.css("margin-top", "6px");
+											}
+									} else {
+										if($strike_text != pad_text)
+										{
+											pad.addClass('hvr-bubble-left');
+											pad.css("margin-top", "6px");
+										} else {
+											pad.find("#send_by").hide();
+											pad.prev().css("border-radius", "0px");
+											pad.css("margin-top", "2px");
+											pad.css("border-radius", "0px 0px 10px 10px");
+										}
+									}
+								}
+							}
+						} else if(another_u_name == data.name){
+							if(data.by == 'self'){
+								if(data.sendbywhom == data.myname){
+									var $strike = $("#another_messages div").last();
+									var att = $strike.attr('id');
+									$another_messages.append('<div id="right">'+ data.message + '<span>'+ data.time +'</span></div>');
+									$("#another_messages").animate({scrollTop: $("#another_messages")[0].scrollHeight},'slow');
+									var pad = $("#another_messages div").last();
+									if(att == 'left' || att == undefined) {
+										pad.css("margin-top", "6px");
+										pad.addClass('hvr-bubble-right');
+									} else {
+										pad.css("margin-top", "2px");
+										var atr = pad.prev().attr('class');
+										if(atr == 'hvr-bubble-right') {
+											pad.prev().css("border-radius", "10px 7px 0px 0px");
+										} else {
+											pad.prev().css("border-radius", "0px");
+										}
+										pad.css("border-radius", "0px 0px 10px 10px");
+									}
+								} else {
+									bleep.play();
+									var $strike = $("#another_messages div").last();
+									var $strike_text = $("#another_messages div p").last().text();
+									var att = $strike.attr('id');
+									$another_messages.append('<div id="left"><p id="send_by">' + data.sendbywhom + '</p>'+ data.message + '<span>'+ data.time +'</span></div>');
+									$("#another_messages").animate({scrollTop: $("#another_messages")[0].scrollHeight},'slow');
+									var pad = $("#another_messages div").last();
+									var pad_text = $("#another_messages div p").last().text();
+									if(att == 'right' || att == undefined) {
+										pad.css("margin-top", "6px");
+										pad.addClass('hvr-bubble-left');
+									} else {
+										var atr = pad.prev().attr('class');
+										if(atr == 'hvr-bubble-left') {
+											if($strike_text == pad_text)
+											{
+												pad.prev().css("border-radius", "7px 10px 0px 0px");
+												pad.css("margin-top", "2px");
+												pad.find("#send_by").hide();
+												pad.css("border-radius", "0px 0px 10px 10px");									
+											} else {
+												pad.addClass('hvr-bubble-left');
+												pad.css("margin-top", "6px");
+											}
+										} else {
+											if($strike_text != pad_text)
+											{
+												pad.addClass('hvr-bubble-left');
+												pad.css("margin-top", "6px");
+											} else {
+												pad.find("#send_by").hide();
+												pad.prev().css("border-radius", "0px");
+												pad.css("margin-top", "2px");
+												pad.css("border-radius", "0px 0px 10px 10px");
+											}											
+										}
+									}
+								}
+							} else if(data.by == 'user'){
+								var $strike = $("#another_messages div").last();
+								var $strike_text = $("#another_messages div p").last().text();
+								var att = $strike.attr('id');
+								bleep.play();
+								$another_messages.append('<div id="left"><p id="send_by">' + data.sendbywhom+ '</p>'+ data.message + '<span>'+ data.time +'</span></div>');
+								$("#another_messages").animate({scrollTop: $("#another_messages")[0].scrollHeight},'slow');
+								var pad = $("#another_messages div").last();
+								var pad_text = $("#another_messages div p").last().text();
+								if(att == 'right' || att == undefined) {
+									pad.css("margin-top", "6px");
+									pad.addClass('hvr-bubble-left');
+								} else {
+									var atr = pad.prev().attr('class');
+									if(atr == 'hvr-bubble-left') {
+										if($strike_text == pad_text)
+											{
+												pad.prev().css("border-radius", "7px 10px 0px 0px");
+												pad.css("margin-top", "2px");
+												pad.find("#send_by").hide();
+												pad.css("border-radius", "0px 0px 10px 10px");									
+											} else {
+												pad.addClass('hvr-bubble-left');
+												pad.css("margin-top", "6px");
+											}
+									} else {
+										if($strike_text != pad_text)
+										{
+											pad.addClass('hvr-bubble-left');
+											pad.css("margin-top", "6px");
+										} else {
+											pad.find("#send_by").hide();
+											pad.prev().css("border-radius", "0px");
+											pad.css("margin-top", "2px");
+											pad.css("border-radius", "0px 0px 10px 10px");
+										}
+									}
+								}
+							}
+						}
+					} else {
+						if(data.by == 'self' && data.myname == data.sendbywhom){
+							var $strike = $("#request_messages div").last();
+							var att = $strike.attr('id');
+							$("#request_messages").append('<div id="right">'+ data.message + '<span>'+ data.time +'</span></div>');
+							$("#request_messages").animate({scrollTop: $("#request_messages")[0].scrollHeight},'slow');
+							var pad = $("#request_messages div").last();
+							if(att == 'left' || att == undefined) {
+								pad.css("margin-top", "6px");
+								pad.addClass('hvr-bubble-right');
+							} else {
+								pad.css("margin-top", "2px");
+								var atr = pad.prev().attr('class');
+								if(atr == 'hvr-bubble-right') {
+									pad.prev().css("border-radius", "10px 7px 0px 0px");
+								} else {
+									pad.prev().css("border-radius", "0px");
+								}
+								pad.css("border-radius", "0px 0px 10px 10px");
+							}
+						} else {
+							bleep.play();
+							var $strike = $("#request_messages div").last();
+							var $strike_text = $("#request_messages div p").last().text();
+							var att = $strike.attr('id');
+							$("#request_messages").append('<div id="left"><p id="send_by">' + data.sendbywhom + '</p>'+ data.message + '<span>'+ data.time +'</span></div>');
+							$("#request_messages").animate({scrollTop: $("#request_messages")[0].scrollHeight},'slow');
+							var pad = $("#request_messages div").last();
+							var pad_text = $("#request_messages div p").last().text();
+							if(att == 'right' || att == undefined) {
+								pad.css("margin-top", "6px");
+								pad.addClass('hvr-bubble-left');
+							} else {
+								var atr = pad.prev().attr('class');
+								if(atr == 'hvr-bubble-left') {
+									if($strike_text == pad_text)
+										{
+											pad.prev().css("border-radius", "7px 10px 0px 0px");
+											pad.css("margin-top", "2px");
+											pad.find("#send_by").hide();
+											pad.css("border-radius", "0px 0px 10px 10px");									
+										} else {
+											pad.addClass('hvr-bubble-left');
+											pad.css("margin-top", "6px");
+										}
+								} else {
+									if($strike_text != pad_text)
+									{
+										pad.addClass('hvr-bubble-left');
+										pad.css("margin-top", "6px");
+									} else {
+										pad.find("#send_by").hide();
+										pad.prev().css("border-radius", "0px");
+										pad.css("margin-top", "2px");
+										pad.css("border-radius", "0px 0px 10px 10px");
+									}											
+								}
+							}
+						}
+					}
+				} else {
+					if(u_name == data.name){
+						if(data.by == 'self'){
+							var $strike = $("#messages div").last();
+							var att = $strike.attr('id');
+							$messages.append('<div id="right">'+ data.message + '<span>'+ data.time +'</span></div>');
+							$("#messages").animate({scrollTop: $("#messages")[0].scrollHeight},'slow');
+							var pad = $("#messages div").last();
+							if(att == 'left' || att == undefined) {
+								pad.css("margin-top", "6px");
+								pad.addClass('hvr-bubble-right');
+							} else {
+								pad.css("margin-top", "2px");
+								var atr = pad.prev().attr('class');
+								if(atr == 'hvr-bubble-right') {
+									pad.prev().css("border-radius", "10px 7px 0px 0px");
+								} else {
+									pad.prev().css("border-radius", "0px");
+								}
+								pad.css("border-radius", "0px 0px 10px 10px");
+							}
+						} else if(data.by == 'user'){
+							var $strike = $("#messages div").last();
+							var att = $strike.attr('id');
+							bleep.play();
+							$messages.append('<div id="left">'+ data.message + '<span>'+ data.time +'</span></div>');
+							$("#messages").animate({scrollTop: $("#messages")[0].scrollHeight},'slow');
+							var pad = $("#messages div").last();
+							if(att == 'right' || att == undefined) {
+								pad.css("margin-top", "6px");
+								pad.addClass('hvr-bubble-left');
+							} else {
+								pad.css("margin-top", "2px");
+								var atr = pad.prev().attr('class');
+								if(atr == 'hvr-bubble-left') {
+									pad.prev().css("border-radius", "7px 10px 0px 0px");							
+								} else {
+									pad.prev().css("border-radius", "0px");
+								}
+								pad.css("border-radius", "0px 0px 10px 10px");
+							}
+						}
+					} else if(another_u_name == data.name) {
+						if(data.by == 'self'){
+							var $strike = $("#another_messages div").last();
+							var att = $strike.attr('id');
+							$another_messages.append('<div id="right">'+ data.message + '<span>'+ data.time +'</span></div>');
+							$("#another_messages").animate({scrollTop: $("#another_messages")[0].scrollHeight},'slow');
+							var pad = $("#another_messages div").last();
+							if(att == 'left' || att == undefined) {
+								pad.css("margin-top", "6px");
+								pad.addClass('hvr-bubble-right');
+							} else {
+								pad.css("margin-top", "2px");
+								var atr = pad.prev().attr('class');
+								if(atr == 'hvr-bubble-right') {
+									pad.prev().css("border-radius", "10px 7px 0px 0px");
+								} else {
+									pad.prev().css("border-radius", "0px");
+								}
+								pad.css("border-radius", "0px 0px 10px 10px");
+							}
+						} else if(data.by == 'user'){
+							var $strike = $("#another_messages div").last();
+							var att = $strike.attr('id');
+							bleep.play();
+							$another_messages.append('<div id="left">'+ data.message + '<span>'+ data.time +'</span></div>');
+							$("#another_messages").animate({scrollTop: $("#another_messages")[0].scrollHeight},'slow');
+							var pad = $("#another_messages div").last();
+							if(att == 'right' || att == undefined) {
+								pad.css("margin-top", "6px");
+								pad.addClass('hvr-bubble-left');
+							} else {
+								pad.css("margin-top", "2px");
+								var atr = pad.prev().attr('class');
+								if(atr == 'hvr-bubble-left') {
+									pad.prev().css("border-radius", "7px 10px 0px 0px");							
+								} else {
+									pad.prev().css("border-radius", "0px");
+								}
+								pad.css("border-radius", "0px 0px 10px 10px");
+							}
+						}
+					}
+				}
+			});
+				
+			$(".slide-toggle").click(function() {
+			var $aim = $(this).parent().parent().parent().next().find('.panel-body');
+				if($aim.is(':visible')) {
+					$(this).prev().removeClass('hidden');
+					$(this).hide();
+					$(this).next().hide();
+					$(this).next().next().hide();
+					$(this).next().next().next().hide();
+				} else {
+					$(this).addClass('hidden');
+					$(this).next().show();
+					$(this).next().next().show();
+					$(this).next().next().next().show();
+					$(this).next().next().next().next().show();
+				}
+				$(this).parent().parent().parent().next().slideToggle("slow");
+			});
+			
+			$(".glyphicon-cog").mousemove(function() {
+				$(this).css("color", "#d7d7d7");
+			}).mouseout(function() {
+				$(this).css("color", "#878787");
+			});
+			
+			$(".glyphicon-remove").click(function() {
+				if($("#nameandemail").is(':visible')) {
+					$('.panel-primary').hide();
+				} else { 
+					$(this).parent().parent().parent().next().find(".onClose").removeClass('hidden');
+					$(this).parent().parent().parent().next().find(".chat-messages").css("height", "260px");
+				}
+			});
+			
+			var $cog = $("#panel").find('.glyphicon-cog');
+			var $another_cog = $("#another_panel").find('.glyphicon-cog');
+			$cog.click(function(e) {
+				if($("#settings").is(':visible')) {
+					$("#settings").hide();
+				} else {
+					$("#settings").show();
+					$("#settings").css('top', e.clientY+25).css('left', e.clientX-180);
+				}
+			});
+			$another_cog.click(function(e) {
+				if($("#another_settings").is(':visible')) {
+					$("#another_settings").hide();
+				} else {
+					$("#another_settings").show();
+					$("#another_settings").css('top', e.clientY+25).css('left', e.clientX-180);
+				}
+			});
+			$(document).click(function(e) {     
+				if($(e.target).attr('id') === "settings" || $(e.target).attr('id') === "another_settings" || $(e.target).attr('class') === "link" || $(e.target).attr('id') === "display-box") {
+				} else {
+					if($("#settings").is(':visible')) {
+						$("#settings").hide();
+					}
+					if($("#another_settings").is(':visible')) {
+						$("#another_settings").hide();
+					}
+				}
+			});
+
+			$(".end-chat").click(function(e) {
+				e.preventDefault();
+				$("#settings").hide();
+				var now = getCurrentTime();
+				var u_name = $(this).parent().parent().prev().find(".with_name").text();
+				var $target = $(this).parent().prev();
+				socket.emit("admin disconnecting",{time: now, username: u_name}, function(data) {
+					if(data)
+					{
+						$target.text("");
+						bleep.play();
+						$target.append('<div class="alert_instructions"><span data-toggle="tooltip" title="' + now + '" class="myToolTip">You are not currently connected with any active chat sessions</span></div><br />');
+						$target.animate({scrollTop: $("#messages")[0].scrollHeight},'slow');
+					}
+				});
+				$("#another_settings").hide();
+				$(this).parent().prev().prev().css('height','300px');
+				$(".onClose").addClass('hidden');
+			});			
+			$("#add-admin").click(function(e) {
+				e.preventDefault();
+				var u_name = $("#chat_with").text();
+				if(u_name == 'Live Chat')
+				{} else {
+					socket.emit("admins name", {username: u_name});
+				}
+			});
+			$("#another_add-admin").click(function(e) {
+				e.preventDefault();
+				var u_name = $("#another_chat_with").text();
+				if(u_name == 'Live Chat')
+				{} else {
+					socket.emit("admins name", {username: u_name});
+				}
+			});
+			socket.on("Listing admins", function(data){
+				var user_name = data.username;
+				var check = $("#chat_with").text();
+				var another_check = $("#another_chat_with").text();
+				var len = data.adminList.length;
+					
+				if(check == user_name)
+				{
+					$("#listing_admins").text("");
+					$("#listing_admins").removeClass('hidden');					
+					$messages.addClass('hidden');
+					for(i=0;i<len;i++)
+					{
+						if(data.adminList[i] != data.myname)
+						{
+							$("#listing_admins").append('<div id="admin_names">'+data.adminList[i]+'</div>');
+						}
+					}	
+				} else if(another_check == user_name)
+				{
+					$("#another_listing_admins").text("");
+					$("#another_listing_admins").removeClass('hidden');					
+					$another_messages.addClass('hidden');
+					for(i=0;i<len;i++)
+					{
+						if(data.adminList[i] != data.myname)
+						{
+							$("#another_listing_admins").append('<div id="admin_names">'+data.adminList[i]+'</div>');		
+						}
+					}						
+				}
+				
+			});
+			
+			socket.on("Recieving chat Request", function(data, callback) {
+				$("#request_panel").show();
+				$("#request_messages").append('<div class="alert_instructions"><span data-toggle="tooltip" title="' + data.time + '" class="myToolTip">'+ data.requestBy + ' needs your support to chat with ' + data.userConnected + '</span></div>');
+				$("#request_messages .alert_instructions").on('click', function() {
+					callback(true);
+				});
+			});
+			
+			socket.on("Getting Request data", function(data) {
+					request_chatroom.room_createdBy = data.chat_data.chat_createdBy;
+					request_chatroom.user_connected = data.chat_data.user_connected;
+					request_chatroom.admins_connected = [];
+					var len = data.chat_data.admins_connected.length;
+					for(i=0;i<len;i++)
+					{
+						name = data.chat_data.admins_connected[i];
+						request_chatroom.admins_connected.push(name);
+					}
+			});
+			
+			socket.on("Chat Left", function(data) {
+				if(chatroom.user_connected != '')
+				{
+					var user = chatroom.user_connected;
+					if(user == data.userName)
+					{
+						chatroom.room_createdBy = '';
+						chatroom.user_connected = '';
+						var len = chatroom.admins_connected.length;
+						alert(chatroom.user_connected);
+					}
+				} else if(another_chatroom.user_connected != '')
+				{
+					var user = another_chatroom.user_connected;
+					if(user == data.userName)
+					{
+						another_chatroom.room_createdBy = '';
+						another_chatroom.user_connected = '';
+						var len = another_chatroom.admins_connected.length;
+						alert(another_chatroom.user_connected);
+					}
+				} else if(request_chatroom.user_connected != '')
+				{
+					var user = request_chatroom.user_connected;
+					if(user == data.userName)
+					{
+						request_chatroom.room_createdBy = '';
+						request_chatroom.user_connected = '';
+						var len = request_chatroom.admins_connected.length;
+						alert(request_chatroom.user_connected);
+					}
+				}
+				
+			});
+			
+			socket.on("Request Response", function(data) {
+				var username = data.complete_data.user_connected;
+				var adminJoined = data.joinedBy;
+				var check = $("#chat_with").text();
+				var another_check = $("#another_chat_with").text();
+				
+				if(data.myname == data.complete_data.chat_createdBy)
+				{
+					if(check == username)
+					{
+						chatroom.room_createdBy = data.complete_data.chat_createdBy;
+						chatroom.user_connected = username;
+						chatroom.admins_connected = [];
+						var length = data.complete_data.admins_connected.length;
+						for(i=0;i<length;i++)
+						{
+							var name = data.complete_data.admins_connected[i];
+							chatroom.admins_connected.push(name);
+						}
+						$messages.append('<div class="instructions"><span data-toggle="tooltip" title="' + data.time + '" class="myToolTip">'+ adminJoined+ ' has joined the chat.</span></div>');
+						console.log(chatroom);
+					} else if(another_check == username)
+					{
+						another_chatroom.room_createdBy = data.complete_data.chat_createdBy;
+						another_chatroom.user_connected = username;
+						another_chatroom.admins_connected = [];
+						var length = data.complete_data.admins_connected.length;
+						for(i=0;i<length;i++)
+						{
+							var name = data.complete_data.admins_connected[i];
+							another_chatroom.admins_connected.push(name);
+						}
+						$another_messages.append('<div class="instructions"><span data-toggle="tooltip" title="' + data.time + '" class="myToolTip">'+ adminJoined+ ' has joined the chat.</span></div>');					
+						console.log(another_chatroom);
+					} else 
+					{
+						return;
+					}					
+				} else {
+					if(data.what == 'self' && data.complete_data.chat_createdBy != data.myname)
+					{
+						$("#request_messages").append('<div class="instructions"><span data-toggle="tooltip" title="' + data.time + '" class="myToolTip">You have joined the chat.</span></div>');
+					}
+				}
+			});
+			
+			$(".cancel").click(function(e) {
+				e.preventDefault();
+				$(this).parent().addClass('hidden');
+				$(this).parent().prev().prev().css("height","300px");
+			});
+			
+			$(document).on('click', "#admin_names", function(e) {
+				e.preventDefault();
+				var admin_name = $(this).text();
+				var user_name = $(this).parent().parent().prev().find(".with_name").text();
+				var target = $(this).parent().prev();
+				var another_target = $(this).parent();
+				var now = getCurrentTime();
+				socket.emit("Sending Chat Request", {admin_name: admin_name, user_name: user_name, time: now}, function(data) {
+					if(data)
+					{
+						target.append('<div class="alert_instructions"><span data-toggle="tooltip" title="' + data.time + '" class="myToolTip">Chat request has been successfully sent to ' + admin_name +'</span></div>');
+						another_target.addClass('hidden');	
+						target.removeClass('hidden');
+					} else {
+						target.append('<div class="alert_instructions"><span data-toggle="tooltip" title="' + data.time + '" class="myToolTip">Unable to send chat request to ' + admin_name +'</span></div>');
+						another_target.addClass('hidden');	
+						target.removeClass('hidden');
+					}
+				});
+			});
+			
+			$(".glyphicon-earphone").mousemove(function() {
+				$(this).css("color", "#d7d7d7");
+			}).mouseout(function() {
+				$(this).css("color", "#878787");
+			});
+			
+			$("#settings ul li").mousemove(function() {
+				$(this).css("cursor", "pointer");
+				$(this).addClass('setting_focus');
+			}).mouseout(function() {
+				$(this).removeClass('setting_focus');
+			});
+			$("#another_settings ul li").mousemove(function() {
+				$(this).css("cursor", "pointer");
+				$(this).addClass('setting_focus');
+			}).mouseout(function() {
+				$(this).removeClass('setting_focus');
+			});			
+			$(".glyphicon-remove").mousemove(function() {
+				$(this).css("color", "#bb542b");
+			}).mouseout(function() {
+				$(this).css("color", "#878787");
+			});
+			$(".glyphicon-cog").mousemove(function() {
+				$(this).css("color", "#d7d7d7");
+			}).mouseout(function() {
+				$(this).css("color", "#878787");
+			});
+			$(".myToolTip").tooltip();
+		});
+	</script>
+	</body>
+</html>

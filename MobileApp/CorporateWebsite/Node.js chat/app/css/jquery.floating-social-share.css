@@ -1,0 +1,163 @@
+
+
+* {
+    box-sizing: border-box;
+}
+
+#floatingSocialShare {
+    position: relative;
+}
+
+#floatingSocialShare a {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    line-height: 24px;
+    display:list-item;
+    list-style-type: none;
+    text-align: center;
+    color: #fff;
+}
+
+#floatingSocialShare a:focus, #floatingSocialShare a:hover {
+    color: #fff;
+    width:52px;
+    opacity: 0.8;
+    transition-duration: 0.3s;
+    transition-property: right;
+    transition-timing-function: ease-out;
+}
+
+#floatingSocialShare a, #floatingSocialShare a:visited, #floatingSocialShare a:focus, #floatingSocialShare a:active, #floatingSocialShare a:hover {
+    outline: 0 none !important;
+}
+
+#floatingSocialShare i {
+    line-height: inherit;
+    font-size: 24px;
+    text-align: center;
+}
+
+#floatingSocialShare .top-left, #floatingSocialShare .top-right, #floatingSocialShare .content-left {
+    position: fixed;
+    top: 25%;
+}
+
+#floatingSocialShare .top-left {
+    left: 0;
+}
+
+#floatingSocialShare .top-right {
+    right: 0;
+}
+
+#floatingSocialShare .content-left {
+    margin: 0 0 0 -75px;
+}
+
+#floatingSocialShare .facebook {
+    background-color: #3b5998;
+}
+
+#floatingSocialShare .facebook:before {
+    border-color: #3b5998;
+}
+
+#floatingSocialShare .twitter {
+    background-color: #00aced;
+}
+
+#floatingSocialShare .twitter:before {
+    border-color: #00aced;
+}
+
+#floatingSocialShare .google-plus {
+    background-color: #dd4b39;
+}
+
+#floatingSocialShare .google-plus:before {
+    border-color: #dd4b39;
+}
+
+#floatingSocialShare .linkedin {
+    background-color: #007bb6;
+}
+
+#floatingSocialShare .linkedin:before {
+    border-color: #007bb6;
+}
+
+#floatingSocialShare .envelope {
+    background-color: #726C6C;
+}
+
+#floatingSocialShare .pinterest {
+    background-color: #c92228;
+}
+
+#floatingSocialShare .pinterest:before {
+    border-color: #c92228;
+}
+
+#floatingSocialShare .stumbleupon {
+    background-color: #eb4924;
+}
+
+#floatingSocialShare .reddit {
+    background-color: #a9bacb;
+}
+
+#floatingSocialShare .tumblr {
+    background-color: #36465d;
+}
+
+#floatingSocialShare .vk {
+    background-color: #6383a8;
+}
+
+#floatingSocialShare .odnoklassniki {
+    background-color: #f6900b;
+}
+
+#floatingSocialShare .shareCount {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    color: #ffffff;
+    font-size:  10px;
+}
+
+#floatingSocialShare .margin-top-5 {
+    margin-top: 5px;
+}
+
+.hvr-right {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+}
+.hvr-right:before {
+  pointer-events: none;
+  position: absolute;
+  z-index: 10;
+  content: '';
+  border-style: solid;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  right: 0;
+  border-width: 24px 0 24px 10px;
+}
+.hvr-right:hover:before, .hvr-right:focus:before, .hvr-right:active:before {
+  -webkit-transform: translateX(10px);
+  transform: translateX(10px);
+}

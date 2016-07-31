@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="3dp">
+
+    <RelativeLayout
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="50dp"
+            android:id="@+id/doctors_img"
+            android:layout_height="50dp"
+            android:src="@drawable/b03"/>
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dr. Deepa Kapoor"
+            android:textStyle="bold"
+            android:textColor="#6b6b6b"
+            android:id="@+id/doc_name"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/doctors_img"
+            android:layout_toEndOf="@+id/doctors_img" />
+
+        <TextView
+            android:id="@+id/doc_degree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="M.S. MBBS"
+            android:textColor="#6b6b6b"
+            android:layout_below="@+id/doc_name"
+            android:layout_alignLeft="@+id/doc_name"
+            android:layout_alignStart="@+id/doc_name" />
+
+        <TextView
+            android:id="@+id/doc_speciality"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ophthalmologist"
+            android:textColor="#6b6b6b"
+            android:layout_below="@+id/doc_degree"
+            android:layout_alignLeft="@+id/doc_degree"
+            android:layout_alignStart="@+id/doc_degree" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content"
+            android:textColor="#6b6b6b"
+            android:id="@+id/like_icon"
+            android:layout_below="@+id/doc_speciality"/>
+        <TextView
+            android:id="@+id/peoples_helped"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/doc_speciality"
+            android:layout_toRightOf="@+id/like_icon"
+            android:text="18k Peoples helped"
+            android:textColor="#6b6b6b"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content"
+            android:textColor="#6b6b6b"
+            android:id="@+id/exp_icon"
+            android:layout_below="@+id/like_icon"/>
+        <TextView
+            android:id="@+id/exp_years"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/peoples_helped"
+            android:layout_toRightOf="@+id/exp_icon"
+            android:text="10 years of experience"
+            android:textColor="#6b6b6b"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/call"
+            android:src="@mipmap/ic_perm_phone_msg_black_24dp"
+            android:layout_margin="10dp"
+            android:clickable="true"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

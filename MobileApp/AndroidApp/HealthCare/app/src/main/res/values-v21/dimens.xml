@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="image_margin_top">48dp</dimen>
+    <dimen name="toolbar_padding_top">24dp</dimen>
+    <dimen name="collapsing_image_margin">48dp</dimen>
+    <dimen name="collapsing_toolbar_padding">0dp</dimen>
+</resources>

@@ -91,9 +91,9 @@ public class Home extends Fragment {
             public void onClick(View v) {
                 SNCareAsyncTaskTaskRunner runner = new SNCareAsyncTaskTaskRunner(getContext());
 
-                //runner.execute("https://boiling-falls-25166.herokuapp.com/softnervecontroller/getdoctorDetails");
+                runner.execute("https://boiling-falls-25166.herokuapp.com/softnervecontroller/getdoctorDetails");
 
-                runner.execute(SNCareConst.SNERVEIPDRESS + "getdoctorDetails");
+               // runner.execute(SNCareConst.SNERVEIPDRESS + "getdoctorDetails");
             }
         });
         RelativeLayout onlinemed_click = (RelativeLayout) layout.findViewById(R.id.online_medicinelayout);

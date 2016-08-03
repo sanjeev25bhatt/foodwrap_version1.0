@@ -2794,25 +2794,33 @@ ul {
 
 
 
-/* parallax 2 */
 
-.parallax_sec2 {
+
+
+
+
+
+/* features section 32 */
+.feature_section32 {
 	float: left;
 	width: 100%;
-	text-align: center;
-	padding: 63px 0px 70px 0px;
-   background: url(../img/04.jpg);
-		background-size: cover;
-		background-position: center;
-		background-attachment: fixed;
-		background-repeat: no-repeat;
-		color: #ffffff;
+	padding: 0px 0px 50px 0px;
+}
+.feature_section32 .left {
+	float: left;
+	width: 45%;
+}
+.feature_section32 .right {
+	float: left;
+	width: 55%;
+}
+.feature_section32 .left iframe {
+	float: left;
+	width: 90%;
+	height: 300px;
+	border: 5px solid #fff;
+	margin-bottom: 25px;
+	-webkit-box-shadow:  0px 0px 3px 0px rgba(0, 0, 0, 0.2);
+	box-shadow:  0px 0px 3px 0px rgba(0, 0, 0, 0.2);
 }
 
-
-        
- .parallax_sec2 .hvideo iframe {
-	float: right;
-	width: 85%;
-	height: 290px;
-}

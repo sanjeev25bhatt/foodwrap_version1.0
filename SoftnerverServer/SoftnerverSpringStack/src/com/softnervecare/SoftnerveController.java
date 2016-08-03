@@ -16,6 +16,7 @@ import javax.imageio.ImageIO;
 import org.apache.naming.resources.Resource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Controller;
@@ -24,10 +25,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.softnerveDataModel.SoftnerveDoctorList;
 import com.softnerveDataModel.SoftnerveMedicineDetails;
+import com.softnerveDataModel.SoftnerveSensorData;
 import com.softnerveDataModel.SoftnerverSpecialities;
 
 @Controller
@@ -38,7 +41,10 @@ public class SoftnerveController {
 	SoftnerveDoctorList _localDocObj = null;
 	@Autowired
 	private ApplicationContext appContext;
+
 	
+	private SoftnerveSensorData _sensorObject = null;
+
 	// http://localhost:8080/SoftnerverSpringStack/softnervecontroller/hello
 	@RequestMapping(method = RequestMethod.GET, value = "/hello")
 	public ModelAndView printHello() {
@@ -365,15 +371,14 @@ public class SoftnerveController {
 			return null;
 	}
 
-	//http://localhost:8080/SoftnerverSpringStack/softnervecontroller/getimage?aImageName=images1.jpg
+	// http://localhost:8080/SoftnerverSpringStack/softnervecontroller/getimage?aImageName=images1.jpg
 	@RequestMapping(value = "/getimage", method = RequestMethod.GET, produces = "image/jpg")
 	public @ResponseBody byte[] getImage(@RequestParam String aImageName) {
 		System.out.println("getImage >>>>>>>>>..");
-		
-		
-		
-		org.springframework.core.io.Resource resource = appContext.getResource("file:C:\\xampp\\tomcat\\webapps\\Photos\\" + aImageName);
-		
+
+		org.springframework.core.io.Resource resource = appContext
+				.getResource("file:C:\\xampp\\tomcat\\webapps\\Photos\\" + aImageName);
+
 		InputStream xx = null;
 		try {
 			xx = resource.getInputStream();
@@ -381,10 +386,10 @@ public class SoftnerveController {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
-	
+
 		try {
 			BufferedImage img = ImageIO.read(xx);
-		
+
 			ByteArrayOutputStream bao = new ByteArrayOutputStream();
 			ImageIO.write(img, "jpg", bao);
 
@@ -393,10 +398,26 @@ public class SoftnerveController {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	//	demoServiceMethod();	
+		// demoServiceMethod();
 		return null;
 
 	}
-	
-	
+
+	// http://localhost:8080/SoftnerverSpringStack/softnervecontroller/sendsensordata?aKey=LEDON
+	@RequestMapping(method = RequestMethod.GET, value = "/sendsensordata", headers = "Accept=application/json")
+	@ResponseStatus(value = HttpStatus.OK)
+	public void sendsensordata(@RequestParam String aKey) {
+		_sensorObject = new SoftnerveSensorData();
+		_sensorObject.setSensorData(aKey);
+		
+	}
+
+	// http://localhost:8080/SoftnerverSpringStack/softnervecontroller/getsensordata
+	@RequestMapping(method = RequestMethod.GET, value = "/getsensordata", headers = "Accept=application/json")
+
+	@ResponseBody
+	public String getSensordata() {
+		return _sensorObject.getSensorData();
+	}
+
 }
